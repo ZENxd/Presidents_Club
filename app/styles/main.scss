@@ -89,11 +89,7 @@ body {
 }
 /* Main marketing message and sign up button */
 .panel {
-
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
+  margin-bottom: 150px;
   .form-heading {
     color: #d3a907;
 
@@ -119,7 +115,7 @@ body {
       font-family: 'Roboto Condensed', sans-serif;
       font-weight: 300;
     }
-    .info {
+    .required {
       color: #C3C3C3;
       font-size: 0.8em;
       font-family: 'Roboto Condensed', sans-serif;
@@ -129,6 +125,35 @@ body {
   }
 }
 
+.form {
+  padding: 0px 30px 20px 30px;
+  color: #8B8B8B;
+  font-size: 0.9em;
+
+  .btn {
+    color: #d3a907;
+    width: 200px;
+    text-align: left;
+  }
+
+  .btn .caret {
+    float: right;
+    margin-top: 8px;
+  }
+
+  .dropdown-menu > li > a {
+    color: #d3a907;
+    cursor: pointer;
+  }
+
+  .required {
+    color: #d3a907;
+  }
+
+  .row {
+    margin-top: 20px;
+  }
+}
 /* Supporting marketing content */
 .marketing {
   margin: 40px 0;

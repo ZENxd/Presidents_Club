@@ -12,16 +12,150 @@
   </div>
 
   <div class="panel panel-default margin-top-30">
+
     <div class="form-heading">
       <div class="wave">
         <div>
-          <div class="pull-right">* <span class="info">DENOTES REQUIRED FIELD</span></div>
+          <div class="pull-right">* <span class="required">DENOTES REQUIRED FIELD</span></div>
           <span class="step">STEP {{step}}</span><br/>
           <span class="step-name">THE NOMINEE</span>
         </div>
       </div>
     </div>
-    <div class="panel-body">
 
+    <div class="panel-body">
+      <div class="container form">
+
+        <div class="row">
+          <div class="col col-md-3">
+            <span class="required">*</span> Nominee's Employee Number
+            <input type="text" class="form-control required" placeholder="" ng-model="employee.number" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-md-3">
+            <span class="required">*</span> Sales Organization
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                {{employee.so ? employee.so : 'Choose'}}
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li data-ng-repeat="item in so">
+                  <a ng-click="employee.so = item">{{item}}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-md-3">
+            <span class="required">*</span> Region
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                {{employee.region ? employee.region : 'Choose'}}
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li data-ng-repeat="item in regions">
+                  <a ng-click="employee.region = item">{{item}}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col col-md-3">
+            <span class="required">*</span> Work Country
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                {{employee.country ? employee.country : 'Choose'}}
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                <li data-ng-repeat="item in countries">
+                  <a ng-click="employee.country = item">{{item}}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-md-3">
+            <span class="required">*</span> Salutation
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                {{employee.salutation ? employee.salutation : 'Choose'}}
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu4">
+                <li data-ng-repeat="item in salutations">
+                  <a ng-click="employee.salutation = item">{{item}}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-md-3">
+            <span class="required">*</span> First Name
+            <input type="text" class="form-control required" placeholder="" ng-model="employee.first" required>
+          </div>
+          <div class="col col-md-3">
+            <span class="required">*</span> Family/Last Name
+            <input type="text" class="form-control required" placeholder="" ng-model="employee.last" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-md-4">
+            <span class="required">*</span> Work Address
+            <input type="text" class="form-control required" placeholder="" ng-model="employee.address" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-md-3">
+            <span class="required">*</span> Office Phone Number
+            <input type="text" class="form-control required" placeholder="" ng-model="employee.office" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-md-3">
+            <span class="required">*</span> Mobile Phone Number
+            <input type="text" class="form-control required" placeholder="" ng-model="employee.mobile" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-md-3">
+            <span class="required">*</span> Email
+            <input type="text" class="form-control required" placeholder="" ng-model="employee.email" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-md-3">
+            <span class="required">*</span> Nominee's Position/Title
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                {{employee.title ? employee.title : 'Choose'}}
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu5">
+                <li data-ng-repeat="item in titles">
+                  <a ng-click="employee.title = item">{{item}}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
+    
   </div>
