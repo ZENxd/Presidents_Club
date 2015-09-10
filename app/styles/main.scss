@@ -5,26 +5,57 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 .browsehappy {
   margin: 0.2em 0;
-  background: #ccc;
+  background: #c9e0fa;
   color: #000;
   padding: 0.2em 0;
 }
 
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
 body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
   padding: 0;
+  background: url(../images/cloud_bg.jpg); 
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% auto;
+  background-color: #c9e0fa;
+  font-family: 'Roboto', sans-serif;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+  padding: 10px 30px 10px 30px;
+  color: #524b3f;
+  background-color: #fff;
+  border-top: 1px solid #b8cce2;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
+/* Everything but the panel gets side spacing for mobile first views */
 .header,
-.marketing,
-.footer {
+.marketing {
   padding-left: 15px;
   padding-right: 15px;
 }
 
 /* Custom page header */
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
 .header {
-  border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
 
   /* Make the masthead heading the same height as the navigation */
@@ -35,26 +66,66 @@ body {
     padding-bottom: 19px;
   }
 }
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
 .container-narrow > hr {
   margin: 30px 0;
 }
-
-/* Main marketing message and sign up button */
-.jumbotron {
+.container.heading {
+  color: #fff;
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+  margin-top: 20px;
+  h1 {
+    font-size: 4.5em;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-top: -25px;
+  }
+}
+.lead {
+  font-size: 1.3em;
+  letter-spacing: 5px;
+}
+.btn-primary.light {
+    background-color: #a0c6ea;
+    border-color: #a0c6ea;
+}
+/* Main marketing message and sign up button */
+.panel {
 
   .btn {
     font-size: 21px;
     padding: 14px 24px;
+  }
+  .form-heading {
+    color: #d3a907;
+
+    .wave {
+      width: 100%;
+      height: 45px;
+      background: url(../images/wave-tile.jpg); 
+      background-repeat: repeat-x;
+      background-position: bottom left;
+    }
+    .wave > div {
+      margin-left: 40px;
+      margin-top: 20px;
+      width: auto;
+    }
+    .step {
+      margin-left: 10px;
+    }
+    .step-name {
+      font-size: 1.8em;
+      background-color: #fff;
+      padding: 0 10px 0 10px;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-weight: 300;
+    }
+    .info {
+      color: #C3C3C3;
+      font-size: 0.8em;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-weight: 400;
+      margin-right: 20px;
+    }
   }
 }
 
@@ -70,22 +141,38 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 730px;
+    max-width: 1000px;
   }
 
   /* Remove the padding we set earlier */
   .header,
   .marketing,
   .footer {
-    padding-left: 0;
-    padding-right: 0;
+    /*padding-left: 0;
+    padding-right: 0;*/
   }
   /* Space out the masthead */
   .header {
     margin-bottom: 30px;
   }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
+  .navbar-right {
+    float: right !important;
+    margin-top: 5px;
+  }
+  /* Remove the bottom border on the panel for visual effect */
+  .panel {
     border-bottom: 0;
   }
+}
+.pad-top-8 {
+  padding-top:8px;
+}
+.margin-top-10 {
+  margin-top: 10px;
+}
+.margin-top-20 {
+  margin-top: 20px;
+}
+.margin-top-30 {
+  margin-top: 30px;
 }

@@ -1,0 +1,1062 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"lastRow",
+				"lastRowIndex"
+			],
+			[
+				"an",
+				"angular.copy"
+			],
+			[
+				"bower",
+				"bower_components"
+			],
+			[
+				"tet",
+				"textarea	Tag"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"but",
+				"bs3-button:primary	bs3-button-primary"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"ng-cl",
+				"ng-click	AngularJS"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"close",
+				"closeable"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"email",
+				"emailObj"
+			],
+			[
+				"phoe",
+				"phoneType"
+			],
+			[
+				"phone",
+				"phoneTypes"
+			],
+			[
+				"fo",
+				"forEach"
+			],
+			[
+				"bu",
+				"bs3-button:primary	bs3-button-primary"
+			],
+			[
+				"req",
+				"required-text-field"
+			],
+			[
+				"mi",
+				"min-height"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"co",
+				"copy"
+			],
+			[
+				"con",
+				"controller	AngularJS"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"bo",
+				"bold"
+			],
+			[
+				"te",
+				"text-indent"
+			],
+			[
+				"border-c",
+				"border-color"
+			],
+			[
+				"buy",
+				"bs3-xs-button:primary	bs3-mini-button-primary"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"rou",
+				"$routeParams	AngularJS"
+			],
+			[
+				"butt",
+				"bs3-button:success	bs3-button-success"
+			],
+			[
+				"u",
+				"ul	Tag"
+			],
+			[
+				"angul",
+				"angular	Angular.js"
+			],
+			[
+				"a",
+				"afn	Anoynmous Function"
+			],
+			[
+				"fun",
+				"func	JS Function"
+			],
+			[
+				"mod",
+				"angular.module"
+			],
+			[
+				"eleme",
+				"angular.element"
+			],
+			[
+				"ng-c",
+				"ng-class	AngularJS"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"margi",
+				"margin"
+			],
+			[
+				"ng-swi",
+				"ng-switch-when	AngularJS"
+			],
+			[
+				"ng-swit",
+				"ng-switch-when	AngularJS"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"index",
+				"index1"
+			],
+			[
+				"dur",
+				"duration"
+			],
+			[
+				"durat",
+				"duration3"
+			],
+			[
+				"bol",
+				"bolder"
+			],
+			[
+				"angular",
+				"angular.copy"
+			],
+			[
+				"angu",
+				"angular.copy"
+			],
+			[
+				"n",
+				"normal"
+			],
+			[
+				"timeca",
+				"timecard"
+			],
+			[
+				"emplo",
+				"employee"
+			],
+			[
+				"pla",
+				"plan"
+			],
+			[
+				"pull",
+				"pull-left	BootstrapClass"
+			],
+			[
+				"setup",
+				"setupService"
+			],
+			[
+				"clear",
+				"clearfix	BootstrapClass"
+			],
+			[
+				"trans",
+				"transparent"
+			],
+			[
+				"pul",
+				"pull-left	BootstrapClass"
+			],
+			[
+				"pan",
+				"panel	BootstrapClass"
+			],
+			[
+				"flo",
+				"float:left"
+			],
+			[
+				"display",
+				"display:inline"
+			],
+			[
+				"btn",
+				"btn-default	BootstrapClass"
+			],
+			[
+				"li",
+				"li	Tag"
+			],
+			[
+				"check",
+				"checkbox	BootstrapClass"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"modal",
+				"modalData"
+			],
+			[
+				"border-top",
+				"border-top-left-radius"
+			],
+			[
+				"border-t",
+				"border-top-left-radius"
+			],
+			[
+				"rgb",
+				"rgba()"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"sho",
+				"showHelp"
+			],
+			[
+				"for",
+				"angular.forEach"
+			],
+			[
+				"ng-re",
+				"ng-repeat	AngularJS"
+			],
+			[
+				"$sc",
+				"$scope	AngularJS"
+			],
+			[
+				"lo",
+				"$scope.login"
+			],
+			[
+				"to",
+				"toolbar"
+			],
+			[
+				"tr",
+				"transparent"
+			],
+			[
+				"pro",
+				"projectIndex"
+			],
+			[
+				"cont",
+				"content"
+			],
+			[
+				"left",
+				"leftPos"
+			],
+			[
+				"ng-r",
+				"ng-repeat	AngularJS"
+			],
+			[
+				"selec",
+				"selectedItem"
+			],
+			[
+				"ren",
+				"rentalItem"
+			],
+			[
+				"sel",
+				"selectedItem"
+			],
+			[
+				"empl",
+				"employee"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"add",
+				"address1"
+			],
+			[
+				"form",
+				"formDiv"
+			],
+			[
+				"com",
+				"complete"
+			],
+			[
+				"re",
+				"require"
+			],
+			[
+				"open",
+				"openCalendar"
+			],
+			[
+				"def",
+				"defer"
+			],
+			[
+				"h",
+				"h4	Tag"
+			],
+			[
+				"bat",
+				"batch"
+			],
+			[
+				"batch",
+				"batchService"
+			],
+			[
+				"sele",
+				"selectedItem"
+			],
+			[
+				"r",
+				"rgba()"
+			],
+			[
+				"filt",
+				"filteredArray"
+			],
+			[
+				"whe",
+				"when"
+			],
+			[
+				"val",
+				"value"
+			],
+			[
+				"togg",
+				"toggleTray"
+			],
+			[
+				"bord",
+				"border-radius"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"line",
+				"line-height"
+			],
+			[
+				"ch",
+				"checked"
+			],
+			[
+				"bot",
+				"border-bottom-right-radius"
+			],
+			[
+				"pr",
+				"projectsService"
+			],
+			[
+				"time",
+				"timeCards"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"par",
+				"params"
+			],
+			[
+				"pat",
+				"pattern"
+			],
+			[
+				"tile",
+				"tiledata"
+			],
+			[
+				"de",
+				"DetailView"
+			],
+			[
+				"nav",
+				"navItem"
+			],
+			[
+				"det",
+				"detail"
+			],
+			[
+				"se",
+				"section"
+			],
+			[
+				"mode",
+				"modelType"
+			],
+			[
+				"col",
+				"collapse"
+			],
+			[
+				"ad",
+				"addClass"
+			],
+			[
+				"rem",
+				"removeClass"
+			],
+			[
+				"gl",
+				"glyph"
+			],
+			[
+				"patter",
+				"patterns"
+			],
+			[
+				"princ",
+				"Principles"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "ind",
+		"selected_items":
+		[
+			[
+				"ind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"copy",
+				"File: Copy as Tag style"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"cop",
+				"File: Copy as Tag script"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			],
+			[
+				"Snippet: ",
+				"Snippet: bs3-breadcrumbs"
+			],
+			[
+				"Snippet: html",
+				"Snippet: bs3-html5-template"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"clip",
+				"Clipboard Manager: Show History"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 530.0
+	},
+	"console":
+	{
+		"height": 210.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"sublime.log_commands(False)",
+			"clear",
+			"sublime.log_commands(True)",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/david/sites/Presidents_Club"
+	],
+	"file_history":
+	[
+		"/Users/david/sites/ep-common/demos/ui-grid/app/index.html",
+		"/Users/david/sites/ep-common/src/ui-grid/plugins/UiGridDragSelectionPlugin.js",
+		"/Users/david/sites/ep-common/demos/ui-grid/bower_components/ep-common/src/ui-grid/plugins/UiGridDragSelectionPlugin.js",
+		"/Users/david/sites/ep-common/src/ui-grid/plugins/UiGridColumnSelectPlugin.js",
+		"/Users/david/sites/ep-common/demos/ui-grid/app/scripts/services/gridDataService.js",
+		"/Users/david/sites/ep-common/demos/ui-grid/bower_components/ep-common/src/ui-grid/plugins/UiGridColumnSelectPlugin.js",
+		"/Users/david/sites/ep-common/demos/ui-grid/app/scripts/controllers/MainController.js",
+		"/Users/david/sites/ep-common/demos/ui-grid/bower_components/ep-common/src/ui-grid/extensions/uiGridNavigation.js",
+		"/Users/david/sites/ep-common/demos/ui-grid/bower_components/ep-common/src/ui-grid/plugins/uiGridDragSelectionCell.js",
+		"/Users/david/sites/ep-common/demos/ui-grid/bower_components/ep-common/src/ui-grid/plugins/uiGridDragSelectionPlugin.js",
+		"/Users/david/Library/Preferences/Autodesk/maya/2015-x64/scripts/createMentalRayIndirectLightingTab.mel",
+		"/Users/david/sites/ep-common/demos/forms/bower_components/ep-common/ep-common.js",
+		"/Users/david/sites/ep-common/README.md",
+		"/Users/david/sites/ep-common/src/birthday/README.md",
+		"/Users/david/sites/ep-common/demos/forms/app/scripts/controllers/main.js",
+		"/Users/david/sites/ep-common/src/birthday/ep.common.birthday.js",
+		"/Users/david/sites/ep-common/ep-common.js",
+		"/Users/david/sites/ep-common/ep-common.css",
+		"/Users/david/sites/ep-common/demos/forms/app/index.html",
+		"/Users/david/sites/ep-common/demos/forms/app/views/main.html",
+		"/Users/david/sites/ep-common/demos/forms/app/scripts/app.js",
+		"/Users/david/sites/ep-common/demos/forms/bower_components/ep-common/ep-common.css",
+		"/Users/david/sites/ep-common/demos/forms/Gruntfile.js",
+		"/Users/david/sites/ep-common/demos/forms/app/styles/main.scss",
+		"/Users/david/sites/ep-common/demos/forms/bower.json",
+		"/Users/david/sites/ep-common/demos/ui-grid/bower.json",
+		"/Users/david/sites/ep-common/demos/ui-grid/app/scripts/app.js",
+		"/Users/david/sites/ep-common/src/ui-grid/README.md",
+		"/Users/david/sites/ep-common/demos/ui-grid/bower_components/ep-common/src/ui-grid/plugins/sheetclip.js",
+		"/Users/david/sites/ep-common/src/ui-grid/plugins/sheetclip.js",
+		"/Users/david/sites/ep-common/src/ui-grid/plugins/uiGridDragSelectionPlugin.js",
+		"/Users/david/sites/ep-common/demos/ui-grid/bower_components/ep-common/src/ui-grid/plugins/uiGridColumnSelectPlugin.js",
+		"/Users/david/sites/ep-common/demos/ui-grid/app/scripts/templates/editableCellTemplate.tpl.html",
+		"/Users/david/sites/ep-common/src/ui-grid/plugins/uiGridColumnSelectPlugin.js",
+		"/Users/david/sites/ep-common/demos/ui-grid/app/scripts/templates/addRowCellTemplate.tpl.html",
+		"/Users/david/sites/ep-common/demos/ui-grid/bower_components/ep-common/src/ui-grid/plugins/angular-zeroclipboard.js",
+		"/Users/david/sites/ep-common/demos/ui-grid/bower_components/angular-ui-grid/ui-grid.css",
+		"/Users/david/sites/ep-common/demos/ui-grid/app/styles/main.scss",
+		"/Users/david/sites/ep-common/src/ui-grid/plugins/uiGridDragSelectionCell.js",
+		"/Users/david/sites/ep-common/demos/ui-grid/bower_components/angular-ui-grid/ui-grid.js",
+		"/Users/david/.Trash/ep-common/demos/ui-grid/Gruntfile.js",
+		"/Users/david/Sites/ep-common/demos/ui-grid/app/scripts/controllers/MainController.js",
+		"/Users/david/Sites/ep-common/src/ui-grid/plugins/uiGridDragSelectionPlugin.js",
+		"/Users/david/sites/temp/bower.json",
+		"/Users/david/Sites/ep-common/demos/ui-grid/bower_components/ep-common/src/ui-grid/plugins/uiGridDragSelectionPlugin.js",
+		"/Users/david/Sites/ep-common/src/ui-grid/plugins/uiGridDragSelectionCell.js",
+		"/Users/david/Sites/ep-common/demos/ui-grid/bower_components/ep-common/src/ui-grid/plugins/uiGridDragSelectionCell.js",
+		"/Users/david/Sites/ep-common/demos/ui-grid/bower_components/ep-common/src/ui-grid-plugins/uiGridDragSelectionPlugin.js",
+		"/Users/david/Sites/ep-common/src/ui-grid-plugins/uiGridDragSelectionPlugin.js",
+		"/Users/david/Sites/ep-common/src/ui-grid-plugins/uiGridAddDeleteRowPlugin.js",
+		"/Users/david/Sites/ep-common/demos/ui-grid/bower_components/ep-common/src/ui-grid-plugins/uiGridColumnSelectPlugin.js",
+		"/Users/david/Sites/Repos/ep-common/src/ui-grid-plugins/uiGridDragSelectionCell.js",
+		"/Users/david/Sites/Repos/ep-common/demos/ui-grid/bower_components/ep-common/src/ui-grid-plugins/uiGridDragSelectionCell.js",
+		"/Users/david/Sites/Repos/ep-common/demos/ui-grid/app/index.html",
+		"/Users/david/Sites/uiGridProc/app/index.html",
+		"/Users/david/Sites/uiGridProc/app/scripts/uiGridDragSelectionCell.js",
+		"/Users/david/sites/uiGridProc/app/scripts/uiGridDragSelectionCell.js",
+		"/Users/david/Sites/uiGridProc/app/scripts/controllers/main.js",
+		"/Users/david/Sites/uiGridProc/app/scripts/controllers/about.js",
+		"/Users/david/Sites/uiGridProc/app/scripts/directives/dragSelection.js",
+		"/Users/david/Sites/uiGridProc/app/styles/main.scss",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/ep-common.css",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/ep-common.js",
+		"/Applications/MAMP/htdocs/EP_components/app/controllers/panel.js",
+		"/Applications/MAMP/htdocs/EP_components/employee.json",
+		"/Applications/MAMP/htdocs/EP_components/app/templates/panel.html",
+		"/Users/david/Desktop/import.csv",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/src/datePicker/ep.common.epDatePicker.js",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/demo.html",
+		"/Applications/MAMP/htdocs/EP_components/scripts/epsDatePicker.js",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/src/ssn/ep.common.ssn.js",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/templates/datePicker.tpl.html",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/templates/ssn.tpl.html",
+		"/Applications/MAMP/htdocs/EP_components/scripts/moment.js",
+		"/Users/david/Pictures/twelth night/pics.txt",
+		"/Applications/MAMP/htdocs/EP_components/index.html",
+		"/Applications/MAMP/htdocs/EP_components/app/app.js",
+		"/Applications/MAMP/htdocs/EP_components/app/services/service.js",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/bootstrap/js/tab.js",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/angular-route/angular-route.js",
+		"/Applications/MAMP/htdocs/EP_components/app/services/employee.json",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/src/cellAllowance/ep.common.cellAllowance.js",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/templates/cellAllowance.tpl.html",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/templates/epAlert.tpl.html",
+		"/Applications/MAMP/htdocs/EP_components/app/templates/cellAllowance.tpl.html",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/src/alert/ep.common.alert.js",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/src/computerRental/ep.common.computerRental.js",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/templates/computerRental.tpl.html",
+		"/Applications/MAMP/htdocs/EP_components/app/controllers/computerRental.js",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/src/boxRental/ep.common.boxRental.js",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/templates/boxRental.tpl.html",
+		"/Applications/MAMP/htdocs/EP_components/app/templates/computerRental.tpl.html",
+		"/Applications/MAMP/htdocs/EP_components/app/controllers/alerts.js",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/src/carAllowance/ep.common.carAllowance.js",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/src/boxRental",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/templates/carAllowance.tpl.html",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep.common/bower.json",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/README.md",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/angular-bootstrap/ui-bootstrap-tpls.js",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/bower.json",
+		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/boxRental.tpl.html",
+		"/Applications/MAMP/htdocs/EP_components/app/templates/boxRental.tpl.html",
+		"/Applications/MAMP/htdocs/EP_components/scripts/angular-ui-utils.js",
+		"/Applications/MAMP/htdocs/EP_components/css/panel.css",
+		"/Users/david/sites/directives/epPanel/bower.json",
+		"/Users/david/sites/directives/epPanel.js",
+		"/Applications/MAMP/htdocs/EP_components/app/templates/carAllowance.tpl.html",
+		"/Applications/MAMP/htdocs/EP_components/app/templates/panel.tpl.html",
+		"/Applications/MAMP/htdocs/EP_components/app/controllers/boxRental.js",
+		"/Applications/MAMP/htdocs/EP_components/app/templates/boxRental.html",
+		"/Applications/MAMP/htdocs/EP_components/css/boxRental.css",
+		"/Applications/MAMP/htdocs/EP_components/app/templates/cellAllowance.html",
+		"/Applications/MAMP/htdocs/EP_components/app/templates/carAllowance.html",
+		"/Applications/MAMP/htdocs/EP_components/app/controllers/cellAllowance.js",
+		"/Applications/MAMP/htdocs/EP_components/app/controllers/carAllowance.js",
+		"/Applications/MAMP/htdocs/EP_components/app/templates/computerRental.html",
+		"/Applications/MAMP/htdocs/EP_components/app/templates/alerts.html",
+		"/Applications/MAMP/htdocs/EP_components/css/alerts.css",
+		"/Applications/MAMP/htdocs/EP_components/app/templates/alert.client.view.tpl.html",
+		"/Applications/MAMP/htdocs/EP_components/css/computerRental.css",
+		"/Applications/MAMP/htdocs/EP_components/css/cellAllowance.css",
+		"/Applications/MAMP/htdocs/EP_components/css/carAllowance.css",
+		"/Applications/MAMP/htdocs/EP_components/css/style.css",
+		"/Applications/MAMP/htdocs/EP_components/css/forms.css",
+		"/Applications/MAMP/htdocs/EP_components/app/templates/aboutYou.html",
+		"/Applications/MAMP/htdocs/EP_components/app/templates/forms.html",
+		"/Applications/MAMP/htdocs/EP_components/app/controllers/forms2Ctrl.js",
+		"/Applications/MAMP/htdocs/EP_components/app/controllers/onboardingCtrl.js"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/david/sites/ep-common/demos/ui-grid/bower_components/angular-ui-grid",
+			"/Applications/MAMP/htdocs/mtc_zenxd/mtc_desktop",
+			"/Applications/MAMP/htdocs/ESP/dev/app/controllers",
+			"/Applications/MAMP/htdocs/ESP/dev/app/partials",
+			"/Applications/MAMP/htdocs/ESP/dev/app/controllers",
+			"",
+			"/Applications/MAMP/htdocs/ESP/dev/app/partials",
+			"/Applications/MAMP/htdocs/ESP/dev/app/partial",
+			"/Applications/MAMP/htdocs/ESP/dev/app/partials",
+			"<open files>",
+			"",
+			"/Applications/MAMP/htdocs/ESP/dev",
+			"-*.design",
+			"",
+			"<all files>",
+			"<open files>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"cmdDown",
+			"firstColIndex",
+			"colIndex",
+			"6",
+			"formatMatrix",
+			"buildMatrix",
+			"cell.scope().$apply();",
+			"lastRow",
+			"formatMatrix",
+			"//cell.scope().$apply();",
+			"cell.scope().$apply();",
+			"selectAllRows",
+			"between",
+			"hiddenCols",
+			"gridColumnOffset",
+			"self.gridColumnOffset",
+			"Third Party Vendor",
+			"3rd",
+			"return",
+			"tempData",
+			"didMakeSelection",
+			"formatMatrix",
+			"didMakeSelection",
+			"formatMatrix",
+			"gridColumnOffset",
+			"formatMatrix",
+			"SheetClip",
+			"clipboardData",
+			"getSelectableElements",
+			"didMakeSelection",
+			"mapObject",
+			"lastColIndex",
+			"firstColIndex",
+			"colVisibilities",
+			"didClearSelection",
+			"cutGridColData",
+			"getSelectedData",
+			"copiedGridColData",
+			"getColData",
+			"getSelectedData",
+			"didMakeSelection",
+			"getSelectedData",
+			"didMakeSelection",
+			"self.$scope.copiedGridColData",
+			"didMakeSelection",
+			"getSelectedData",
+			"columnMap",
+			"$scope",
+			"57",
+			"this",
+			"masklast",
+			"scope.dob",
+			"ssn-placeholder",
+			"ssnArray",
+			"3",
+			"showHideSSN",
+			"toggleSSNMask",
+			"ssn",
+			"$scope",
+			"data",
+			"json",
+			"copySelection",
+			"\\n",
+			"n",
+			"sheetclip-data",
+			"sheetclipData",
+			"sheetclip-data",
+			"$scope",
+			"matrix",
+			"MATRIX",
+			"matrix",
+			"Matrix",
+			"matrix",
+			"Matrix",
+			"matrix",
+			"Matrix",
+			"matrix",
+			"Matrix",
+			"matrix",
+			"Matrix",
+			"matrix",
+			"buildMatrix",
+			"copySelection",
+			"copyClipboardSelection",
+			"cell.Cell.scope().$apply();",
+			"cell",
+			"Cell",
+			"cell",
+			"colIndex",
+			"focus",
+			"focused",
+			"focus",
+			"currentSelection",
+			"CurrentSelection",
+			"currentSelection",
+			"item",
+			"cell",
+			"Col",
+			"col",
+			"Col",
+			"Row",
+			"row",
+			"Row",
+			"row",
+			"Row",
+			"self.currentCells[index]",
+			"self.copiedGridColData",
+			"$scope.copiedGridColData",
+			"$scope",
+			"selection-cell",
+			"''",
+			"formatDataForPaste",
+			"mapObject",
+			"Row",
+			"\"",
+			"range",
+			"gold",
+			"Row",
+			"value",
+			"z",
+			"mySelection",
+			"multiSelect",
+			"MultiSelect",
+			"multiSelect",
+			"rowCnt",
+			"copyParams",
+			"wish",
+			"pasteIndex"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"self.copiedGridColData",
+			",}\\n",
+			"\"Notes\": \"\",}",
+			"\"Notes\": \"\",\\n}",
+			"},{",
+			"},{\\n",
+			"},\\n{",
+			"{\\n\"Feature\":",
+			"\",\\n",
+			"fa fa-file-o fa-rotate-180",
+			"src=\"{{employee.avatar}}\"",
+			"",
+			"fa fa-plus",
+			"fa fa-file-text",
+			"fa fa-asterisk",
+			"fa-asterisk",
+			"fa fa-asterisk",
+			"",
+			"thumbnail = '<img src=\"'+thumbnailUrl+'\" class=\"photo\" width=\"'+imgHeight[0]+'\" height=\"'+imgHeight[1]+'\">';",
+			"imgHeight = [tileWidth,tileWidth];",
+			"openOverlay(380)",
+			"<li><a href=\"#\" id=\"futureEvents\">FUTURE EVENTS</a></li>",
+			"http://www.parsecdn.com/js/parse-1.2.2.min.js",
+			"yourGroupsCollections.php",
+			"<div class=\"tabOff\" id=\"groups\">Groups</div>",
+			"yourGroups.php",
+			"yourGroupsDetail.php",
+			"followGroup(2",
+			"groupObject"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.clipboard_manager":
+	{
+		"height": 100.0
+	},
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "pc.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"tabs",
+				"app/bower_components/bootstrap/js/tab.js"
+			],
+			[
+				"ngroute",
+				"app/bower_components/angular-route/angular-route.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 339.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

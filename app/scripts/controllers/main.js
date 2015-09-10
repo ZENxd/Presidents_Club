@@ -8,10 +8,6 @@
  * Controller of the presidentsClubApp
  */
 angular.module('presidentsClubApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('MainCtrl', ['$scope', '$q', function ($scope, $q) {
+  	$scope.step = 1;
+  }]);
