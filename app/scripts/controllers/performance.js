@@ -2,15 +2,15 @@
 
 /**
  * @ngdoc function
- * @name presidentsClubApp.controller:MainCtrl
+ * @name presidentsClubApp.controller:PerformanceCtrl
  * @description
- * # MainCtrl
- * Controller of the presidentsClubApp step 1
+ * # PerformanceCtrl
+ * Controller of the presidentsClubApp step 2
  */
 angular.module('presidentsClubApp')
-  .controller('MainCtrl', ['$scope', '$q', '$location', 'employeeService', 'dataService', 'usersService',
+  .controller('PerformanceCtrl', ['$scope', '$q', '$location', 'employeeService', 'dataService', 'usersService',
    function ($scope, $q, $location, employeeService, dataService, usersService) {
-  	$scope.step = 1;
+  	$scope.step = 2;
   	$scope.employee = null;
   	$scope.user = null;
 
@@ -35,9 +35,5 @@ angular.module('presidentsClubApp')
     usersService.getUserData(function(result) {
       $scope.user = result;
     });
-
-    $scope.next = function(){
-    	$location.path( '/step2' );
-    };
 
   }]);

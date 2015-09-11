@@ -40,7 +40,7 @@
 
     <!-- <div class="wrap"> -->
       <div class="container" style="padding-top: 60px;">
-        <div ng-view="" ng-cloak class="ng-cloak"></div>
+        <div class="page {{ pageClass }}" ng-view="" autoscroll="true" ng-cloak class="ng-cloak"></div>
       </div>
     <!-- </div> -->
       
@@ -81,6 +81,7 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/performance.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <!-- Services -->
         <script type="text/javascript" src="scripts/services/employeeService.js"></script>
