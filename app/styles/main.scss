@@ -141,6 +141,26 @@ body {
     margin-top: 8px;
   }
 
+  .btn-form {
+      background: #e2ba23;
+      color: #ffffff;
+      font-size: 1.2em;
+      letter-spacing: 2px;
+
+  }
+  .btn-form > i {
+    float: right;
+    padding-top: 2px;
+  }
+  .btn-form:hover, .btn-form:focus, .btn-form:active, .btn-form.active, .open > .dropdown-toggle.btn-form {
+      background: #CAA823;
+  }
+   
+  .btn-form:active, .btn-form.active {
+      background: #CAA823;
+      box-shadow: none;
+  }
+
   .dropdown-menu > li > a {
     color: #d3a907;
     cursor: pointer;
@@ -187,6 +207,10 @@ body {
   /* Remove the bottom border on the panel for visual effect */
   .panel {
     border-bottom: 0;
+
+    hr {
+      margin-right:60px;
+    }
   }
 }
 .pad-top-8 {

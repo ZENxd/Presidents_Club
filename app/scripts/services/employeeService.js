@@ -3,7 +3,7 @@
   angular.module('presidentsClubApp')
     .service('employeeService', function() {
       
-      var data = [{
+      var data = {
        'id': '1',
        'number': '',
        'so': '',
@@ -16,8 +16,10 @@
        'officeTel': '',
        'mobileTel': '',
        'email': '',
-       'title': ''
-      }];
+       'title': '',
+       'nominatedByManager': 'Yes',
+       'foo': 'bar'
+      };
 
       this.getEmployeeData = function(callback) {
         callback(data);

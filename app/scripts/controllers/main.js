@@ -8,9 +8,11 @@
  * Controller of the presidentsClubApp
  */
 angular.module('presidentsClubApp')
-  .controller('MainCtrl', ['$scope', '$q', 'employeeService', 'dataService', function ($scope, $q, employeeService, dataService) {
+  .controller('MainCtrl', ['$scope', '$q', 'employeeService', 'dataService', 'usersService',
+   function ($scope, $q, employeeService, dataService, usersService) {
   	$scope.step = 1;
   	$scope.employee = null;
+  	$scope.user = null;
 
   	//Consumable Data
   	$scope.so = null;
@@ -28,6 +30,10 @@ angular.module('presidentsClubApp')
       $scope.regions = result.regions;
       $scope.countries = result.countries;
       $scope.titles = result.titles;
+    });
+
+    usersService.getUserData(function(result) {
+      $scope.user = result;
     });
 
   }]);

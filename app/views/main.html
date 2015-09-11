@@ -155,6 +155,49 @@
           </div>
         </div>
 
+        <hr/>
+
+        <div class="row">
+          <div class="col col-md-4">
+            <span class="required">*</span> Are you the nominee's direct manager?<br/>
+            <label>
+              <input type="checkbox"
+               ng-model="employee.nominatedByManager"
+               ng-true-value="'Yes'"
+               ng-false-value="'No'">
+              {{employee.nominatedByManager}}
+            </label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-md-3">
+            <span class="required">*</span> Nominator's First Name
+            <input type="text" class="form-control required" placeholder="" ng-model="user.first" required>
+          </div>
+          <div class="col col-md-3">
+            <span class="required">*</span> Nominator's Family/Last Name
+            <input type="text" class="form-control required" placeholder="" ng-model="user.last" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-md-3">
+            <span class="required">*</span> Nominator's Email
+            <input type="text" class="form-control required" placeholder="" ng-model="user.email" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-md-3">
+            <span class="required">*</span> Nominator's Work Phone Number
+            <input type="text" class="form-control required" placeholder="" ng-model="user.officeTel" required>
+          </div>
+        </div>
+
+        <hr/>
+
+        <button type="button" class="btn btn-form">NEXT STEP <i class="fa fa-angle-right fa-lg"></i></button>
       </div>
     </div>
     
