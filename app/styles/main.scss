@@ -84,8 +84,10 @@ body {
   letter-spacing: 5px;
 }
 .btn-primary.light {
-    background-color: #bfd2eb;
-    border-color: #bfd2eb;
+    background-color: #a0c6ea;
+    border-color: #a0c6ea;
+    letter-spacing: 2px;
+    font-size: 1.1em;
 }
 /* Main marketing message and sign up button */
 .panel {
@@ -186,7 +188,12 @@ body {
   .required {
     color: #d3a907;
   }
-
+  .eg {
+    color: #CACACA;
+    font-size: 0.9em;
+    padding-left: 10px;
+    margin-bottom: 7px;
+  }
   .row {
     margin-top: 20px;
   }

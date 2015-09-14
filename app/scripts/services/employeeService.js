@@ -18,7 +18,9 @@
        'email': '',
        'title': '',
        'nominatedByManager': 'Yes',
-       'foo': 'bar'
+       'recurringWinner': 'No',
+       'winCount': '',
+       'years': ''
       };
 
       this.getEmployeeData = function(callback) {

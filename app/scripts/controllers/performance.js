@@ -15,11 +15,10 @@ angular.module('presidentsClubApp')
   	$scope.user = null;
 
   	//Consumable Data
-  	$scope.so = null;
-  	$scope.regions = null;
-  	$scope.countries = null;
-  	$scope.salutations = ['Mr', 'Ms', 'Mrs', 'Dr'];
-  	$scope.titles = null;
+  	$scope.salesQuota = null;
+    $scope.sales = null;
+    $scope.percentOver = null;
+    $scope.percentLast = null;
 
   	employeeService.getEmployeeData(function(result) {
       $scope.employee = result;
@@ -35,5 +34,12 @@ angular.module('presidentsClubApp')
     usersService.getUserData(function(result) {
       $scope.user = result;
     });
+
+    $scope.next = function(){
+      // check to make sure the form is completely valid
+        //if ($scope.userForm.$valid) {
+          $location.path( '/step3' );
+        //}
+    };
 
   }]);

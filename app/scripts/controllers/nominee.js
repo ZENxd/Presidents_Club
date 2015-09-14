@@ -38,9 +38,9 @@ angular.module('presidentsClubApp')
 
     $scope.next = function(){
     	// check to make sure the form is completely valid
-        if ($scope.userForm.$valid) {
+        //if ($scope.userForm.$valid) {
         	$location.path( '/step2' );
-        }
+        //}
     };
 
   }]);
