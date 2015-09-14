@@ -84,8 +84,8 @@ body {
   letter-spacing: 5px;
 }
 .btn-primary.light {
-    background-color: #a0c6ea;
-    border-color: #a0c6ea;
+    background-color: #bfd2eb;
+    border-color: #bfd2eb;
 }
 /* Main marketing message and sign up button */
 .panel {
@@ -124,7 +124,24 @@ body {
     }
   }
 }
+.login {
+  padding: 0px 30px 20px 30px;
+  color: #8B8B8B;
+  font-size: 0.9em;
 
+  .btn {
+    color: #a0bbd7;
+    background: #bfd2eb;
+    letter-spacing: 2px;
+    font-size: 1.1em;
+  }
+  .row {
+    margin-top: 10px;
+  }
+  .error {
+    color: #CA1D2D
+  }
+}
 .form {
   padding: 0px 30px 20px 30px;
   color: #8B8B8B;
@@ -172,6 +189,9 @@ body {
 
   .row {
     margin-top: 20px;
+  }
+  .error {
+    color: #CA1D2D
   }
 }
 /* Supporting marketing content */

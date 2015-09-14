@@ -1,204 +1,36 @@
- <div class="container heading">
-      <p class="lead">
-        THE PRESIDENT'S CLUB
-      </p>
-      <h1>NOMINATION FORM</h1>
-      <p class="margin-top-30">
-        Curabitur blandit tempus porttitor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.
-      </p>
-      <p class="margin-top-30">
-        <a class="btn btn-lg btn-primary light" ng-href="#/">NOMINEE CRITERIA</a>
-      </p>
-  </div>
-
-  <div class="panel panel-default margin-top-30">
-
-    <div class="form-heading">
-      <div class="wave">
-        <div>
-          <div class="pull-right">* <span class="required">DENOTES REQUIRED FIELD</span></div>
-          <span class="step">STEP {{step}}</span><br/>
-          <span class="step-name">THE NOMINEE</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="panel-body">
-      <div class="container form">
-
+<div class="container heading" style="width:700px;">
+    <p class="lead">
+        <img src="../images/seal.png">
+    </p>
+    <p class="margin-top-30">
+        Curabitur blandit tempus porttitor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare vel eu leo.
+    </p>
+</div>
+<div class="container login margin-top-30" style="width:700px;">
+    <form name="userForm" ng-submit="next()" novalidate>
         <div class="row">
-          <div class="col col-md-3">
-            <span class="required">*</span> Nominee's Employee Number
-            <input type="text" class="form-control required" placeholder="" ng-model="employee.number" required>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col col-md-3">
-            <span class="required">*</span> Sales Organization
-            <div class="dropdown">
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                {{employee.so ? employee.so : 'Choose'}}
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li data-ng-repeat="item in so">
-                  <a ng-click="employee.so = item">{{item}}</a>
-                </li>
-              </ul>
+            <div class="col col-md-3"></div>
+            <div class="col col-md-6" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+                <input type="email" name="email" class="form-control required" placeholder="email address" ng-model="user.email" required>
+                <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="error">Email is required.</p>
             </div>
-          </div>
+            <div class="col col-md-3"></div>
         </div>
-
         <div class="row">
-          <div class="col col-md-3">
-            <span class="required">*</span> Region
-            <div class="dropdown">
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                {{employee.region ? employee.region : 'Choose'}}
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                <li data-ng-repeat="item in regions">
-                  <a ng-click="employee.region = item">{{item}}</a>
-                </li>
-              </ul>
+            <div class="col col-md-3"></div>
+            <div class="col col-md-6" ng-class="{ 'has-error' : userForm.password.$invalid && !userForm.password.$pristine }">
+                <input type="password" name="password" class="form-control required" placeholder="password" ng-model="user.password" required>
+                <p ng-show="userForm.password.$invalid && !userForm.password.$pristine" class="error">Password is required.</p>
             </div>
-          </div>
-
-          <div class="col col-md-3">
-            <span class="required">*</span> Work Country
-            <div class="dropdown">
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                {{employee.country ? employee.country : 'Choose'}}
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
-                <li data-ng-repeat="item in countries">
-                  <a ng-click="employee.country = item">{{item}}</a>
-                </li>
-              </ul>
+            <div class="col col-md-3"></div>
+        </div>
+        <div class="row">
+            <div class="col col-md-3"></div>
+            <div class="col col-md-6">
+                <button type="submit" class="btn btn-primary light btn-lg btn-block">SIGN IN</button>
+                <!-- ng-disabled="userForm.$invalid" -->
             </div>
-          </div>
+            <div class="col col-md-3"></div>
         </div>
-
-        <div class="row">
-          <div class="col col-md-3">
-            <span class="required">*</span> Salutation
-            <div class="dropdown">
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                {{employee.salutation ? employee.salutation : 'Choose'}}
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenu4">
-                <li data-ng-repeat="item in salutations">
-                  <a ng-click="employee.salutation = item">{{item}}</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col col-md-3">
-            <span class="required">*</span> First Name
-            <input type="text" class="form-control required" placeholder="" ng-model="employee.first" required>
-          </div>
-          <div class="col col-md-3">
-            <span class="required">*</span> Family/Last Name
-            <input type="text" class="form-control required" placeholder="" ng-model="employee.last" required>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col col-md-4">
-            <span class="required">*</span> Work Address
-            <input type="text" class="form-control required" placeholder="" ng-model="employee.address" required>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col col-md-3">
-            <span class="required">*</span> Office Phone Number
-            <input type="text" class="form-control required" placeholder="" ng-model="employee.office" required>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col col-md-3">
-            <span class="required">*</span> Mobile Phone Number
-            <input type="text" class="form-control required" placeholder="" ng-model="employee.mobile" required>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col col-md-3">
-            <span class="required">*</span> Email
-            <input type="text" class="form-control required" placeholder="" ng-model="employee.email" required>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col col-md-3">
-            <span class="required">*</span> Nominee's Position/Title
-            <div class="dropdown">
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                {{employee.title ? employee.title : 'Choose'}}
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenu5">
-                <li data-ng-repeat="item in titles">
-                  <a ng-click="employee.title = item">{{item}}</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <hr/>
-
-        <div class="row">
-          <div class="col col-md-4">
-            <span class="required">*</span> Are you the nominee's direct manager?<br/>
-            <label>
-              <input type="checkbox"
-               ng-model="employee.nominatedByManager"
-               ng-true-value="'Yes'"
-               ng-false-value="'No'">
-              {{employee.nominatedByManager}}
-            </label>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col col-md-3">
-            <span class="required">*</span> Nominator's First Name
-            <input type="text" class="form-control required" placeholder="" ng-model="user.first" required>
-          </div>
-          <div class="col col-md-3">
-            <span class="required">*</span> Nominator's Family/Last Name
-            <input type="text" class="form-control required" placeholder="" ng-model="user.last" required>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col col-md-3">
-            <span class="required">*</span> Nominator's Email
-            <input type="text" class="form-control required" placeholder="" ng-model="user.email" required>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col col-md-3">
-            <span class="required">*</span> Nominator's Work Phone Number
-            <input type="text" class="form-control required" placeholder="" ng-model="user.officeTel" required>
-          </div>
-        </div>
-
-        <hr/>
-
-        <button type="button" class="btn btn-form" ng-click="next()">NEXT STEP <i class="fa fa-angle-right fa-lg"></i></button>
-      </div>
-    </div>
-    
-  </div>
+    </form>
+</div>

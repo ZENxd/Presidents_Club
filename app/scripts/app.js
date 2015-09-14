@@ -16,7 +16,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.mask'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -24,6 +25,11 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
+      })
+      .when('/step1', {
+        templateUrl: 'views/nominee.html',
+        controller: 'NomineeCtrl',
+        controllerAs: 'nominee'
       })
       .when('/step2', {
         templateUrl: 'views/performance.html',
