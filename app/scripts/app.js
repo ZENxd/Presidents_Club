@@ -36,6 +36,11 @@ angular
         controller: 'PerformanceCtrl',
         controllerAs: 'performance'
       })
+      .when('/step3', {
+        templateUrl: 'views/comments.html',
+        controller: 'CommentsCtrl',
+        controllerAs: 'comments'
+      })
       .otherwise({
         redirectTo: '/'
       });

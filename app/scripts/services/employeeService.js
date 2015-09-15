@@ -20,7 +20,14 @@
        'nominatedByManager': 'Yes',
        'recurringWinner': 'No',
        'winCount': '',
-       'years': ''
+       'years': '',
+       'comments': {
+          'performance' : '',
+          'planning': '',
+          'relationship': '',
+          'behavior': '',
+          'leadership': ''
+       }
       };
 
       this.getEmployeeData = function(callback) {
