@@ -10,7 +10,11 @@
        'officeTel': '',
        'mobileTel': '',
        'email': '',
-       'title': ''
+       'title': '',
+       'submitter': 'No',
+       'submitterFirst': '',
+       'submitterLast': '',
+       'submitterEmail': ''
       };
 
       this.getUserData = function(callback) {

@@ -41,6 +41,11 @@ angular
         controller: 'CommentsCtrl',
         controllerAs: 'comments'
       })
+      .when('/step4', {
+        templateUrl: 'views/nominator.html',
+        controller: 'NominatorCtrl',
+        controllerAs: 'nominator'
+      })
       .otherwise({
         redirectTo: '/'
       });
