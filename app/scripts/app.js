@@ -46,6 +46,11 @@ angular
         controller: 'NominatorCtrl',
         controllerAs: 'nominator'
       })
+      .when('/step5', {
+        templateUrl: 'views/thanks.html',
+        controller: 'ThanksCtrl',
+        controllerAs: 'thanks'
+      })
       .otherwise({
         redirectTo: '/'
       });
