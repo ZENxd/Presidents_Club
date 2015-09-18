@@ -67,6 +67,7 @@
           var employee = angular.copy(template);
           employee.first = nominee.first;
           employee.last = nominee.last;
+          employee.title = nominee.title;
           employee.nominator = {'name': nominators[index]};
           employee.nomStatus = status[index];
           employees.push(employee);

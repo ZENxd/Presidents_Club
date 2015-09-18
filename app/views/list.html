@@ -10,17 +10,36 @@
         Curabitur blandit tempus porttitor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare vel eu leo.
     </p>
 </div>
-<div class="panel panel-default margin-top-30">
-    <div class="panel-body">
-        <div class="row" ng-repeat="employee in employees">
+<div class="panel panel-default">
+    <div class="panel-heading" style="background-color:#F5F3E3;color:#d3a907;font-size:0.8em;">
+        <div class="row">
             <div class="col col-md-3">
-                {{employee.first}} {{employee.last}}
+                NOMINEE
+            </div>
+            <div class="col col-md-3">
+                NOMINATOR
+            </div>
+            <div class="col col-md-3">
+                STATUS
+            </div>
+            <div class="col col-md-3">
+                
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="row padding-top-30 padding-bottom-30" ng-class="{'underline' : !$last}" ng-repeat="employee in employees">
+            <div class="col col-md-3">
+                <span class="listName">{{employee.first}} {{employee.last}}</span><br/>
+                <span class="listTitle">{{employee.title}}</span>
             </div>
             <div class="col col-md-3">
                 {{employee.nominator.name}}
             </div>
-            <div class="col col-md-3">
+            <div class="col col-md-3" ng-style="myColor={color:(employee.nomStatus === 'Denied') ? '#CA4045' : 
+                                                        (employee.nomStatus === 'Approved') ? '#d3a907' : '#ccc'}">
                 {{employee.nomStatus}}
+              
             </div>
             <div class="col col-md-3" style="text-align:center;">
                 <button type="button" class="btn btn-default">REVIEW</button>
