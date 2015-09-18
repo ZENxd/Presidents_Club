@@ -3,7 +3,7 @@
   angular.module('presidentsClubApp')
     .service('employeeService', function() {
       
-      var data = {
+      var template = {
        'id': '1',
        'number': '',
        'so': '',
@@ -31,7 +31,47 @@
       };
 
       this.getEmployeeData = function(callback) {
-        callback(data);
+        callback(template);
+      };
+
+      var nominees = [
+        {first: 'BEN', last: 'EDWARDS', title: 'Product Specialist'},
+        {first: 'MATTHEW', last: ' TYRELL', title: 'Account Manager' },
+        {first: 'ALLISON', last: 'CAMPBELL', title: 'District Sales Manager'},
+        {first: 'JESSE', last: 'BENNETT-CHAMBERLAIN', title: 'Product Specialist'},
+        {first: 'KIRK', last: 'HERRON', title: 'Product Specialist'},
+        {first: 'TAYLOR', last: 'BOSWELL', title: 'Account Manager'},
+        {first: 'JENNIFER', last: 'BRADSHAW', title: 'District Sales Manager'},
+        {first: 'BRIAN', last: 'KAUFMAN', title: 'Product Specialist'},
+        {first: 'CARLOS', last: 'SANCHEZ', title: 'Product Specialist' },
+        {first: 'WEYLAND', last: 'ERICKSON', title: 'Account Manager'},
+        {first: 'AMY', last: 'PARKER', title: 'District Sales Manager'},
+        {first: 'DUSTIN', last: 'ANDERSON', title: 'Product Specialist'}
+      ];
+
+      var nominators = [
+        'Trent Walton', 'Jeremy Turner', 'Megham Armstrong', 'Ed Williams',
+        'Trent Walton', 'Jeremy Turner', 'Megham Armstrong', 'Ed Williams',
+        'Trent Walton', 'Jeremy Turner', 'Megham Armstrong', 'Ed Williams'
+      ];
+
+      var status = [
+        'Awaiting Approval', 'Denied', 'Approved', 'Denied',
+        'Awaiting Approval', 'Awaiting Approval', 'Denied', 'Approved',
+        'Approved', 'Awaiting Approval', 'Awaiting Approval', 'Denied'
+      ];
+
+      this.getEmployees = function(callback) {
+        var employees = [];
+        angular.forEach(nominees, function(nominee, index){
+          var employee = angular.copy(template);
+          employee.first = nominee.first;
+          employee.last = nominee.last;
+          employee.nominator = {'name': nominators[index]};
+          employee.nomStatus = status[index];
+          employees.push(employee);
+        });
+        callback(employees);
       };
 
     });

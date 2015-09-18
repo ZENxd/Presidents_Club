@@ -1,0 +1,30 @@
+<div class="container heading" style="width:700px;">
+    <p class="lead">
+        <img src="../images/seal.png">
+        <p class="lead">
+            THE PRESIDENT'S CLUB
+        </p>
+        <h1>2015 NOMINEES</h1>
+    </p>
+    <p class="margin-top-30">
+        Curabitur blandit tempus porttitor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare vel eu leo.
+    </p>
+</div>
+<div class="panel panel-default margin-top-30">
+    <div class="panel-body">
+        <div class="row" ng-repeat="employee in employees">
+            <div class="col col-md-3">
+                {{employee.first}} {{employee.last}}
+            </div>
+            <div class="col col-md-3">
+                {{employee.nominator.name}}
+            </div>
+            <div class="col col-md-3">
+                {{employee.nomStatus}}
+            </div>
+            <div class="col col-md-3" style="text-align:center;">
+                <button type="button" class="btn btn-default">REVIEW</button>
+            </div>
+        </div>
+    </div>
+</div>

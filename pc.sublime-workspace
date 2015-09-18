@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"ng-cl",
+				"ng-click	AngularJS"
+			],
+			[
+				"i",
+				"i	Tag"
+			],
+			[
+				"button",
+				"bs3-button:primary	bs3-button-primary"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"border-t",
+				"border-top"
+			],
+			[
 				"lastRow",
 				"lastRowIndex"
 			],
@@ -32,14 +76,6 @@
 				"bs3-button:primary	bs3-button-primary"
 			],
 			[
-				"pad",
-				"padding"
-			],
-			[
-				"ng-cl",
-				"ng-click	AngularJS"
-			],
-			[
 				"in",
 				"input"
 			],
@@ -50,14 +86,6 @@
 			[
 				"close",
 				"closeable"
-			],
-			[
-				"mar",
-				"margin-top"
-			],
-			[
-				"padd",
-				"padding-left"
 			],
 			[
 				"email",
@@ -92,24 +120,12 @@
 				"font-size"
 			],
 			[
-				"fon",
-				"font-size"
-			],
-			[
-				"i",
-				"italic"
-			],
-			[
 				"co",
 				"copy"
 			],
 			[
 				"con",
 				"controller	AngularJS"
-			],
-			[
-				"marg",
-				"margin-bottom"
 			],
 			[
 				"margin",
@@ -130,10 +146,6 @@
 			[
 				"buy",
 				"bs3-xs-button:primary	bs3-mini-button-primary"
-			],
-			[
-				"text",
-				"text-align"
 			],
 			[
 				"rou",
@@ -288,10 +300,6 @@
 				"border-top-left-radius"
 			],
 			[
-				"border-t",
-				"border-top-left-radius"
-			],
-			[
 				"rgb",
 				"rgba()"
 			],
@@ -432,10 +440,6 @@
 				"border-radius"
 			],
 			[
-				"back",
-				"background-color"
-			],
-			[
 				"line",
 				"line-height"
 			],
@@ -510,15 +514,35 @@
 			[
 				"patter",
 				"patterns"
-			],
-			[
-				"princ",
-				"Principles"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "app/styles/main.scss",
+			"settings":
+			{
+				"buffer_size": 6181,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/thanks.html",
+			"settings":
+			{
+				"buffer_size": 725,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/index.html",
+			"settings":
+			{
+				"buffer_size": 4392,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -527,17 +551,21 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "ind",
+		"height": 327.0,
+		"last_filter": "copy",
 		"selected_items":
 		[
 			[
-				"ind",
-				"Indentation: Reindent Lines"
+				"copy",
+				"File: Copy as Tag script"
 			],
 			[
-				"copy",
-				"File: Copy as Tag style"
+				"upp",
+				"Convert Case: Upper Case"
+			],
+			[
+				"ind",
+				"Indentation: Reindent Lines"
 			],
 			[
 				"install",
@@ -617,10 +645,36 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/david/sites/Presidents_Club"
+		"/Users/david/sites/Presidents_Club",
+		"/Users/david/sites/Presidents_Club/app",
+		"/Users/david/sites/Presidents_Club/app/scripts",
+		"/Users/david/sites/Presidents_Club/app/scripts/controllers",
+		"/Users/david/sites/Presidents_Club/app/scripts/services",
+		"/Users/david/sites/Presidents_Club/app/styles",
+		"/Users/david/sites/Presidents_Club/app/views",
+		"/Users/david/sites/Presidents_Club/bower_components/angular",
+		"/Users/david/sites/Presidents_Club/bower_components/angular-ui-mask/dist"
 	],
 	"file_history":
 	[
+		"/Users/david/sites/Presidents_Club/app/views/nominator.html",
+		"/Users/david/sites/Presidents_Club/app/views/performance.html",
+		"/Users/david/sites/Presidents_Club/app/views/nominee.html",
+		"/Users/david/sites/Presidents_Club/app/views/main.html",
+		"/Users/david/sites/Presidents_Club/app/views/comments.html",
+		"/Users/david/sites/Presidents_Club/app/scripts/controllers/nominator.js",
+		"/Users/david/sites/Presidents_Club/app/scripts/controllers/thanks.js",
+		"/Users/david/sites/Presidents_Club/app/index.html",
+		"/Users/david/sites/Presidents_Club/app/scripts/app.js",
+		"/Users/david/sites/Presidents_Club/app/views/error-messages.html",
+		"/Users/david/sites/Presidents_Club/app/scripts/services/usersService.js",
+		"/Users/david/sites/Presidents_Club/app/scripts/controllers/comments.js",
+		"/Users/david/sites/Presidents_Club/app/scripts/services/employeeService.js",
+		"/Users/david/sites/Presidents_Club/app/scripts/controllers/performance.js",
+		"/Users/david/sites/Presidents_Club/app/scripts/controllers/nominee.js",
+		"/Users/david/sites/Presidents_Club/app/scripts/controllers/main.js",
+		"/Users/david/sites/Presidents_Club/bower.json",
+		"/Users/david/sites/Presidents_Club/app/scripts/services/data.js",
 		"/Users/david/sites/ep-common/demos/ui-grid/app/index.html",
 		"/Users/david/sites/ep-common/src/ui-grid/plugins/UiGridDragSelectionPlugin.js",
 		"/Users/david/sites/ep-common/demos/ui-grid/bower_components/ep-common/src/ui-grid/plugins/UiGridDragSelectionPlugin.js",
@@ -730,29 +784,11 @@
 		"/Applications/MAMP/htdocs/EP_components/app/templates/carAllowance.tpl.html",
 		"/Applications/MAMP/htdocs/EP_components/app/templates/panel.tpl.html",
 		"/Applications/MAMP/htdocs/EP_components/app/controllers/boxRental.js",
-		"/Applications/MAMP/htdocs/EP_components/app/templates/boxRental.html",
-		"/Applications/MAMP/htdocs/EP_components/css/boxRental.css",
-		"/Applications/MAMP/htdocs/EP_components/app/templates/cellAllowance.html",
-		"/Applications/MAMP/htdocs/EP_components/app/templates/carAllowance.html",
-		"/Applications/MAMP/htdocs/EP_components/app/controllers/cellAllowance.js",
-		"/Applications/MAMP/htdocs/EP_components/app/controllers/carAllowance.js",
-		"/Applications/MAMP/htdocs/EP_components/app/templates/computerRental.html",
-		"/Applications/MAMP/htdocs/EP_components/app/templates/alerts.html",
-		"/Applications/MAMP/htdocs/EP_components/css/alerts.css",
-		"/Applications/MAMP/htdocs/EP_components/app/templates/alert.client.view.tpl.html",
-		"/Applications/MAMP/htdocs/EP_components/css/computerRental.css",
-		"/Applications/MAMP/htdocs/EP_components/css/cellAllowance.css",
-		"/Applications/MAMP/htdocs/EP_components/css/carAllowance.css",
-		"/Applications/MAMP/htdocs/EP_components/css/style.css",
-		"/Applications/MAMP/htdocs/EP_components/css/forms.css",
-		"/Applications/MAMP/htdocs/EP_components/app/templates/aboutYou.html",
-		"/Applications/MAMP/htdocs/EP_components/app/templates/forms.html",
-		"/Applications/MAMP/htdocs/EP_components/app/controllers/forms2Ctrl.js",
-		"/Applications/MAMP/htdocs/EP_components/app/controllers/onboardingCtrl.js"
+		"/Applications/MAMP/htdocs/EP_components/app/templates/boxRental.html"
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -782,6 +818,86 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"left",
+			"Nominator",
+			"nominator",
+			"right",
+			"Nominator",
+			"nemail",
+			"nlast",
+			"nfirst",
+			"Comments",
+			"\"3\"",
+			"behavior",
+			"planning",
+			"$error\">",
+			"\"70\"",
+			"70",
+			"planning",
+			"performance",
+			"ng-message",
+			"behavior",
+			"Behavior",
+			"behavior",
+			"relationship",
+			"Relationship",
+			"relationship",
+			"planning",
+			"Planning",
+			"planning",
+			"performance",
+			"number",
+			"Number",
+			"number",
+			"Main",
+			"number",
+			"phone",
+			"title",
+			"percentOver",
+			"sales",
+			"salesQuota",
+			"span",
+			"number",
+			"Number",
+			"number",
+			"email",
+			"number",
+			"Main",
+			"About",
+			"ng-required=\"{{employee.nominatedByManager === 'Yes'}}\"",
+			" && employee.nominatedByManager === 'Yes'",
+			" && !userForm.nfirst.$pristine && employee.nominatedByManager === 'Yes'",
+			"employee.nominatedByManager === 'No'",
+			"nemail",
+			"nlast",
+			"nfirst",
+			"email",
+			"nfirst",
+			"email",
+			"so",
+			"mobile",
+			"phone",
+			"address",
+			"number",
+			"country",
+			"region",
+			"so",
+			"help-block",
+			"number",
+			"service_id",
+			"service",
+			"number",
+			"name",
+			"email",
+			"Email",
+			"primary",
+			"]",
+			"so",
+			"region",
+			"2",
+			"region",
+			"so",
+			"jumbotron",
 			"cmdDown",
 			"firstColIndex",
 			"colIndex",
@@ -829,87 +945,7 @@
 			"didMakeSelection",
 			"getSelectedData",
 			"columnMap",
-			"$scope",
-			"57",
-			"this",
-			"masklast",
-			"scope.dob",
-			"ssn-placeholder",
-			"ssnArray",
-			"3",
-			"showHideSSN",
-			"toggleSSNMask",
-			"ssn",
-			"$scope",
-			"data",
-			"json",
-			"copySelection",
-			"\\n",
-			"n",
-			"sheetclip-data",
-			"sheetclipData",
-			"sheetclip-data",
-			"$scope",
-			"matrix",
-			"MATRIX",
-			"matrix",
-			"Matrix",
-			"matrix",
-			"Matrix",
-			"matrix",
-			"Matrix",
-			"matrix",
-			"Matrix",
-			"matrix",
-			"Matrix",
-			"matrix",
-			"buildMatrix",
-			"copySelection",
-			"copyClipboardSelection",
-			"cell.Cell.scope().$apply();",
-			"cell",
-			"Cell",
-			"cell",
-			"colIndex",
-			"focus",
-			"focused",
-			"focus",
-			"currentSelection",
-			"CurrentSelection",
-			"currentSelection",
-			"item",
-			"cell",
-			"Col",
-			"col",
-			"Col",
-			"Row",
-			"row",
-			"Row",
-			"row",
-			"Row",
-			"self.currentCells[index]",
-			"self.copiedGridColData",
-			"$scope.copiedGridColData",
-			"$scope",
-			"selection-cell",
-			"''",
-			"formatDataForPaste",
-			"mapObject",
-			"Row",
-			"\"",
-			"range",
-			"gold",
-			"Row",
-			"value",
-			"z",
-			"mySelection",
-			"multiSelect",
-			"MultiSelect",
-			"multiSelect",
-			"rowCnt",
-			"copyParams",
-			"wish",
-			"pasteIndex"
+			"$scope"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -956,8 +992,100 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/styles/main.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6181,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4751,
+								4751
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1262.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/thanks.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 725,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								635,
+								635
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4392,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1073,
+								1073
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
