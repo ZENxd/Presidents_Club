@@ -8,8 +8,13 @@
  * Controller of the presidentsClubApp
  */
 angular.module('presidentsClubApp')
-  .controller('ListCtrl', ['$scope', '$q', '$location', 'employeeService', 'usersService',
-   function ($scope, $q, $location, employeeService, usersService) {
+  .controller('ListCtrl', ['$scope', '$q', '$location', 'employeeService', 'usersService', 'settings', 
+   function ($scope, $q, $location, employeeService, usersService, settings) {
+
+    settings.setValue('logo', true);
+    settings.setValue('back', false);
+    settings.setValue('showNav', true);
+
     $scope.user = {};
     $scope.employees = [];
 
@@ -20,12 +25,9 @@ angular.module('presidentsClubApp')
     usersService.getUserData(function(result) {
       $scope.user = result;
     });
-    
-    $scope.next = function(){
-    	// check to make sure the form is completely valid
-        //if ($scope.userForm.$valid) {
-        	$location.path( '/step1' );
-        //}
+
+    $scope.detail = function(id){
+        $location.path( '/list/'+id );
     };
 
   }]);

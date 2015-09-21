@@ -56,7 +56,16 @@ angular
         controller: 'ListCtrl',
         controllerAs: 'list'
       })
+      .when('/list/:id', {
+        templateUrl: 'views/detail.html',
+        controller: 'DetailCtrl',
+        controllerAs: 'detail'
+      })
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
+  .run(function($rootScope) {
+    //set global values
+    $rootScope.foo = 'bar';
+});

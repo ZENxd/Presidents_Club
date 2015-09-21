@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+
+    <div class="form-heading">
+      <div class="wave">
+        <div>
+            <div class="pull-left">
+                <span class="step">&nbsp;</span><br/>
+                <span class="step-name">THE NOMINEE</span>
+            </div>
+            <div class="pull-right right">
+                <button type="button" class="btn btn-approve" ng-click="approve(employee.id)">APPROVE</button>
+                <button type="button" class="btn btn-deny" ng-click="deny(employee.id)">DENY</button>
+            </div>
+        </div>
+            
+      </div>
+    </div>
+
+    <div class="panel-body">
+      <div class="container form">
+        {{employee.first}}
+      </div>
+    </div>
+
+</div>

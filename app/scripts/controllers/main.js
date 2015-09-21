@@ -8,8 +8,12 @@
  * Controller of the presidentsClubApp
  */
 angular.module('presidentsClubApp')
-  .controller('MainCtrl', ['$scope', '$q', '$location', 'usersService',
-   function ($scope, $q, $location, usersService) {
+  .controller('MainCtrl', ['$scope', '$q', '$location', 'usersService', 'settings', 
+   function ($scope, $q, $location, usersService, settings) {
+
+    settings.setValue('showNav', true);
+    settings.setValue('showHelp', false);
+
     $scope.user = {};
 
     usersService.getUserData(function(result) {

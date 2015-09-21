@@ -8,11 +8,14 @@
  * Controller of the presidentsClubApp step 1
  */
 angular.module('presidentsClubApp')
-  .controller('NomineeCtrl', ['$scope', '$q', '$location', 'employeeService', 'dataService', 'usersService',
-   function ($scope, $q, $location, employeeService, dataService, usersService) {
+  .controller('NomineeCtrl', ['$scope', '$q', '$location', 'employeeService', 'dataService', 'usersService', 'settings', 
+   function ($scope, $q, $location, employeeService, dataService, usersService, settings) {
   	$scope.step = 1;
   	$scope.employee = null;
   	$scope.user = null;
+
+    settings.setValue('showNav', true);
+    settings.setValue('showHelp', true);
 
   	//Consumable Data
   	$scope.so = null;

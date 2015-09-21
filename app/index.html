@@ -22,16 +22,20 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
+    <div class="header" ng-controller="NavCtrl" ng-show="settings.showNav">
       <div class="navbar navbar-default" role="navigation">
         <!-- <div class="container"> -->
           <div class="navbar-header">
-            <a class="navbar-brand" href="#/"><img src="../images/logo.png"></a>
+            <a class="navbar-brand" href="#/" ng-show="settings.logo"><img src="../images/logo.png"></a>
+            <a class="navbar-brand" href="#/list" ng-show="settings.back"><i class="fa fa-angle-left"></i>&nbsp; 2015 NOMINEES</a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right" ng-show="settings.showHelp">
               <li><a href="#/"><i class="fa fa-question-circle"></i> Help</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" ng-show="settings.back">
+              <li><a href="#/">Dave Stewart | <i class="fa fa-caret-down"></i></a></li>
             </ul>
           </div>
         <!-- </div> -->
@@ -80,15 +84,18 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/nominee.js"></script>
-        <script src="scripts/controllers/performance.js"></script>
-        <script src="scripts/controllers/comments.js"></script>
-        <script src="scripts/controllers/nominator.js"></script>
-        <script src="scripts/controllers/thanks.js"></script>
-        <script src="scripts/controllers/list.js"></script>
+        <script type="text/javascript" src="scripts/app.js"></script>
+        <script type="text/javascript" src="scripts/controllers/nav.js"></script>
+        <script type="text/javascript" src="scripts/controllers/main.js"></script>
+        <script type="text/javascript" src="scripts/controllers/nominee.js"></script>
+        <script type="text/javascript" src="scripts/controllers/performance.js"></script>
+        <script type="text/javascript" src="scripts/controllers/comments.js"></script>
+        <script type="text/javascript" src="scripts/controllers/nominator.js"></script>
+        <script type="text/javascript" src="scripts/controllers/thanks.js"></script>
+        <script type="text/javascript" src="scripts/controllers/list.js"></script>
+        <script type="text/javascript" src="scripts/controllers/detail.js"></script>
         <!-- Services -->
+        <script type="text/javascript" src="scripts/services/settings.js"></script>
         <script type="text/javascript" src="scripts/services/employeeService.js"></script>
         <script type="text/javascript" src="scripts/services/data.js"></script>
         <script type="text/javascript" src="scripts/services/usersService.js"></script>

@@ -65,6 +65,7 @@
         var employees = [];
         angular.forEach(nominees, function(nominee, index){
           var employee = angular.copy(template);
+          employee.id = index;
           employee.first = nominee.first;
           employee.last = nominee.last;
           employee.title = nominee.title;
@@ -75,5 +76,16 @@
         callback(employees);
       };
 
+      this.queryEmployee = function(callback, id) {
+        var employee = angular.copy(template);
+        if(!id) {id = 0;}
+        employee.id = id;
+        employee.first = nominees[id].first;
+        employee.last = nominees[id].last;
+        employee.title = nominees[id].title;
+        employee.nominator = {'name': nominators[id]};
+        employee.nomStatus = status[id];
+        callback(employee);
+      };
     });
 })();

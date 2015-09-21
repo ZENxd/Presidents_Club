@@ -46,7 +46,9 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
-
+.navbar-default .navbar-brand {
+  color: #fff;
+}
 /* Custom page header */
 .navbar-default {
     background-color: transparent;
@@ -123,6 +125,10 @@ body {
       font-family: 'Roboto Condensed', sans-serif;
       font-weight: 400;
       margin-right: 20px;
+    }
+    .right {
+      padding-top: 20px;
+      margin-right: 35px;
     }
   }
 }
@@ -201,6 +207,45 @@ body {
     color: #CA1D2D
   }
 }
+
+.btn-approve {
+  background: #e2ba23;
+  color: #ffffff;
+  font-size: 1em;
+  letter-spacing: 2px;
+}
+.btn-approve > i {
+  float: right;
+  padding-top: 2px;
+}
+.btn-approve:hover, .btn-approve:focus, .btn-approve:active, .btn-approve.active, .open > .dropdown-toggle.btn-approve {
+  background: #CAA823;
+}
+ 
+.btn-approve:active, .btn-approve.active {
+  background: #CAA823;
+  box-shadow: none;
+}
+
+.btn-deny {
+  background: #E6E6E6;
+  color: #E02B2D;
+  font-size: 1em;
+  letter-spacing: 2px;
+}
+.btn-deny > i {
+  float: right;
+  padding-top: 2px;
+}
+.btn-deny:hover, .btn-deny:focus, .btn-deny:active, .btn-deny.active, .open > .dropdown-toggle.btn-deny {
+  background: #B9B9B9;
+}
+ 
+.btn-deny:active, .btn-deny.active {
+  background: #B9B9B9;
+  box-shadow: none;
+}
+
 .row.underline {
   border-bottom: 1px solid #ccc;
 }
