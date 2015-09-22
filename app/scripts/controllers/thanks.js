@@ -21,9 +21,9 @@ angular.module('presidentsClubApp')
             $scope.user = {};
             $scope.employee = null;
 
-            employeeService.getEmployeeData(function(result) {
-                $scope.employee = result;
-            });
+            // employeeService.getEmployeeTemplate(function(result) {
+            //     $scope.employee = result;
+            // });
 
             usersService.getUserData(function(result) {
                 $scope.user = result;

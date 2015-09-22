@@ -32,7 +32,7 @@
               <span class="required">*</span> Is the submitter different from the nominator?<br/>
               <label>
                 <input type="checkbox"
-                 ng-model="user.submitter"
+                 ng-model="employee.submitter.value"
                  ng-true-value="'Yes'"
                  ng-false-value="'No'">
                 Yes
@@ -40,17 +40,17 @@
             </div>
           </div>
 
-          <div ng-if="user.submitter === 'Yes'">
+          <div ng-if="employee.submitter.value === 'Yes'">
             <div class="row">
               <div class="col col-md-3" ng-class="{ 'has-error' : userForm.sfirst.$invalid && !userForm.sfirst.$pristine }">
                 <span class="required">*</span> Submitter's First Name
-                <input type="text" name="sfirst" class="form-control required" placeholder="" ng-model="user.submitterFirst" required>
+                <input type="text" name="sfirst" class="form-control required" placeholder="" ng-model="employee.submitter.first" required>
                 <p ng-show="userForm.sfirst.$invalid && !userForm.sfirst.$pristine" class="error">First name is required.</p>
               </div>
 
               <div class="col col-md-3" ng-class="{ 'has-error' : userForm.slast.$invalid && !userForm.slast.$pristine }">
                 <span class="required">*</span> Submitter's Last Name
-                <input type="text" name="slast" class="form-control required" placeholder="" ng-model="user.submitterLast" required>
+                <input type="text" name="slast" class="form-control required" placeholder="" ng-model="employee.submitter.last" required>
                 <p ng-show="userForm.slast.$invalid && !userForm.slast.$pristine" class="error">Last name is required.</p>
               </div>
             </div>
@@ -58,7 +58,7 @@
             <div class="row">
               <div class="col col-md-3" ng-class="{ 'has-error' : userForm.semail.$invalid && !userForm.semail.$pristine }">
                 <span class="required">*</span> Submitter's Email
-                <input type="email" name="semail" class="form-control required" placeholder="" ng-model="user.submitterEmail" required>
+                <input type="email" name="semail" class="form-control required" placeholder="" ng-model="employee.submitter.email" required>
                 <p ng-show="userForm.semail.$invalid && !userForm.semail.$pristine" class="error">Email is required.</p>
               </div>
             </div>

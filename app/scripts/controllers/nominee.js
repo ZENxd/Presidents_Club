@@ -24,10 +24,14 @@ angular.module('presidentsClubApp')
   	$scope.so = null;
   	$scope.regions = null;
   	$scope.countries = null;
-  	$scope.salutations = ['Mr', 'Ms', 'Mrs', 'Dr'];
   	$scope.titles = null;
+    $scope.salutations = null;
 
-  	employeeService.getEmployeeData(function(result) {
+    // employeeService.getEmployees(function(result) {
+    //     $scope.employee = result[0];
+    // });
+
+  	employeeService.getEmployeeTemplate(function(result) {
       $scope.employee = result;
     });
 
@@ -36,6 +40,7 @@ angular.module('presidentsClubApp')
       $scope.regions = result.regions;
       $scope.countries = result.countries;
       $scope.titles = result.titles;
+      $scope.salutations = result.salutations;
     });
 
     usersService.getUserData(function(result) {

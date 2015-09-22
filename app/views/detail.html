@@ -21,9 +21,9 @@
         
         <div class="row">
           <div class="col-md-12 detail">
-            {{employee.salutation}}
+            {{employee.salutation.name}}
             <h1>{{employee.first}} {{employee.last}}</h1>
-            {{employee.title}}
+            {{employee.title.name}}
           </div>
         </div>
 
@@ -34,18 +34,18 @@
           </div>
           <div class="col-md-6 detail">
             Sales Organization<br/>
-            <span>{{employee.so}}</span>
+            <span>{{employee.so.name}}</span>
           </div>
         </div>
 
         <div class="row">
           <div class="col-md-6 detail">
             Region<br/>
-            <span>{{employee.region}}</span>
+            <span>{{employee.region.name}}</span>
           </div>
           <div class="col-md-6 detail">
             Work Country<br/>
-            <span>{{employee.country}}</span>
+            <span>{{employee.country.name}}</span>
           </div>
         </div>
 
@@ -132,7 +132,7 @@
           <div class="row">
             <div class="col-md-4 detail">
               Nominator<br/>
-              <span>{{employee.nominator.name}}</span>
+              <span>{{employee.nominator.first}} {{employee.nominator.last}}</span>
             </div>
             <div class="col-md-4 detail">
               Nominator's email address<br/>

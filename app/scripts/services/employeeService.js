@@ -7,26 +7,26 @@
       var template = {
        'id': '1',
        'number': '',
-       'so': '',
-       'region': '',
-       'country': '',
-       'salutation': '',
+       'so': {},
+       'region': {},
+       'country': {},
+       'salutation': {},
        'first': '',
        'last': '',
        'address': '',
        'officeTel': '',
        'mobileTel': '',
        'email': '',
-       'title': '',
-       'nominatedByManager': 'Yes',
+       'title': {},
+       'nominatedByManager': 'No',
        'recurringWinner': 'No',
-       'winCount': '',
+       'winCount': {},
        'years': '',
        'performance': {
-          'salesQuota': '',
-          'sales': '',
-          'percentOver': '',
-          'percentLast': ''
+          'salesQuota': null,
+          'sales': null,
+          'percentOver': null,
+          'percentLast': null
        },
        'comments': {
           'performance' : '',
@@ -41,33 +41,41 @@
           'email': '', 
           'phone': ''
        },
+       'submitter': {value: 'No', first: '', last: '', email: ''},
        'nomStatus': ''
       };
 
-      this.getEmployeeData = function(callback) {
+      this.getEmployeeTemplate = function(callback) {
         callback(template);
       };
 
       var nominees = [
-        {salutation: 'Mr.',  number: '225087', first: 'BEN', last: 'EDWARDS', title: 'Product Specialist'},
-        {salutation: 'Mr.',  number: '155084', first: 'MATTHEW', last: ' TYRELL', title: 'Account Manager' },
-        {salutation: 'Mrs.', number: '233087', first: 'ALLISON', last: 'CAMPBELL', title: 'District Sales Manager'},
-        {salutation: 'Mr.',  number: '234086', first: 'JESSE', last: 'BENNETT-CHAMBERLAIN', title: 'Product Specialist'},
-        {salutation: 'Mr.',  number: '455087', first: 'KIRK', last: 'HERRON', title: 'Product Specialist'},
-        {salutation: 'Mr.',  number: '355087', first: 'TAYLOR', last: 'BOSWELL', title: 'Account Manager'},
-        {salutation: 'Ms.',  number: '255344', first: 'JENNIFER', last: 'BRADSHAW', title: 'District Sales Manager'},
-        {salutation: 'Mr.',  number: '255287', first: 'BRIAN', last: 'KAUFMAN', title: 'Product Specialist'},
-        {salutation: 'Mr.',  number: '252587', first: 'CARLOS', last: 'SANCHEZ', title: 'Product Specialist' },
-        {salutation: 'Mr.',  number: '285083', first: 'WEYLAND', last: 'ERICKSON', title: 'Account Manager'},
-        {salutation: 'Ms.',  number: '143087', first: 'AMY', last: 'PARKER', title: 'District Sales Manager'},
-        {salutation: 'Mr.',  number: '255025', first: 'DUSTIN', last: 'ANDERSON', title: 'Product Specialist'}
+        {salutation: {id: 0, name: 'Mr.'},  number: '225087', first: 'BEN', last: 'EDWARDS', title:{id: 0, name: 'Accountant'}},
+        {salutation: {id: 3, name: 'Dr.'},  number: '155084', first: 'MATTHEW', last: ' TYRELL', title:{id: 1, name: 'Account Manager' }},
+        {salutation: {id: 2, name: 'Mrs.'}, number: '233087', first: 'ALLISON', last: 'CAMPBELL', title:{id: 2, name: 'District Sales Manager'}},
+        {salutation: {id: 0, name: 'Mr.'},  number: '234086', first: 'JESSE', last: 'BENNETT-CHAMBERLAIN', title:{id: 3, name: 'Product Designer'}},
+        {salutation: {id: 0, name: 'Mr.'},  number: '455087', first: 'KIRK', last: 'HERRON', title:{id: 4, name: 'Product Specialist'}},
+        {salutation: {id: 0, name: 'Mr.'},  number: '355087', first: 'TAYLOR', last: 'BOSWELL', title:{id: 0, name: 'Account Manager'}},
+        {salutation: {id: 1, name: 'Ms.'},  number: '255344', first: 'JENNIFER', last: 'BRADSHAW', title:{id: 1, name: 'Account Manager'}},
+        {salutation: {id: 0, name: 'Mr.'},  number: '255287', first: 'BRIAN', last: 'KAUFMAN', title:{id: 2, name: 'District Sales Managr'}},
+        {salutation: {id: 0, name: 'Mr.'},  number: '252587', first: 'CARLOS', last: 'SANCHEZ', title:{id: 3, name: 'Product Designer' }},
+        {salutation: {id: 0, name: 'Mr.'},  number: '285083', first: 'WEYLAND', last: 'ERICKSON', title:{id: 4, name: 'Product Specialist'}},
+        {salutation: {id: 1, name: 'Ms.'},  number: '143087', first: 'AMY', last: 'PARKER', title:{id: 0, name: 'Accountant'}},
+        {salutation: {id: 3, name: 'Dr.'},  number: '255025', first: 'DUSTIN', last: 'ANDERSON', title:{id: 1, name: 'Account Manager'}}
       ];
 
       var details = {
-        so: 'LSAG/ACG', region: 'China', country: 'USA',
+        so: {id: '0', name: 'LSAG/ACG'},
+        region: {id: '0', name: 'China'}, 
+        country: {id: '0', name: 'USA'},
         address: '5301 Stevens Creek Blvd., Santa Clara CA, 95051',
         officeTel: '8774244536', mobileTel: '4083458886',
-        performance: {salesQuota: '1500000', sales: '1700000', percentOver: '110', percentLast: '103'}
+        recurringWinner: 'Yes',
+        performance: {salesQuota: 1500000, sales: 1700000, percentOver: 110, percentLast: 103},
+        nominatedByManager: 'Yes',
+        winCount: {id: '1', name: '2'},
+        years: '2010, 2011',
+        submitter: {value: 'Yes', first: 'Joe', last: 'Blogs', email: 'joeblogs@gmail.com'}
       };
 
       var comment = 'Curabitur blandit tempus porttitor. Maecenas faucibus mollis interdum. Nullam id dolor id nibh ultricies' +
@@ -80,12 +88,6 @@
         {first: 'Trent', last: 'Walton', email: '', phone: '8774244536'}, {first: 'Jeremy', last: 'Turner', email: '', phone: '8774244536'}, {first: 'Megham', last: 'Armstrong', email: '', phone: '8774244536'}, {first: 'Ed', last: 'Williams', email: '', phone: '8774244536'},
         {first: 'Trent', last: 'Walton', email: '', phone: '8774244536'}, {first: 'Jeremy', last: 'Turner', email: '', phone: '8774244536'}, {first: 'Megham', last: 'Armstrong', email: '', phone: '8774244536'}, {first: 'Ed', last: 'Williams', email: '', phone: '8774244536'}
       ];
-
-      // var status = [
-      //   'Awaiting Approval', 'Denied', 'Approved', 'Denied',
-      //   'Awaiting Approval', 'Awaiting Approval', 'Denied', 'Approved',
-      //   'Approved', 'Awaiting Approval', 'Awaiting Approval', 'Denied'
-      // ];
 
       this.makeEmployees = function(){
         angular.forEach(nominees, function(nominee, index){
@@ -103,6 +105,11 @@
           employee.address = details.address;
           employee.officeTel = details.officeTel;
           employee.mobileTel = details.mobileTel;
+          employee.recurringWinner = details.recurringWinner;
+          employee.nominatedByManager = details.nominatedByManager;
+          employee.winCount = details.winCount;
+          employee.years = details.years;
+          employee.submitter = details.submitter;
           employee.performance.salesQuota = details.performance.salesQuota;
           employee.performance.sales = details.performance.sales;
           employee.performance.percentOver = details.performance.percentOver;
@@ -112,7 +119,7 @@
           employee.comments.relationship = comment;
           employee.comments.behavior = comment;
           employee.comments.leadership = comment;
-          employee.nominator = {name: nominators[index].first + ' ' + nominators[index].last, 
+          employee.nominator = {first: nominators[index].first, last: nominators[index].last, 
                                 email: nominators[index].first+'@agilent.com',
                                 phone: nominators[index].phone};
           employee.nomStatus = 'Awaiting Approval';
