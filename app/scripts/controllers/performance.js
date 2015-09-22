@@ -8,9 +8,16 @@
  * Controller of the presidentsClubApp step 2
  */
 angular.module('presidentsClubApp')
-  .controller('PerformanceCtrl', ['$scope', '$q', '$location', 'employeeService', 'dataService', 'usersService',
-   function ($scope, $q, $location, employeeService, dataService, usersService) {
-  	$scope.step = 2;
+  .controller('PerformanceCtrl', ['$scope', '$q', '$location', 'employeeService', 'dataService', 'usersService', 'settings', 
+   function ($scope, $q, $location, employeeService, dataService, usersService, settings) {
+  	
+    settings.setValue('showNav', true);
+    settings.setValue('showHelp', true);
+    settings.setValue('logo', true);
+    settings.setValue('back', false);
+    settings.setValue('user', false);
+    
+    $scope.step = 2;
   	$scope.employee = null;
   	$scope.user = null;
 

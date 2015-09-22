@@ -7,7 +7,8 @@
         'showNav': false,
         'showHelp': false,
         'logo': true,
-        'back': false
+        'back': false,
+        'user': false
       };
 
       this.getSettings = function(callback) {

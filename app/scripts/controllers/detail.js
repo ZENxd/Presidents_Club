@@ -14,6 +14,7 @@ angular.module('presidentsClubApp')
     settings.setValue('showNav', true);
     settings.setValue('logo', false);
     settings.setValue('back', true);
+    settings.setValue('user', true);
 
     $scope.user = {};
     $scope.employee = null;
@@ -32,16 +33,29 @@ angular.module('presidentsClubApp')
 
     $scope.approve = function(id){
       $scope.id = id;
-      $scope.employee.status = 'Approved';
+      $scope.employee.nomStatus = 'Approved';
     };
 
     $scope.deny = function(id){
       $scope.id = id;
-      $scope.employee.status = 'Denied';
+      $scope.employee.nomStatus = 'Denied';
     };
 
     $scope.back = function(){
       $location.path( '/list' );
+    };
+
+    $scope.formatPhone = function(value) {
+      if(value.length === 10)
+      {
+        value = value.replace(/-/g, '');
+        var areaCode = value.substring(0, 3);
+        var exchange = value.substring(3, 6);
+        var tail = value.substring(6);
+        return "(" + areaCode + ")" + "-" + exchange + "-" + tail;
+      } else {
+        return '';
+      }
     };
 
   }]);

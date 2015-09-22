@@ -16,7 +16,10 @@ angular.module('presidentsClubApp')
 
     settings.setValue('showNav', true);
     settings.setValue('showHelp', true);
-
+    settings.setValue('logo', true);
+    settings.setValue('back', false);
+    settings.setValue('user', false);
+    
   	//Consumable Data
   	$scope.so = null;
   	$scope.regions = null;

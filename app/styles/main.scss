@@ -85,6 +85,32 @@ body {
   font-size: 1.3em;
   letter-spacing: 5px;
 }
+.detail {
+  h1 {
+    color: #363636;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  span {
+    color: #515151;
+    font-size: 1.7em;
+  }
+  .comment {
+    font-size: 1.2em;
+    margin-top: 5px;
+    color: #646464;
+  }
+}
+.gray-container{
+  margin-top: 20px;
+  margin-left: -20px;
+  margin-right: 45px;
+  background-color: #F9F9F9;
+  border: 1px solid #EDEDED;
+  padding: 5px 20px 20px 20px;
+  border-radius: 4px;
+}
 .btn-primary.light {
     background-color: #a0c6ea;
     border-color: #a0c6ea;
@@ -310,6 +336,9 @@ body {
 }
 .padding-left-20 {
   padding-left: 20px;
+}
+.padding-left-50 {
+  padding-left: 50px;
 }
 .padding-right-5 {
   padding-right: 5px;

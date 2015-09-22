@@ -18,7 +18,133 @@
 
     <div class="panel-body">
       <div class="container form">
-        {{employee.first}}
+        
+        <div class="row">
+          <div class="col-md-12 detail">
+            {{employee.salutation}}
+            <h1>{{employee.first}} {{employee.last}}</h1>
+            {{employee.title}}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 detail">
+            Nominee's Employee Number<br/>
+            <span>{{employee.number}}</span>
+          </div>
+          <div class="col-md-6 detail">
+            Sales Organization<br/>
+            <span>{{employee.so}}</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 detail">
+            Region<br/>
+            <span>{{employee.region}}</span>
+          </div>
+          <div class="col-md-6 detail">
+            Work Country<br/>
+            <span>{{employee.country}}</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 detail">
+            Work Address<br/>
+            <span>{{employee.address}}</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 detail">
+            Office Phone Number<br/>
+            <span>{{formatPhone(employee.officeTel)}}</span>
+          </div>
+          <div class="col-md-6 detail">
+            Mobile Phone Number<br/>
+            <span>{{formatPhone(employee.mobileTel)}}</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 detail">
+            Email Address<br/>
+            <span>{{employee.email | lowercase}}</span>
+          </div>
+        </div>
+
+        <div class="gray-container">
+          <div class="row">
+            <div class="col-md-6 detail">
+              Fiscal Year Sales Quota<br/>
+              <span>{{employee.performance.salesQuota | currency}}</span>
+            </div>
+            <div class="col-md-6 detail padding-left-50">
+              Actual Fiscal Year Sales<br/>
+              <span>{{employee.performance.sales | currency}}</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 detail">
+              Percent Sales Quota<br/>
+              <span>{{employee.performance.percentOver}}%</span>
+            </div>
+            <div class="col-md-6 detail padding-left-50">
+              Previous Year Percent of Quota<br/>
+              <span>{{employee.performance.percentLast}}%</span>
+            </div>
+          </div>
+        </div>
+          
+        <div class="row">
+          <div class="col-md-11 detail">
+            Sales Performance/Results<br/>
+            <div class="comment">{{employee.comments.performance}}</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-11 detail">
+            Sales and Planning Skills<br/>
+            <div class="comment">{{employee.comments.planning}}</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-11 detail">
+            Customer Relationship and Loyalty<br/>
+            <div class="comment">{{employee.comments.relationship}}</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-11 detail">
+            One Agilent Behavior<br/>
+            <div class="comment">{{employee.comments.behavior}}</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-11 detail">
+            Leadership/Role Model<br/>
+            <div class="comment">{{employee.comments.leadership}}</div>
+          </div>
+        </div>
+
+        <div class="gray-container">
+          <div class="row">
+            <div class="col-md-4 detail">
+              Nominator<br/>
+              <span>{{employee.nominator.name}}</span>
+            </div>
+            <div class="col-md-4 detail">
+              Nominator's email address<br/>
+              <span>{{employee.nominator.email | lowercase}}</span>
+            </div>
+            <div class="col-md-4 detail">
+              Work Phone Number<br/>
+              <span>{{formatPhone(employee.nominator.phone)}}</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 

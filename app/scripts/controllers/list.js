@@ -11,9 +11,10 @@ angular.module('presidentsClubApp')
   .controller('ListCtrl', ['$scope', '$q', '$location', 'employeeService', 'usersService', 'settings', 
    function ($scope, $q, $location, employeeService, usersService, settings) {
 
+    settings.setValue('showNav', true);
     settings.setValue('logo', true);
     settings.setValue('back', false);
-    settings.setValue('showNav', true);
+    settings.setValue('user', true);
 
     $scope.user = {};
     $scope.employees = [];

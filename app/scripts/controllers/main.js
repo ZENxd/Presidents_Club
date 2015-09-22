@@ -13,7 +13,10 @@ angular.module('presidentsClubApp')
 
     settings.setValue('showNav', true);
     settings.setValue('showHelp', false);
-
+    settings.setValue('logo', true);
+    settings.setValue('back', false);
+    settings.setValue('user', false);
+    
     $scope.user = {};
 
     usersService.getUserData(function(result) {
