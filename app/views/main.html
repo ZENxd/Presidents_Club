@@ -7,9 +7,12 @@
     </p>
     <p class="margin-top-30">
         <a class="btn btn-primary btn-lg light" ng-href="#/step1">NOMINATION FORM</a>
-      </p>
+    </p>
+    <p ng-show="globals.loader.show" class="loader">
+        Signing in...
+    </p>
 </div>
-<div class="container login margin-top-30" style="width:700px;">
+<div class="container login margin-top-30" style="width:700px;" ng-hide="globals.loader.show">
     <form name="signupForm" ng-submit="trySignup()" novalidate ng-hide="signIn">
         <!-- <div class="row">
             <div class="col col-md-3"></div>

@@ -8,8 +8,8 @@
  * Controller of the presidentsClubApp
  */
 angular.module('presidentsClubApp')
-    .controller('MainCtrl', ['$scope', '$rootScope', '$q', '$location', 'settings', 'globals',
-        function($scope, $rootScope, $q, $location, settings, globals) {
+    .controller('MainCtrl', ['$scope', '$rootScope', '$q', '$location', 'settings', 'globals', '$timeout',
+        function($scope, $rootScope, $q, $location, settings, globals, $timeout) {
 
             if ($scope.currentUser) {
                 $location.path('/step1');
@@ -27,7 +27,6 @@ angular.module('presidentsClubApp')
                 msg: 'Unrecognized email & or password.'
             };
             $scope.loginError = false;
-            $scope.accessLevel = null;
 
             settings.setValue('showNav', true);
             settings.setValue('showHelp', false);
@@ -44,8 +43,9 @@ angular.module('presidentsClubApp')
                         success: function(user) {
                             $scope.currentUser = user;
                             $scope.$apply();
-                            globals.loader.show = false;
-                            $scope.login();
+                            $timeout(function() {
+                                $scope.login();
+                            }, 500);
                         },
                         error: function(user, error) {
                             globals.loader.show = false;
@@ -57,6 +57,7 @@ angular.module('presidentsClubApp')
             };
 
             $scope.trySignup = function() {
+                globals.loader.show = true;
                 var user = new Parse.User();
                 user.set("email", $scope.signupEmail);
                 user.set("username", $scope.signupEmail);
@@ -66,10 +67,9 @@ angular.module('presidentsClubApp')
                     success: function(user) {
                         $scope.currentUser = user;
                         $scope.$apply();
-                        globals.loader.show = false;
-                        console.log('User created');
-                        $scope.login();
-
+                        $timeout(function() {
+                            $scope.login();
+                        }, 500);
                     },
                     error: function(user, error) {
                         globals.loader.show = false;
@@ -80,6 +80,7 @@ angular.module('presidentsClubApp')
             };
 
             $scope.login = function() {
+                globals.loader.show = false;
                 $location.path('/step1');
             };
 

@@ -17,6 +17,7 @@ angular.module('presidentsClubApp')
             $scope.step = 1;
             $scope.employee = null;
             $scope.nominee = null;
+            $scope.editMode = false;
 
 
             settings.setValue('showNav', true);
@@ -31,33 +32,68 @@ angular.module('presidentsClubApp')
             $scope.titles = null;
             $scope.salutations = null;
 
-            $scope.employee = Nominee.getData();
-            if (!$scope.employee) {
-                Nominee.setTemplate();
+            if ($scope.employeeId) {
+                $scope.editMode = true;
+                Nominee.queryNominee($scope.employeeId).then(function(result) {
+                    $scope.nominee = result;
+                    $scope.employee = angular.copy($scope.nominee.attributes);
+                });
+            } else {
+                $scope.editMode = false;
                 $scope.employee = Nominee.getData();
+                if (!$scope.employee) {
+                    $scope.step = 1;
+                    Nominee.setTemplate();
+                    $scope.employee = Nominee.getData();
+                    $location.path('/step1');
+                }
             }
+
 
             $scope.save = function(step) {
                 // check to make sure the form is completely valid
-                //if ($scope.userForm.$valid) {
-                Nominee.setData($scope.employee);
-                $scope.step = step;
-                $scope.next();
-                //}
+                if ($scope.userForm.$valid) {
+                    Nominee.setData($scope.employee);
+                    if ($scope.editMode && $scope.employeeId) {
+                        Nominee.saveNominee($scope.nominee).then(function(result) {
+                            $scope.nominee = result;
+                            $scope.step = step;
+                            $scope.next();
+                        });
+                    } else {
+                        $scope.step = step;
+                        $scope.next();
+                    }
+                }
+            };
+
+            $scope.next = function() {
+                if ($scope.editMode && $scope.employeeId) {
+                    $location.path('/step' + $scope.step + '/' + $scope.employeeId);
+                } else {
+                    $location.path('/step' + $scope.step);
+                }
             };
 
             $scope.saveNominee = function(step) {
                 Nominee.setData($scope.employee);
-                Nominee.newNominee().then(function(result) {
-                    $scope.nominee = result;
-                    $scope.employeeId = $scope.nominee.id;
-                    $scope.step = step;
-                    $scope.next();
-                });
-            };
+                if ($scope.editMode && $scope.employeeId) {
+                    Nominee.saveNominee($scope.nominee).then(function(result) {
+                        $scope.nominee = result;
+                        $scope.editMode = null;
+                        $scope.employeeId = null;
+                        $scope.step = step;
+                        $scope.next();
+                    });
+                } else {
+                    Nominee.newNominee().then(function(result) {
+                        $scope.nominee = result;
+                        $scope.employeeId = $scope.nominee.id;
+                        $scope.step = step;
+                        $scope.next();
+                    });
+                }
 
-            $scope.next = function() {
-                $location.path('/step' + $scope.step);
             };
 
             dataService.getData(function(result) {

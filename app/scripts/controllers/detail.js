@@ -11,10 +11,6 @@ angular.module('presidentsClubApp')
     .controller('DetailCtrl', ['$scope', '$rootScope', '$q', '$location', 'employeeService', '$routeParams', 'settings', 'Nominee',
         function($scope, $rootScope, $q, $location, employeeService, $routeParams, settings, Nominee) {
 
-            if (!Parse.User.current()) {
-                $location.path('/');
-            }
-
             settings.setValue('showNav', true);
             settings.setValue('logo', false);
             settings.setValue('back', true);

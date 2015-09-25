@@ -21,10 +21,10 @@
                 winCount: {},
                 years: '',
                 performance: {
-                    salesQuota: 0,
-                    sales: 0,
-                    percentOver: 0,
-                    percentLast: 0
+                    salesQuota: null,
+                    sales: null,
+                    percentOver: null,
+                    percentLast: null
                 },
                 comments: {
                     performance: '',
@@ -102,7 +102,6 @@
                     var query = new Parse.Query(this);
                     return $q.when(query.get(id, {
                         success: function(result) {
-                          console.log(result);
                             q.resolve(result);
                         },
                         error: function(err) {
@@ -114,6 +113,7 @@
                 getNominees: function() {
                     var q = $q.defer();
                     var query = new Parse.Query(this);
+                    query.descending('createdAt');
                     return $q.when(query.find({
                         success: function(results) {
                             q.resolve(results);
@@ -161,10 +161,10 @@
                 winCount: {},
                 years: '',
                 performance: {
-                    salesQuota: 0,
-                    sales: 0,
-                    percentOver: 0,
-                    percentLast: 0
+                    salesQuota: null,
+                    sales: null,
+                    percentOver: null,
+                    percentLast: null
                 },
                 comments: {
                     performance: '',

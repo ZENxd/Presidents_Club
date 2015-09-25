@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
@@ -15,64 +16,65 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
     <!-- endbuild -->
-  </head>
-  <body ng-app="presidentsClubApp">
+</head>
+
+<body ng-app="presidentsClubApp">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
     <!-- Add your site or application content here -->
     <div class="header" ng-controller="NavCtrl" ng-show="settings.showNav">
-      <div class="navbar navbar-default" role="navigation">
-        <!-- <div class="container"> -->
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#/" ng-show="settings.logo"><img src="../images/logo.png"></a>
-            <a class="navbar-brand" href="#/list" ng-show="settings.back"><i class="fa fa-angle-left"></i>&nbsp; 2015 NOMINEES</a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-            <ul class="nav navbar-nav navbar-right" ng-show="settings.showHelp">
-              <li><a href="#/"><i class="fa fa-question-circle"></i> Help</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right" ng-show="checkForLogin()">
-              <li><a>{{getEmail()}} | <i class="fa fa-caret-down"></i></a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right" ng-show="checkForLogin()">
-              <li><a href="" ng-click="logout()">Log out</a></li>
-            </ul>
-          </div>
-        <!-- </div> -->
-      </div>
+        <div class="navbar navbar-default" role="navigation">
+            <!-- <div class="container"> -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#/" ng-show="settings.logo"><img src="../images/logo.png"></a>
+                <a class="navbar-brand" href="#/list" ng-show="settings.back"><i class="fa fa-angle-left"></i>&nbsp; 2015 NOMINEES</a>
+            </div>
+            <div class="collapse navbar-collapse" id="js-navbar-collapse">
+                <ul class="nav navbar-nav navbar-right" ng-show="settings.showHelp">
+                    <li><a href=""><i class="fa fa-question-circle"></i> Help</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" ng-show="checkForLogin()">
+                    <!-- <li><a>{{getEmail()}} | <i class="fa fa-caret-down"></i></a></li> -->
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                          {{getEmail()}} <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a ng-href="#/list">View Nominees</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" ng-click="logout()">Log out</a></li>
+                </ul>
+            </div>
+            <!-- </div> -->
+        </div>
     </div>
-
     <!-- <div class="wrap"> -->
-      <div class="container" style="padding-top: 60px;">
+    <div class="container" style="padding-top: 60px;">
         <div class="page {{ pageClass }}" ng-view="" autoscroll="true" ng-cloak class="ng-cloak"></div>
-      </div>
+    </div>
     <!-- </div> -->
-      
     <footer class="footer">
-      <div class="container">
-        <span><img src="../images/footer-logo.png"></span>
-        <span class="pull-right pad-top-8">© Copyright 2015 <span style="color:#e2ba23;"> Agilent Technologies</span></span>
-      </div>
+        <div class="container">
+            <span><img src="../images/footer-logo.png"></span>
+            <span class="pull-right pad-top-8">© Copyright 2015 <span style="color:#e2ba23;"> Agilent Technologies</span></span>
+        </div>
     </footer>
-
-
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <script>
+    ! function(A, n, g, u, l, a, r) {
+        A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
+                (A[l].q = A[l].q || []).push(arguments)
+            }, A[l].l = +new Date, a = n.createElement(g),
+            r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+    }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
     </script>
-
     <!-- Parse sdk, must be before build.js or it will be removed on grunt build -->
     <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
-
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -89,21 +91,19 @@
     <script src="bower_components/angular-ui-event/dist/event.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        
-        <script type="text/javascript" src="scripts/app.js"></script>
-        <script type="text/javascript" src="scripts/controllers/nav.js"></script>
-        <script type="text/javascript" src="scripts/controllers/main.js"></script>
-        <script type="text/javascript" src="scripts/controllers/nominee.js"></script>
-
-        <script type="text/javascript" src="scripts/controllers/thanks.js"></script>
-        <script type="text/javascript" src="scripts/controllers/list.js"></script>
-        <script type="text/javascript" src="scripts/controllers/detail.js"></script>
-        <!-- Services -->
-        <script type="text/javascript" src="scripts/services/settings.js"></script>
-        <script type="text/javascript" src="scripts/services/employeeService.js"></script>
-        <script type="text/javascript" src="scripts/services/data.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/controllers/nav.js"></script>
+    <script type="text/javascript" src="scripts/controllers/main.js"></script>
+    <script type="text/javascript" src="scripts/controllers/nominee.js"></script>
+    <script type="text/javascript" src="scripts/controllers/thanks.js"></script>
+    <script type="text/javascript" src="scripts/controllers/list.js"></script>
+    <script type="text/javascript" src="scripts/controllers/detail.js"></script>
+    <!-- Services -->
+    <script type="text/javascript" src="scripts/services/settings.js"></script>
+    <script type="text/javascript" src="scripts/services/employeeService.js"></script>
+    <script type="text/javascript" src="scripts/services/data.js"></script>
+    <!-- endbuild -->
 </body>
+
 </html>

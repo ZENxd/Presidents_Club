@@ -13,10 +13,6 @@ angular.module('presidentsClubApp')
 
             $scope.currentUser = Parse.User.current();
 
-            if (!$scope.currentUser) {
-                $location.path('/');
-            }
-
             settings.setValue('showNav', true);
             settings.setValue('logo', true);
             settings.setValue('back', false);
