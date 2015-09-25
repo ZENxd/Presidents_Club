@@ -8,13 +8,33 @@
  * Controller of the presidentsClubApp
  */
 angular.module('presidentsClubApp')
-  .controller('NavCtrl', ['$scope', '$q', '$location', '$routeParams', 'settings', 
-   function ($scope, $q, $location, $routeParams, settings) {
+  .controller('NavCtrl', ['$scope', '$rootScope', '$q', '$location', '$routeParams', 'settings',   
+   function ($scope, $rootScope, $q, $location, $routeParams, settings) {
     
+    $scope.currentUser = Parse.User.current();
     $scope.settings = null;
+
+    $scope.checkForLogin = function(){
+      $scope.currentUser = Parse.User.current();
+      if(Parse.User.current()){
+        return true;
+      }
+      return false;
+    };
+
+    $scope.getEmail = function(){
+      if(Parse.User.current()){
+        return Parse.User.current().get('email');
+      }
+      return '';
+    };
 
     settings.getSettings(function(result) {
       $scope.settings = result;
     });
 
+    $scope.logout = function(){
+      $rootScope.logOut();
+    };
+    
   }]);

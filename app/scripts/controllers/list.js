@@ -8,27 +8,37 @@
  * Controller of the presidentsClubApp
  */
 angular.module('presidentsClubApp')
-  .controller('ListCtrl', ['$scope', '$q', '$location', 'employeeService', 'usersService', 'settings', 
-   function ($scope, $q, $location, employeeService, usersService, settings) {
+    .controller('ListCtrl', ['$scope', '$rootScope', '$q', '$location', 'employeeService', 'settings', 'Nominee',
+        function($scope, $rootScope, $q, $location, employeeService, settings, Nominee) {
 
-    settings.setValue('showNav', true);
-    settings.setValue('logo', true);
-    settings.setValue('back', false);
-    settings.setValue('user', true);
+            $scope.currentUser = Parse.User.current();
 
-    $scope.user = {};
-    $scope.employees = [];
+            if (!$scope.currentUser) {
+                $location.path('/');
+            }
 
-    employeeService.getEmployees(function(result) {
-        $scope.employees = result;
-    });
+            settings.setValue('showNav', true);
+            settings.setValue('logo', true);
+            settings.setValue('back', false);
 
-    usersService.getUserData(function(result) {
-      $scope.user = result;
-    });
+            $scope.employees = [];
 
-    $scope.detail = function(id){
-        $location.path( '/list/'+id );
-    };
+            Nominee.getNominees().then(function(results) {
+                $scope.employees = results;
+            });
 
-  }]);
+
+            // employeeService.getEmployees(function(result) {
+            //     $scope.employees = result;
+            // });
+
+            $scope.detail = function(id) {
+                $location.path('/list/' + id);
+            };
+
+            $scope.edit = function(id) {
+                $location.path('/step1/' + id);
+            };
+
+        }
+    ]);

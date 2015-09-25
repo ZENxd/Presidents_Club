@@ -8,36 +8,36 @@
  * Controller of the presidentsClubApp
  */
 angular.module('presidentsClubApp')
-    .controller('NominatorCtrl', ['$scope', '$q', '$location', 'employeeService', 'usersService', 'settings', 
-        function($scope, $q, $location, employeeService, usersService, settings) {
+    .controller('NominatorCtrl', ['$scope', '$rootScope', '$q', '$location', 'Nominee', 'dataService', 'settings', '$routeParams',  
+        function($scope, $rootScope, $q, $location, Nominee, dataService, settings, $routeParams) {
+
+            $scope.currentUser = Parse.User.current();
+            $scope.employeeId = $routeParams.id;
 
             settings.setValue('showNav', true);
             settings.setValue('showHelp', true);
             settings.setValue('logo', true);
             settings.setValue('back', false);
-            settings.setValue('user', false);
-            
+
             $scope.step = 4;
-            $scope.user = {};
             $scope.employee = null;
 
-            // employeeService.getEmployees(function(result) {
-            //     $scope.employee = result[0];
-            // });
-            
-            employeeService.getEmployeeTemplate(function(result) {
-                $scope.employee = result;
-            });
+            if ($scope.employeeId) {
+                Nominee.queryNominee(function(result) {
+                    $scope.employee = result;
+                });
+            } else {
+                $location.path('/step1');
+            }
 
-            usersService.getUserData(function(result) {
-                $scope.user = result;
-            });
-
-            $scope.next = function() {
-                // check to make sure the form is completely valid
-                //if ($scope.userForm.$valid) {
-                $location.path('/step5');
-                //}
+            $scope.saveNominee = function() {
+                if ($scope.currentUser) {
+                    Nominee.saveNominee($scope.employee).then(function(nominee) {
+                        $scope.employeeId = nominee;
+                        console.log('Nominee Saved');
+                        $location.path('/step5');
+                    });
+                }
             };
 
         }

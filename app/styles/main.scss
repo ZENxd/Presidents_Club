@@ -278,6 +278,10 @@ body {
 .listName{
   font-size: 1.1em;
   text-transform: uppercase;
+  a {
+    cursor: pointer;
+    color: #363636;
+  }
 }
 .listTitle{
   font-size: 0.9em;

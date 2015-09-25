@@ -8,30 +8,27 @@
  * Controller of the presidentsClubApp
  */
 angular.module('presidentsClubApp')
-    .controller('CommentsCtrl', ['$scope', '$q', '$location', 'employeeService', 'usersService', 'settings', 
-        function($scope, $q, $location, employeeService, usersService, settings) {
+    .controller('CommentsCtrl', ['$scope', '$rootScope', '$q', '$location', 'Nominee', 'dataService', 'settings', '$routeParams',
+        function($scope, $rootScope, $q, $location, Nominee, dataService, settings, $routeParams) {
+
+            $scope.currentUser = Parse.User.current();
+            $scope.employeeId = $routeParams.id;
 
             settings.setValue('showNav', true);
             settings.setValue('showHelp', true);
             settings.setValue('logo', true);
             settings.setValue('back', false);
-            settings.setValue('user', false);
 
             $scope.step = 3;
-            $scope.user = {};
             $scope.employee = null;
 
-            // employeeService.getEmployees(function(result) {
-            //     $scope.employee = result[0];
-            // });
-            
-            employeeService.getEmployeeTemplate(function(result) {
-                $scope.employee = result;
-            });
-
-            usersService.getUserData(function(result) {
-                $scope.user = result;
-            });
+            if ($scope.employeeId) {
+                Nominee.queryNominee(function(result) {
+                    $scope.employee = result;
+                });
+            } else {
+                $location.path('/step1');
+            }
 
             $scope.next = function() {
                 // check to make sure the form is completely valid
