@@ -113,6 +113,7 @@
                 getNominees: function() {
                     var q = $q.defer();
                     var query = new Parse.Query(this);
+                    // query.equalTo("owner", Parse.User.current());
                     query.descending('createdAt');
                     return $q.when(query.find({
                         success: function(results) {
