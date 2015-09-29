@@ -8,41 +8,41 @@
  * Controller of the presidentsClubApp
  */
 angular.module('presidentsClubApp')
-    .controller('DetailCtrl', ['$scope', '$rootScope', '$q', '$location', 'employeeService', '$routeParams', 'settings', 'Nominee',
-        function($scope, $rootScope, $q, $location, employeeService, $routeParams, settings, Nominee) {
+    .controller('DetailCtrl', ['$scope', '$rootScope', '$q', '$location', 'nomineeService', '$routeParams', 'settings', 'Nominee',
+        function($scope, $rootScope, $q, $location, nomineeService, $routeParams, settings, Nominee) {
 
             settings.setValue('showNav', true);
             settings.setValue('logo', false);
             settings.setValue('back', true);
 
-            $scope.employee = null;
-            $scope.employeeId = $routeParams.id;
+            $scope.nomineeModel = null;
+            $scope.nomineeModelId = $routeParams.id;
 
-            Nominee.queryNominee($scope.employeeId).then(function(result) {
-                $scope.employee = result;
+            Nominee.queryNominee($scope.nomineeModelId).then(function(result) {
+                $scope.nomineeModel = result;
             });
 
-            // employeeService.queryEmployee(function(result) {
-            //   $scope.employee = result;
+            // nomineeService.queryNominee(function(result) {
+            //   $scope.nomineeModel = result;
             // },
             //   //Pass params to service
-            //   $scope.employeeId
+            //   $scope.nomineeModelId
             // );
 
             $scope.approve = function(id) {
                 $scope.id = id;
-                $scope.employee.set('nomStatus', 'Approved');
+                $scope.nomineeModel.set('nomStatus', 'Approved');
                 $scope.save();
             };
 
             $scope.deny = function(id) {
                 $scope.id = id;
-                $scope.employee.set('nomStatus', 'Denied');
+                $scope.nomineeModel.set('nomStatus', 'Denied');
                 $scope.save();
             };
 
             $scope.save = function() {
-                $scope.employee.save(null, {
+                $scope.nomineeModel.save(null, {
                     success: function(result) {
                         console.log(result.id);
                     },

@@ -28,21 +28,21 @@
         </div>
     </div>
     <div class="panel-body">
-        <div class="row padding-top-30 padding-bottom-30" ng-class="{'underline' : !$last}" ng-repeat="employee in employees">
+        <div class="row padding-top-30 padding-bottom-30" ng-class="{'underline' : !$last}" ng-repeat="nomineeModel in nomineeModels">
             <div class="col col-md-4">
-                <span class="listName"><a ng-click="edit(employee.id)">{{employee.get('first')}} {{employee.get('last')}}</a></span><br/>
-                <span class="listTitle">{{employee.get('title').name}}</span>
+                <span class="listName"><a ng-click="edit(nomineeModel.id)">{{nomineeModel.get('first')}} {{nomineeModel.get('last')}}</a></span><br/>
+                <span class="listTitle">{{nomineeModel.get('title').name}}</span>
             </div>
             <div class="col col-md-3">
-                {{employee.get('nominator').first}} {{employee.get('nominator').last}}
+                {{nomineeModel.get('nominator').first}} {{nomineeModel.get('nominator').last}}
             </div>
-            <div class="col col-md-3" ng-style="myColor={color:(employee.get('nomStatus') === 'Denied') ? '#CA4045' : 
-                                                        (employee.get('nomStatus') === 'Approved') ? '#d3a907' : '#ccc'}">
-                {{employee.get('nomStatus') ? employee.get('nomStatus') : 'Awaiting Approval'}}
+            <div class="col col-md-3" ng-style="myColor={color:(nomineeModel.get('nomStatus') === 'Denied') ? '#CA4045' : 
+                                                        (nomineeModel.get('nomStatus') === 'Approved') ? '#d3a907' : '#ccc'}">
+                {{nomineeModel.get('nomStatus') ? nomineeModel.get('nomStatus') : 'Awaiting Approval'}}
               
             </div>
             <div class="col col-md-2" style="text-align:center;">
-                <button type="button" class="btn btn-review" ng-click="detail(employee.id)">REVIEW</button>
+                <button type="button" class="btn btn-review" ng-click="detail(nomineeModel.id)">REVIEW</button>
             </div>
         </div>
     </div>

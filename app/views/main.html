@@ -5,9 +5,6 @@
     <p class="margin-top-30">
         Curabitur blandit tempus porttitor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare vel eu leo.
     </p>
-    <p class="margin-top-30">
-        <a class="btn btn-primary btn-lg light" ng-href="#/step1">NOMINATION FORM</a>
-    </p>
     <p ng-show="globals.loader.show" class="loader">
         Signing in...
     </p>
@@ -41,13 +38,12 @@
         <div class="row">
             <div class="col col-md-3"></div>
             <div class="col col-md-6">
-                <button type="submit" class="btn btn-primary light btn-lg btn-block">SIGN UP</button>
-                <!-- ng-disabled="signupForm.$invalid" -->
+                <button type="submit" class="btn btn-primary light btn-lg btn-block" ng-disabled="signupForm.$invalid">SIGN UP</button>
             </div>
             <div class="col col-md-3"></div>
         </div>
     </form>
-    <form name="userForm" ng-submit="tryLogin()" novalidate ng-show="signIn">
+    <form name="userForm" ng-submit="tryLogin()" novalidate ng-show="signIn" ng-enter="scaleUp">
         <div class="row">
             <div class="col col-md-3"></div>
             <div class="col col-md-6" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
@@ -67,8 +63,7 @@
         <div class="row">
             <div class="col col-md-3"></div>
             <div class="col col-md-6">
-                <button type="submit" class="btn btn-primary light btn-lg btn-block">SIGN IN</button>
-                <!-- ng-disabled="userForm.$invalid" -->
+                <button type="submit" class="btn btn-primary light btn-lg btn-block" ng-disabled="userForm.$invalid">SIGN IN</button>
             </div>
             <div class="col col-md-3"></div>
         </div>

@@ -25,12 +25,13 @@
 
     <div class="panel-body">
       <div class="container form">
+        <!-- NOMINEE ENTRY -->
         <form name="userForm" ng-submit="save(2)" novalidate>
 
           <div class="row">
             <div class="col col-md-3" ng-class="{ 'has-error' : userForm.number.$invalid && !userForm.number.$pristine }">
               <span class="required">*</span> Nominee's Employee Number
-              <input type="text" name="number" class="form-control required" placeholder="" ng-model="employee.number" required>
+              <input type="text" name="number" class="form-control required" placeholder="" ng-model="nomineeModel.number" required>
               <p ng-show="userForm.number.$invalid && !userForm.number.$pristine" class="error">Employee number is required.</p>
             </div>
           </div>
@@ -39,7 +40,7 @@
             <div class="col col-md-3">
               <span class="required">*</span> Sales Organization
               <select class="form-control required" name="so"          
-                      ng-model="employee.so" 
+                      ng-model="nomineeModel.so" 
                       ng-options="item.name for item in so track by item.id"
                       required> 
                 <option value="">Choose</option> 
@@ -52,7 +53,7 @@
             <div class="col col-md-3">
               <span class="required">*</span> Region
               <select class="form-control required" name="region"          
-                      ng-model="employee.region" 
+                      ng-model="nomineeModel.region" 
                       ng-options="item.name for item in regions track by item.id"
                       required> 
                 <option value="">Choose</option> 
@@ -63,7 +64,7 @@
             <div class="col col-md-3">
               <span class="required">*</span> Work Country
               <select class="form-control required" name="country"          
-                      ng-model="employee.country" 
+                      ng-model="nomineeModel.country" 
                       ng-options="item.name for item in countries track by item.id"
                       required> 
                 <option value="">Choose</option> 
@@ -76,7 +77,7 @@
             <div class="col col-md-3">
               <span class="required">*</span> Salutation
               <select class="form-control required" name="salutation"          
-                      ng-model="employee.salutation" 
+                      ng-model="nomineeModel.salutation" 
                       ng-options="item.name for item in salutations track by item.id"
                       required> 
                 <option value="">Choose</option> 
@@ -88,12 +89,12 @@
           <div class="row">
             <div class="col col-md-3" ng-class="{ 'has-error' : userForm.first.$invalid && !userForm.first.$pristine }">
               <span class="required">*</span> First Name
-              <input type="text" name="first" class="form-control required" placeholder="" ng-model="employee.first" required>
+              <input type="text" name="first" class="form-control required" placeholder="" ng-model="nomineeModel.first" required>
               <p ng-show="userForm.first.$invalid && !userForm.first.$pristine" class="error">First name is required.</p>
             </div>
             <div class="col col-md-3" ng-class="{ 'has-error' : userForm.last.$invalid && !userForm.last.$pristine }">
               <span class="required">*</span> Family/Last Name
-              <input type="text" name="last" class="form-control required" placeholder="" ng-model="employee.last" required>
+              <input type="text" name="last" class="form-control required" placeholder="" ng-model="nomineeModel.last" required>
               <p ng-show="userForm.last.$invalid && !userForm.last.$pristine" class="error">Last name is required.</p>
             </div>
           </div>
@@ -101,7 +102,7 @@
           <div class="row">
             <div class="col col-md-6" ng-class="{ 'has-error' : userForm.address.$invalid && !userForm.address.$pristine }">
               <span class="required">*</span> Work Address
-              <input type="text" name="address" class="form-control required" placeholder="" ng-model="employee.address" required>
+              <input type="text" name="address" class="form-control required" placeholder="" ng-model="nomineeModel.address" required>
               <p ng-show="userForm.address.$invalid && !userForm.address.$pristine" class="error">Address is required.</p>
             </div>
           </div>
@@ -109,7 +110,7 @@
           <div class="row">
             <div class="col col-md-3" ng-class="{ 'has-error' : userForm.phone.$invalid && !userForm.phone.$pristine }">
               <span class="required">*</span> Office Phone Number
-              <input type="phone" name="phone" class="form-control required" placeholder="" ng-model="employee.officeTel" ui-mask="(999) 999-9999" required>
+              <input type="phone" name="phone" class="form-control required" placeholder="" ng-model="nomineeModel.officeTel" ui-mask="(999) 999-9999" required>
               <p ng-show="userForm.phone.$invalid && !userForm.phone.$pristine" class="error">Phone is required.</p>
             </div>
           </div>
@@ -117,7 +118,7 @@
           <div class="row">
             <div class="col col-md-3" ng-class="{ 'has-error' : userForm.mobile.$invalid && !userForm.mobile.$pristine }">
               <span class="required">*</span> Mobile Phone Number
-              <input type="phone" name="mobile" class="form-control required" placeholder="" ng-model="employee.mobileTel" ui-mask="(999) 999-9999" required>
+              <input type="phone" name="mobile" class="form-control required" placeholder="" ng-model="nomineeModel.mobileTel" ui-mask="(999) 999-9999" required>
               <p ng-show="userForm.mobile.$invalid && !userForm.mobile.$pristine" class="error">Mobile is required.</p>
             </div>
           </div>
@@ -125,7 +126,7 @@
           <div class="row">
             <div class="col col-md-3" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
               <span class="required">*</span> Email
-              <input type="email" name="email" class="form-control required" placeholder="" ng-model="employee.email" required>
+              <input type="email" name="email" class="form-control required" placeholder="" ng-model="nomineeModel.email" required>
               <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="error">Email is required.</p>
             </div>
           </div>
@@ -134,7 +135,7 @@
             <div class="col col-md-3">
               <span class="required">*</span> Nominee's Position/Title
               <select class="form-control required" name="title"          
-                      ng-model="employee.title" 
+                      ng-model="nomineeModel.title" 
                       ng-options="item.name for item in titles track by item.id"
                       required> 
                 <option value="">Choose</option> 
@@ -145,13 +146,13 @@
 
           <hr/>
 
-          <!-- NOMINATOR'S FORM -->
+          <!-- NOMINATOR'S MANAGER CHECKBOX -->
           <div class="row">
             <div class="col col-md-4">
               <span class="required">*</span> Are you the nominee's direct manager?<br/>
               <label>
                 <input type="checkbox"
-                 ng-model="employee.nominatedByManager"
+                 ng-model="nomineeModel.nominatedByManager"
                  ng-true-value="'Yes'"
                  ng-false-value="'No'">
                 Yes
@@ -159,15 +160,16 @@
             </div>
           </div>
 
+          <!-- NOMINATOR'S FORM -->
           <div class="row">
             <div class="col col-md-3" ng-class="{ 'has-error' : userForm.nfirst.$invalid && !userForm.nfirst.$pristine }">
               <span class="required">*</span> Nominator's First Name
-              <input type="text" name="nfirst" class="form-control required" placeholder="" ng-model="employee.nominator.first" required>
+              <input type="text" name="nfirst" class="form-control required" placeholder="" ng-model="nomineeModel.nominator.first" required>
               <p ng-show="userForm.nfirst.$invalid && !userForm.nfirst.$pristine" class="error">First name is required.</p>
             </div>
             <div class="col col-md-3" ng-class="{ 'has-error' : userForm.nlast.$invalid && !userForm.nlast.$pristine }">
               <span class="required">*</span> Nominator's Family/Last Name
-              <input type="text" name="nlast" class="form-control required" placeholder="" ng-model="employee.nominator.last" required>
+              <input type="text" name="nlast" class="form-control required" placeholder="" ng-model="nomineeModel.nominator.last" required>
               <p ng-show="userForm.nlast.$invalid && !userForm.nlast.$pristine" class="error">Last name is required.</p>
             </div>
           </div>
@@ -175,7 +177,7 @@
           <div class="row">
             <div class="col col-md-3" ng-class="{ 'has-error' : userForm.nemail.$invalid && !userForm.nemail.$pristine }">
               <span class="required">*</span> Nominator's Email
-              <input type="email" name="nemail" class="form-control required" placeholder="" ng-model="employee.nominator.email" required>
+              <input type="email" name="nemail" class="form-control required" placeholder="" ng-model="nomineeModel.nominator.email" required>
               <p ng-show="userForm.nemail.$invalid && !userForm.nemail.$pristine" class="error">Email is required.</p>
             </div>
           </div>
@@ -183,7 +185,7 @@
           <div class="row">
             <div class="col col-md-3" ng-class="{ 'has-error' : userForm.nphone.$invalid && !userForm.nphone.$pristine }">
               <span class="required">*</span> Nominator's Work Phone Number
-              <input type="phone" name="nphone" class="form-control required" placeholder="" ng-model="employee.nominator.phone" ui-mask="(999) 999-9999" required>
+              <input type="phone" name="nphone" class="form-control required" placeholder="" ng-model="nomineeModel.nominator.phone" ui-mask="(999) 999-9999" required>
               <p ng-show="userForm.nphone.$invalid && !userForm.nphone.$pristine" class="error">Phone is required.</p>
             </div>
           </div>

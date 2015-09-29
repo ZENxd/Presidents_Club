@@ -1,6 +1,33 @@
 (function() {
     'use strict';
     angular.module('presidentsClubApp')
+        /*  Example http get from API */
+        .factory('nomineeService', function($http, $log, $q) {
+            return {
+                getNominees: function() {
+                    var q = $q.defer();
+                    $http.get('/api/v1/nominees/')
+                        .success(function(result) {
+                            q.resolve(result);
+                        }).error(function(msg, code) {
+                            q.reject(msg);
+                            $log.error(msg, code);
+                        });
+                    return q.promise;
+                },
+                getNomineeById: function(id) {
+                    var q = $q.defer();
+                    $http.get('/api/v1/nominees/' + id)
+                        .success(function(result) {
+                            q.resolve(result);
+                        }).error(function(msg, code) {
+                            q.reject(msg);
+                            $log.error(msg, code);
+                        });
+                    return q.promise;
+                }
+            };
+        })
         .factory('Nominee', function($q) {
 
             var template = {
@@ -135,15 +162,15 @@
                     data = obj;
                 },
                 resetData: function() {
-                  data = null;
+                    data = null;
                 }
             });
             return Nominee;
 
         })
-        .service('employeeService', function() {
-            var nominee = null;
-            var employees = [];
+        .service('nomineeService', function() {
+            var nomineeModel = null;
+            var nomineeModels = [];
             var template = {
                 number: '',
                 so: {},
@@ -189,13 +216,13 @@
                 nomStatus: ''
             };
 
-            this.getEmployeeTemplate = function(callback) {
-                nominee = angular.copy(template);
-                callback(nominee);
+            this.getNomineeTemplate = function(callback) {
+                nomineeModel = angular.copy(template);
+                callback(nomineeModel);
             };
 
             this.getNominee = function(callback) {
-                callback(nominee);
+                callback(nomineeModel);
             };
 
             var nominees = [{
@@ -448,54 +475,54 @@
                 phone: '8774244536'
             }];
 
-            this.makeEmployees = function() {
+            this.makeNominees = function() {
                 angular.forEach(nominees, function(nominee, index) {
-                    var employee = angular.copy(template);
-                    employee.id = index;
-                    employee.number = nominees[index].number;
-                    employee.salutation = nominees[index].salutation;
-                    employee.first = nominees[index].first;
-                    employee.last = nominees[index].last;
-                    employee.title = nominees[index].title;
-                    employee.email = nominees[index].first + '@agilent.com';
-                    employee.so = details.so;
-                    employee.region = details.region;
-                    employee.country = details.country;
-                    employee.address = details.address;
-                    employee.officeTel = details.officeTel;
-                    employee.mobileTel = details.mobileTel;
-                    employee.recurringWinner = details.recurringWinner;
-                    employee.nominatedByManager = details.nominatedByManager;
-                    employee.winCount = details.winCount;
-                    employee.years = details.years;
-                    employee.submitter = details.submitter;
-                    employee.performance.salesQuota = details.performance.salesQuota;
-                    employee.performance.sales = details.performance.sales;
-                    employee.performance.percentOver = details.performance.percentOver;
-                    employee.performance.percentLast = details.performance.percentLast;
-                    employee.comments.performance = comment;
-                    employee.comments.planning = comment;
-                    employee.comments.relationship = comment;
-                    employee.comments.behavior = comment;
-                    employee.comments.leadership = comment;
-                    employee.nominator = {
+                    var nomineeModel = angular.copy(template);
+                    nomineeModel.id = index;
+                    nomineeModel.number = nominee.number;
+                    nomineeModel.salutation = nominee.salutation;
+                    nomineeModel.first = nominee.first;
+                    nomineeModel.last = nominee.last;
+                    nomineeModel.title = nominee.title;
+                    nomineeModel.email = nominee.first + '@agilent.com';
+                    nomineeModel.so = details.so;
+                    nomineeModel.region = details.region;
+                    nomineeModel.country = details.country;
+                    nomineeModel.address = details.address;
+                    nomineeModel.officeTel = details.officeTel;
+                    nomineeModel.mobileTel = details.mobileTel;
+                    nomineeModel.recurringWinner = details.recurringWinner;
+                    nomineeModel.nominatedByManager = details.nominatedByManager;
+                    nomineeModel.winCount = details.winCount;
+                    nomineeModel.years = details.years;
+                    nomineeModel.submitter = details.submitter;
+                    nomineeModel.performance.salesQuota = details.performance.salesQuota;
+                    nomineeModel.performance.sales = details.performance.sales;
+                    nomineeModel.performance.percentOver = details.performance.percentOver;
+                    nomineeModel.performance.percentLast = details.performance.percentLast;
+                    nomineeModel.comments.performance = comment;
+                    nomineeModel.comments.planning = comment;
+                    nomineeModel.comments.relationship = comment;
+                    nomineeModel.comments.behavior = comment;
+                    nomineeModel.comments.leadership = comment;
+                    nomineeModel.nominator = {
                         first: nominators[index].first,
                         last: nominators[index].last,
                         email: nominators[index].first + '@agilent.com',
                         phone: nominators[index].phone
                     };
-                    employee.nomStatus = 'Awaiting Approval';
-                    employees.push(employee);
+                    nomineeModel.nomStatus = 'Awaiting Approval';
+                    nomineeModels.push(nomineeModel);
                 });
             };
-            this.makeEmployees();
+            this.makeNominees();
 
-            this.getEmployees = function(callback) {
-                callback(employees);
+            this.getNominees = function(callback) {
+                callback(nomineeModels);
             };
 
-            this.queryEmployee = function(callback, id) {
-                callback(employees[id]);
+            this.queryNominee = function(callback, id) {
+                callback(nomineeModels[id]);
             };
         });
 })();

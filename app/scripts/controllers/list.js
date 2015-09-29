@@ -8,8 +8,8 @@
  * Controller of the presidentsClubApp
  */
 angular.module('presidentsClubApp')
-    .controller('ListCtrl', ['$scope', '$rootScope', '$q', '$location', 'employeeService', 'settings', 'Nominee',
-        function($scope, $rootScope, $q, $location, employeeService, settings, Nominee) {
+    .controller('ListCtrl', ['$scope', '$rootScope', '$q', '$location', 'nomineeService', 'settings', 'Nominee',
+        function($scope, $rootScope, $q, $location, nomineeService, settings, Nominee) {
 
             $scope.currentUser = Parse.User.current();
 
@@ -17,15 +17,15 @@ angular.module('presidentsClubApp')
             settings.setValue('logo', true);
             settings.setValue('back', false);
 
-            $scope.employees = [];
+            $scope.nomineeModels = [];
 
             Nominee.getNominees().then(function(results) {
-                $scope.employees = results;
+                $scope.nomineeModels = results;
             });
 
 
-            // employeeService.getEmployees(function(result) {
-            //     $scope.employees = result;
+            // nomineeService.getNominees(function(result) {
+            //     $scope.nomineeModels = result;
             // });
 
             $scope.detail = function(id) {

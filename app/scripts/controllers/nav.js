@@ -8,8 +8,8 @@
  * Controller of the presidentsClubApp
  */
 angular.module('presidentsClubApp')
-  .controller('NavCtrl', ['$scope', '$rootScope', '$q', '$location', '$routeParams', 'settings',   
-   function ($scope, $rootScope, $q, $location, $routeParams, settings) {
+  .controller('NavCtrl', ['$scope', '$rootScope', '$q', '$location', '$routeParams', 'settings', 'Nominee',
+   function ($scope, $rootScope, $q, $location, $routeParams, settings, Nominee) {
     
     $scope.currentUser = Parse.User.current();
     $scope.settings = null;
@@ -34,6 +34,7 @@ angular.module('presidentsClubApp')
     });
 
     $scope.logout = function(){
+      Nominee.resetData();
       $rootScope.logOut();
     };
     

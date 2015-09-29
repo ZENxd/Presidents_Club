@@ -37,12 +37,12 @@
           <div class="row">
             <div class="col col-md-3" ng-class="{ 'has-error' : userForm.salesQuota.$invalid && !userForm.salesQuota.$pristine }">
               <span class="required">*</span> Fiscal Year Sales Quota in USD <br/>
-              <div class="eg">{{employee.performance.salesQuota | currency}}</div>
+              <div class="eg">{{nomineeModel.performance.salesQuota | currency}}</div>
 
               <div class="currency">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
-                  <input type="number" name="salesQuota" class="form-control" placeholder="" ng-model="employee.performance.salesQuota" required>
+                  <input type="number" name="salesQuota" class="form-control" placeholder="" ng-model="nomineeModel.performance.salesQuota" required>
                 </div>
               </div>
 
@@ -53,12 +53,12 @@
           <div class="row">
             <div class="col col-md-3" ng-class="{ 'has-error' : userForm.sales.$invalid && !userForm.sales.$pristine }">
               <span class="required">*</span> Actual Fiscal Year Sales in USD <br/>
-              <div class="eg">{{employee.performance.sales | currency}}</div>
+              <div class="eg">{{nomineeModel.performance.sales | currency}}</div>
 
               <div class="currency">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
-                  <input type="number" name="sales" class="form-control" placeholder="" ng-model="employee.performance.sales" required>
+                  <input type="number" name="sales" class="form-control" placeholder="" ng-model="nomineeModel.performance.sales" required>
                 </div>
               </div>
               
@@ -73,7 +73,7 @@
 
               <div class="currency">
                 <div class="input-group">
-                  <input type="number" name="percentOver" class="form-control" placeholder="" ng-model="employee.performance.percentOver" required>
+                  <input type="number" name="percentOver" class="form-control" placeholder="" ng-model="nomineeModel.performance.percentOver" required>
                   <span class="input-group-addon">%</span>
                 </div>
               </div>
@@ -89,7 +89,7 @@
 
               <div class="currency">
                 <div class="input-group">
-                  <input type="number" name="percentLast" class="form-control" placeholder="" ng-model="employee.performance.percentLast" required>
+                  <input type="number" name="percentLast" class="form-control" placeholder="" ng-model="nomineeModel.performance.percentLast" required>
                   <span class="input-group-addon">%</span>
                 </div>
               </div>
@@ -103,7 +103,7 @@
               <span class="required">*</span> Is the nominee a previous Presidents Club winner?<br/>
               <label>
                 <input type="checkbox"
-                 ng-model="employee.recurringWinner"
+                 ng-model="nomineeModel.recurringWinner"
                  ng-true-value="'Yes'"
                  ng-false-value="'No'">
                 Yes
@@ -111,12 +111,12 @@
             </div>
           </div>
 
-          <div ng-show="employee.recurringWinner === 'Yes'">
+          <div ng-show="nomineeModel.recurringWinner === 'Yes'">
             <div class="row">
               <div class="col col-md-3">
                 <span class="required">*</span> If yes, then how many times?
                 <select class="form-control required" name="winCount"          
-                        ng-model="employee.winCount" 
+                        ng-model="nomineeModel.winCount" 
                         ng-options="item.name for item in winCount track by item.id"
                         required> 
                   <option value="">Choose</option> 
@@ -128,7 +128,7 @@
             <div class="row">
               <div class="col col-md-3">
                 List what years (if known)
-                <input type="text" name="years" class="form-control required" placeholder="" ng-model="employee.years">
+                <input type="text" name="years" class="form-control required" placeholder="" ng-model="nomineeModel.years">
               </div>
             </div>
           </div>
