@@ -1,9 +1,21 @@
 (function() {
     'use strict';
     angular.module('presidentsClubApp')
-        /*  Example http get from API */
-        .factory('nomineeService', function($http, $log, $q) {
+        /*.factory('nomineeService', function($http, $log, $q) {
             return {
+                //Post a nominee
+                postNominee: function(dataObj) {
+                    var q = $q.defer();
+                    $http.post('/api/v1/nominees/', dataObj)
+                        .success(function(result) {
+                            q.resolve(result);
+                        }).error(function(msg, code) {
+                            q.reject(msg);
+                            $log.error(msg, code);
+                        });
+                    return q.promise;
+                },
+                //Get all nominees
                 getNominees: function() {
                     var q = $q.defer();
                     $http.get('/api/v1/nominees/')
@@ -15,6 +27,7 @@
                         });
                     return q.promise;
                 },
+                //Get a nominee by id
                 getNomineeById: function(id) {
                     var q = $q.defer();
                     $http.get('/api/v1/nominees/' + id)
@@ -27,7 +40,7 @@
                     return q.promise;
                 }
             };
-        })
+        })*/
         .factory('Nominee', function($q) {
 
             var template = {
