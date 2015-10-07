@@ -5,132 +5,77 @@
  * @name presidentsClubApp.controller:NomineeCtrl
  * @description
  * # NomineeCtrl
- * Controller of the presidentsClubApp step 1
+ * Controller of the presidentsClubApp nomination forms
  */
 angular.module('presidentsClubApp')
-    .controller('NomineeCtrl', ['$scope', '$rootScope', '$q', '$location', 'Nominee', 'dataService', 'settings', '$routeParams',
-        function($scope, $rootScope, $q, $location, Nominee, dataService, settings, $routeParams) {
+    .controller('NomineeCtrl', ['$scope', '$rootScope', '$location', '$routeParams', 'dataService', 'settings', 'modelService', 'nomineeService',
+        function($scope, $rootScope, $location, $routeParams, dataService, settings, modelService, nomineeService) {
 
-            //The current session user
-            $scope.currentUser = Parse.User.current();
-            //Looks for an ID passed to the url for edit mode
-            $scope.nomineeModelId = $routeParams.id;
-
-            //Step through counter for visuals
-            $scope.step = 1;
-            //The data model bound to html
-            $scope.nomineeModel = null;
-            //The model class from the API
-            $scope.nomineeClass = null;
-            //For toggling edit/input mode
-            $scope.editMode = false;
-
-            //Visual DOM switches
-            settings.setValue('showNav', true);
-            settings.setValue('showHelp', true);
-            settings.setValue('logo', true);
-            settings.setValue('back', false);
-
-            //Consumable Data for pre-population
-            $scope.so = null;
-            $scope.regions = null;
-            $scope.countries = null;
-            $scope.titles = null;
-            $scope.salutations = null;
-
-            if ($scope.nomineeModelId) {
-                $scope.editMode = true;
-                Nominee.queryNominee($scope.nomineeModelId).then(function(result) {
-                    $scope.nomineeClass = result;
-                    $scope.nomineeModel = angular.copy($scope.nomineeClass.attributes);
-                });
+            //Bounce to here if we have a user not logged in
+            if (!$rootScope.globals.currentUser) {
+                $location.path('/');
             } else {
-                $scope.editMode = false;
-                //Blank template object will act as the model
-                $scope.nomineeModel = Nominee.getData();
-                if (!$scope.nomineeModel) {
-                    $scope.step = 1;
-                    Nominee.setTemplate();
-                    $scope.nomineeModel = Nominee.getData();
-                    $location.path('/step1');
-                }
+                $rootScope.cloud = true;
             }
 
+            //The persistant data model bound to html
+            modelService.getModel(function(result) {
+                $scope.nomineeModel = result;
+            });
 
-            $scope.save = function(step) {
-                //console.table($scope.nomineeModel);
-                //console.log(JSON.stringify($scope.nomineeModel));
-                // check to make sure the form is completely valid
+            //Top nav DOM visual switches
+            settings.setValue('logo', false);
+            settings.setValue('back', true);
+
+            //Step forward to next form after validation
+            $scope.next = function(url) {
                 if ($scope.userForm.$valid) {
-                    Nominee.setData($scope.nomineeModel);
-                    if ($scope.editMode && $scope.nomineeModelId) {
-                        Nominee.saveNominee($scope.nomineeClass).then(function(result) {
-                            $scope.nomineeClass = result;
-                            $scope.step = step;
-                            $scope.next();
-                        });
-                    } else {
-                        $scope.step = step;
-                        $scope.next();
-                    }
+                    //Update local model for persistance
+                    modelService.updateModel($scope.nomineeModel);
+                    $location.path('/'+url);
                 }
             };
 
-            $scope.next = function() {
-                if ($scope.editMode && $scope.nomineeModelId) {
-                    $location.path('/step' + $scope.step + '/' + $scope.nomineeModelId);
-                } else {
-                    $location.path('/step' + $scope.step);
-                }
+            //Step back to previous form
+            $scope.back = function(url) {
+                //Update local model for persistance
+                modelService.updateModel($scope.nomineeModel);
+                $location.path('/'+url);
             };
 
-            $scope.saveNominee = function(step) {
-                Nominee.setData($scope.nomineeModel);
-                if ($scope.editMode && $scope.nomineeModelId) {
-                    Nominee.saveNominee($scope.nomineeClass).then(function(result) {
-                        $scope.nomineeClass = result;
-                        $scope.editMode = null;
-                        $scope.nomineeModelId = null;
-                        $scope.step = step;
-                        $scope.next();
-                    });
-                } else {
-                    Nominee.newNominee().then(function(result) {
-                        $scope.nomineeClass = result;
-                        $scope.nomineeModelId = $scope.nomineeClass.id;
-                        $scope.step = step;
-                        $scope.next();
+            /*
+                Last form (Step 3) calls this method
+                Call postNominee in nomineeService here.
+
+            */
+            $scope.save = function(url) {
+                if ($scope.userForm.$valid) {
+                    //Update local model for persistance
+                    modelService.updateModel($scope.nomineeModel);
+                    //Post model to server
+                    nomineeService.postNominee($scope.nomineeModel).then(function(result) {
+                        console.log(result);
+                        //Goto thank you page.
+                        $location.path('/'+url);
                     });
                 }
-
             };
 
+            //Consumable Data for pre-population, dropdowns etc.
             dataService.getData(function(result) {
-                $scope.so = result.so;
+                $scope.salesOrg = result.salesOrg;
                 $scope.regions = result.regions;
                 $scope.countries = result.countries;
                 $scope.titles = result.titles;
                 $scope.salutations = result.salutations;
+                $scope.winCount = result.winCount;
             });
 
-            $scope.winCount = [{
-                id: '0',
-                name: '1'
-            }, {
-                id: '1',
-                name: '2'
-            }, {
-                id: '2',
-                name: '3'
-            }, {
-                id: '3',
-                name: '4'
-            }, {
-                id: '4',
-                name: '5'
-            }];
         }
     ])
+/*
+    Directive to handle 70 word max in textarea validation
+*/
     .directive('maximumWordsValidation', function() {
         return {
             require: 'ngModel',

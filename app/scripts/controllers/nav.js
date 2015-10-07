@@ -8,23 +8,21 @@
  * Controller of the presidentsClubApp
  */
 angular.module('presidentsClubApp')
-  .controller('NavCtrl', ['$scope', '$rootScope', '$q', '$location', '$routeParams', 'settings', 'Nominee',
-   function ($scope, $rootScope, $q, $location, $routeParams, settings, Nominee) {
+  .controller('NavCtrl', ['$scope', '$rootScope', '$q', '$location', '$routeParams', 'AuthenticationService', 'settings', 
+   function ($scope, $rootScope, $q, $location, $routeParams, AuthenticationService, settings) {
     
-    $scope.currentUser = Parse.User.current();
     $scope.settings = null;
 
     $scope.checkForLogin = function(){
-      $scope.currentUser = Parse.User.current();
-      if(Parse.User.current()){
+      if($rootScope.globals.currentUser){
         return true;
       }
       return false;
     };
 
-    $scope.getEmail = function(){
-      if(Parse.User.current()){
-        return Parse.User.current().get('email');
+    $scope.getUsername = function(){
+      if($rootScope.globals.currentUser){
+        return $rootScope.globals.currentUser.username;
       }
       return '';
     };
@@ -34,8 +32,10 @@ angular.module('presidentsClubApp')
     });
 
     $scope.logout = function(){
-      Nominee.resetData();
-      $rootScope.logOut();
+      // reset login status & return to login
+      AuthenticationService.ClearCredentials();
+      $rootScope.cloud = false;
+      $location.path('/');
     };
     
   }]);

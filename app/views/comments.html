@@ -1,16 +1,3 @@
- <div class="container heading">
-      <p class="lead">
-        THE PRESIDENT'S CLUB
-      </p>
-      <h1>NOMINATION FORM</h1>
-      <p class="margin-top-30">
-        Curabitur blandit tempus porttitor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.
-      </p>
-      <p class="margin-top-30">
-        <a class="btn btn-primary btn-lg light" ng-href="#/">NOMINEE CRITERIA</a>
-      </p>
-  </div>
-
   <div class="panel panel-default margin-top-30">
 
     <div class="form-heading">
@@ -25,7 +12,7 @@
 
     <div class="panel-body">
       <div class="container form">
-        <form name="userForm" ng-submit="save(4)" novalidate>
+        <form name="userForm" ng-submit="save('thanks')" novalidate>
 
           <div class="row">
             <div class="col col-md-6" ng-class="{ 'has-error' : userForm.performance.$invalid && !userForm.performance.$pristine }">
@@ -93,8 +80,8 @@
           </div>
 
           <hr/>
-
-          <button type="submit" class="btn btn-form" ng-disabled="userForm.$invalid">NEXT STEP <i class="fa fa-angle-right fa-lg padding-left-20"></i></button>
+          <button type="button" class="btn btn-form" ng-click="back('performance')"><i class="fa fa-angle-left fa-lg padding-right-20"></i> BACK</button>
+          <button type="submit" class="btn btn-form" ng-disabled="userForm.$invalid">SUBMIT NOMINATION</button>
         </form>
       </div>
     </div>

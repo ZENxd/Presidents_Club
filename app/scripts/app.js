@@ -20,139 +20,53 @@ angular.module('presidentsClubApp', [
     ])
     .config(function($routeProvider, $sceDelegateProvider, $httpProvider) {
         $httpProvider.useApplyAsync(true);
-        $sceDelegateProvider.resourceUrlWhitelist([
-            // Allow same origin resource loads.
-            'self',
-            // Allow loading template files from Parse.com domain.
-            'http://files.parsetfss.com/**'
-        ]);
         $routeProvider
             .when('/', {
-                templateUrl: 'views/main.html',
+                templateUrl: 'views/login.html',
                 controller: 'MainCtrl',
                 controllerAs: 'main'
             })
-            .when('/step1', {
+            .when('/nominee', {
                 templateUrl: 'views/nominee.html',
                 controller: 'NomineeCtrl',
                 controllerAs: 'nominee'
             })
-            .when('/step1/:id', {
-                templateUrl: 'views/nominee.html',
-                controller: 'NomineeCtrl',
-                controllerAs: 'nominee',
-                resolve: {
-                  'loggedIn': function($location){
-                    if(!Parse.User.current()){
-                      $location.path('/');
-                    }
-                  }
-                }
-            })
-            .when('/step2', {
+            .when('/performance', {
                 templateUrl: 'views/performance.html',
                 controller: 'NomineeCtrl',
                 controllerAs: 'nominee'
             })
-            .when('/step2/:id', {
-                templateUrl: 'views/performance.html',
-                controller: 'NomineeCtrl',
-                controllerAs: 'nominee',
-                resolve: {
-                  'loggedIn': function($location){
-                    if(!Parse.User.current()){
-                      $location.path('/');
-                    }
-                  }
-                }
-            })
-            .when('/step3', {
+            .when('/comments', {
                 templateUrl: 'views/comments.html',
                 controller: 'NomineeCtrl',
                 controllerAs: 'nominee'
             })
-            .when('/step3/:id', {
-                templateUrl: 'views/comments.html',
-                controller: 'NomineeCtrl',
-                controllerAs: 'nominee',
-                resolve: {
-                  'loggedIn': function($location){
-                    if(!Parse.User.current()){
-                      $location.path('/');
-                    }
-                  }
-                }
-            })
-            .when('/step4', {
-                templateUrl: 'views/nominator.html',
-                controller: 'NomineeCtrl',
-                controllerAs: 'nominee'
-            })
-            .when('/step4/:id', {
-                templateUrl: 'views/nominator.html',
-                controller: 'NomineeCtrl',
-                controllerAs: 'nominee',
-                resolve: {
-                  'loggedIn': function($location){
-                    if(!Parse.User.current()){
-                      $location.path('/');
-                    }
-                  }
-                }
-            })
-            .when('/step5', {
+            .when('/thanks', {
                 templateUrl: 'views/thanks.html',
                 controller: 'ThanksCtrl',
                 controllerAs: 'thanks'
-            })
-            .when('/list', {
-                templateUrl: 'views/list.html',
-                controller: 'ListCtrl',
-                controllerAs: 'list',
-                resolve: {
-                  'loggedIn': function($location){
-                    if(!Parse.User.current()){
-                      $location.path('/');
-                    }
-                  }
-                }
-            })
-            .when('/list/:id', {
-                templateUrl: 'views/detail.html',
-                controller: 'DetailCtrl',
-                controllerAs: 'detail',
-                resolve: {
-                  'loggedIn': function($location){
-                    if(!Parse.User.current()){
-                      $location.path('/');
-                    }
-                  }
-                }
             })
             .otherwise({
                 redirectTo: '/'
             });
     })
-    .run(['$rootScope', '$location', 'appAuth', function($scope, $location, appAuth) {
-        //Parse app init
-        Parse.initialize("iN0dCO4RxgFH95fp0Ie9ONiwXTnjuj6nS3UeCxBW", "rJfKosKbp4myNqeWYECjDgxCNb77NZrmAdcq9oMc");
-        $scope.currentUser = Parse.User.current();
+    .run(['$rootScope', '$location', '$cookieStore', '$http',
+        function($rootScope, $location, $cookieStore, $http) {
+            $rootScope.cloud = false;
+            // keep user logged in after page refresh
+            $rootScope.globals = $cookieStore.get('globals') || {};
+            if ($rootScope.globals.currentUser) {
+                $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata; // jshint ignore:line
+            }
 
-        $scope.logOut = function() {
-            Parse.User.logOut();
-            $scope.currentUser = null;
-            $location.path('/');
-        };
-
-        if (!appAuth.isLoggedIn()) {
-            appAuth.saveAttemptUrl();
-            $location.path('/');
+            $rootScope.$on('$locationChangeStart', function(event, next, current) { // jshint ignore:line
+                // redirect to login page if not logged in
+                if ($location.path() !== '/' && !$rootScope.globals.currentUser) {
+                    $location.path('/');
+                }
+            });
         }
-
-    }])
-    .value('redirectToUrlAfterLogin', {
-        url: '/step1'
-    })
+    ])
     .value('globals', {
         loader: {
             show: false

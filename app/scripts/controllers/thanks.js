@@ -8,25 +8,14 @@
  * Controller of the presidentsClubApp
  */
 angular.module('presidentsClubApp')
-    .controller('ThanksCtrl', ['$scope', '$q', '$location', 'settings', 'Nominee',
-        function($scope, $q, $location, settings, Nominee) {
+    .controller('ThanksCtrl', ['$scope', '$q', '$location', 'settings', 
+        function($scope, $q, $location, settings) {
 
-            $scope.currentUser = Parse.User.current();
-            settings.setValue('showNav', true);
-            settings.setValue('showHelp', true);
-            settings.setValue('logo', true);
-            settings.setValue('back', false);
+            settings.setValue('logo', false);
+            settings.setValue('back', true);
             
             $scope.restart = function() {
-                Nominee.resetData();
-                $location.path('/step1');
-            };
-
-            $scope.view = function() {
-                if($scope.currentUser){
-                    Nominee.resetData();
-                    $location.path('/list');
-                }
+                $location.path('/nominee');
             };
 
         }
