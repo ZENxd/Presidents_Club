@@ -27,6 +27,8 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 html {
     position: relative;
     min-height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -39,6 +41,11 @@ body {
     background-size: 100% auto;
     background-color: #072847;
     font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    padding-bottom: 20px;
 }
 
 .cloud {
@@ -114,13 +121,16 @@ body {
     text-decoration: underline;
     padding: 0 10px 0 20px;
 }
+
 a.pipe-left {
     border-left: 1px solid #fff;
 }
+
 .navbar-default .navbar-nav > li {
     color: #fff;
     padding: 0 15px 0 5px;
 }
+
 .header {
     margin-bottom: 10px;
     /* Make the masthead heading the same height as the navigation */
@@ -271,6 +281,7 @@ a.pipe-left {
 /* home */
 
 .info {
+    vertical-align: top;
     font-family: 'Roboto', sans-serif;
     margin-top: 10px;
     margin-left: 20px;
@@ -512,7 +523,9 @@ a.pipe-left {
     color: #FFF;
 }
 
+
 /* modal */
+
 .close {
     float: right;
     font-size: 5em;
@@ -522,24 +535,45 @@ a.pipe-left {
     font-family: 'Roboto', sans-serif;
     opacity: 1;
 }
+
 .modal-header {
     padding: 15px;
     border-bottom: none;
     min-height: 16.428571429px;
 }
+
 .modal-text {
     text-align: center;
     padding: 70px;
     padding-top: 15px;
-    h3{
+    h3 {
         word-spacing: 5px;
     }
 }
+
+hr {
+    margin-right: 70px;
+}
+
+
 /* Responsive: Portrait tablets and up */
 
-@media screen and (min-width: 768px) {
+
+/*iPad in portrait & landscape*/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+
+
+/*iPad in landscape*/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {}
+
+
+/*iPad in portrait*/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
     .container {
-        max-width: 1000px;
+        max-width: 900px;
     }
     /* Remove the padding we set earlier */
     .header,
@@ -560,10 +594,41 @@ a.pipe-left {
     .panel {
         border-bottom: 0;
         hr {
-            margin-right: 60px;
+            margin-right: 80px;
+        }
+    }
+    .container.heading {
+        color: #fff;
+        text-align: center;
+        margin-top: 20px;
+        h1 {
+            font-size: 3.5em;
+            font-family: 'Roboto Condensed', sans-serif;
+            margin-top: -10px;
+            letter-spacing: 10px;
+            font-weight: 600;
+        }
+        h4 {
+            letter-spacing: 3px;
+        }
+    }
+    .info {
+        vertical-align: top;
+        font-family: 'Roboto', sans-serif;
+        margin-top: 10px;
+        margin-left: 20px;
+        .heading {
+            font-size: 1.1em;
+            color: #525252;
+            font-weight: 600;
         }
     }
 }
+
+
+/*@media screen and (min-width: 768px) {
+    
+}*/
 
 .pad-top-8 {
     padding-top: 8px;
