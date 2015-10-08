@@ -163,7 +163,7 @@ body {
 }
 
 .btn-primary.light {
-    background-color: #7bb1df;
+    background-color: #e2ba23;
     border-color: #a0c6ea;
     letter-spacing: 2px;
     font-size: 1.1em;
@@ -218,9 +218,23 @@ body {
     font-size: 0.9em;
     .btn {
         color: #fff;
-        background: #7bb1df;
+    }
+    .btn-login {
+        background: #e2ba23;
+        font-size: 1.2em;
         letter-spacing: 2px;
-        font-size: 1.1em;
+        height: 50px;
+    }
+    .btn-login:hover,
+    .btn-login:focus,
+    .btn-login:active,
+    .btn-login.active {
+        background: #CAA823;
+    }
+    .btn-login:active,
+    .btn-login.active {
+        background: #CAA823;
+        box-shadow: none;
     }
     .row {
         margin-top: 10px;

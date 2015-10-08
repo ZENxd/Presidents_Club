@@ -103,5 +103,8 @@
             this.updateModel = function(model) {
                 nomineeModel = model;
             };
+            this.resetModel = function() {
+                nomineeModel = angular.copy(template);
+            };
         });
 })();
