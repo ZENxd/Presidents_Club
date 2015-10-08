@@ -8,14 +8,18 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
     color: #000;
     padding: 0.2em 0;
 }
+
+
 /* Mixin */
+
 @mixin vertical-align($position: relative) {
-  position: $position;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+    position: $position;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
+
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -36,6 +40,7 @@ body {
     background-color: #c9e0fa;
     font-family: 'Roboto', sans-serif;
 }
+
 .cloud {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
@@ -47,6 +52,7 @@ body {
     background-color: #c9e0fa;
     font-family: 'Roboto', sans-serif;
 }
+
 .seal {
     display: inline-block;
     width: 90px;
@@ -54,11 +60,13 @@ body {
     background: url(../images/seal.png);
     background-repeat: no-repeat;
     background-position: top left;
-    vertical-align:middle;
+    vertical-align: middle;
 }
+
 .v-align {
     @include vertical-align();
 }
+
 .footer {
     position: absolute;
     bottom: 0;
@@ -84,6 +92,7 @@ body {
 .navbar-default .navbar-brand {
     color: #fff;
 }
+
 .username {
     color: #fff;
     line-height: 20px;
@@ -91,6 +100,7 @@ body {
     display: block;
     padding: 15px 20px;
 }
+
 
 /* Custom page header */
 
@@ -243,6 +253,73 @@ body {
         color: #CA1D2D
     }
 }
+
+
+/* home */
+
+.info {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+    margin-left: 20px;
+    .heading {
+        font-size: 1.2em;
+        color: #525252;
+        font-weight: 600;
+    }
+    .normal {
+        line-height: 25px;
+        color: #888888;
+        font-size: 0.9em;
+    }
+    ul.none {
+        list-style: none;
+    }
+    li {
+        margin-top: 30px;
+        color: #888888;
+        font-size: 0.9em;
+        .detail {
+            color: #525252;
+            font-weight: 600;
+        }
+    }
+    li:first-child {
+        margin-top: 0;
+    }
+    .timeline {
+        display: inline-block;
+        margin-top: 10px;
+        width: 25px;
+        height: 286px;
+        background: url(../images/timeline.png);
+        background-repeat: no-repeat;
+        background-position: top left;
+    }
+    .btn {
+        color: #d3a907;
+        background: #e2ba23;
+        color: #ffffff;
+        font-size: 1.2em;
+        letter-spacing: 2px;
+        width: 300px;
+        height: 50px;
+    }
+    .btn:hover,
+    .btn:focus,
+    .btn:active,
+    .btn.active {
+        background: #CAA823;
+    }
+    .btn:active,
+    .btn.active {
+        background: #CAA823;
+        box-shadow: none;
+    }
+}
+
+
+/* Forms */
+
 .form {
     padding: 0px 30px 20px 30px;
     color: #8B8B8B;
@@ -613,12 +690,14 @@ body {
 
 /* when hiding the picture */
 
+
 /*.ng-hide-add {
     animation: 0.5s lightSpeedOut ease;
 }*/
 
 
 /* when showing the picture */
+
 
 /*.ng-hide-remove {
     animation: 0.5s flipInX ease;

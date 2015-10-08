@@ -26,6 +26,11 @@ angular.module('presidentsClubApp', [
                 controller: 'MainCtrl',
                 controllerAs: 'main'
             })
+            .when('/home', {
+                templateUrl: 'views/home.html',
+                controller: 'HomeCtrl',
+                controllerAs: 'home'
+            })
             .when('/nominee', {
                 templateUrl: 'views/nominee.html',
                 controller: 'NomineeCtrl',

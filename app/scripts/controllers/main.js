@@ -13,7 +13,7 @@ angular.module('presidentsClubApp')
 
             //Bounce to here if we have a user logged in
             if ($rootScope.globals.currentUser) {
-                $location.path('/nominee');
+                $location.path('/home');
             }
 
             // Obj for user creds
@@ -38,7 +38,6 @@ angular.module('presidentsClubApp')
                 AuthenticationService.Login($scope.loginCredentials.username, $scope.loginCredentials.password, function(response) {
                     if (response.success) {
                         AuthenticationService.SetCredentials($scope.loginCredentials.username, $scope.loginCredentials.password);
-                        $rootScope.cloud = true;
                         $scope.loginError = false;
                         $scope.next();
                     } else {
@@ -52,7 +51,7 @@ angular.module('presidentsClubApp')
             // Continue to step 1 after successfull login
             $scope.next = function() {
                 globals.loader.show = false;
-                $location.path('/nominee');
+                $location.path('/home');
             };
 
         }
