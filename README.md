@@ -3,7 +3,7 @@
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.12.1.
 
-## Prerequisites:
+## Prerequisites for App Development:
 Install Node: https://nodejs.org/en/
 
 Install Bower: http://bower.io/
@@ -14,7 +14,13 @@ Install Grunt: http://gruntjs.com/
 Knowledge of Javascript, AngularJS, HTML, css/sass
 
 ### Backend
+
+Main Branch using:
+
 Parse SDK: http://parse.com
+
+Production Branch using:
+REST Services
 
 ## Development & Build
 
@@ -27,7 +33,7 @@ This will open the site running in Node in a new Browser window.
 
 Run `grunt build` for building.
 
-This will create a dist folder with the deployable site. It can run on any flavor http server.
+This will create a dist folder with the deployable site that can run with REST services.
 
 See pc.sublime-project in Sublime Text to view project.
 
