@@ -37,7 +37,7 @@ body {
     background-repeat: no-repeat;
     background-position: top left;
     background-size: 100% auto;
-    background-color: #c9e0fa;
+    background-color: #072847;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -111,8 +111,16 @@ body {
 
 .navbar-default .navbar-nav > li > a {
     color: #fff;
+    text-decoration: underline;
+    padding: 0 10px 0 20px;
 }
-
+a.pipe-left {
+    border-left: 1px solid #fff;
+}
+.navbar-default .navbar-nav > li {
+    color: #fff;
+    padding: 0 15px 0 5px;
+}
 .header {
     margin-bottom: 10px;
     /* Make the masthead heading the same height as the navigation */
@@ -135,12 +143,17 @@ body {
     h1 {
         font-size: 4.5em;
         font-family: 'Roboto Condensed', sans-serif;
-        margin-top: -25px;
+        margin-top: -10px;
+        letter-spacing: 10px;
+        font-weight: 600;
+    }
+    h4 {
+        letter-spacing: 3px;
     }
 }
 
 .lead {
-    font-size: 1.3em;
+    font-size: 1.2em;
     letter-spacing: 5px;
 }
 
@@ -499,7 +512,29 @@ body {
     color: #FFF;
 }
 
-
+/* modal */
+.close {
+    float: right;
+    font-size: 5em;
+    font-weight: lighter;
+    line-height: 1;
+    color: #e2ba23;
+    font-family: 'Roboto', sans-serif;
+    opacity: 1;
+}
+.modal-header {
+    padding: 15px;
+    border-bottom: none;
+    min-height: 16.428571429px;
+}
+.modal-text {
+    text-align: center;
+    padding: 70px;
+    padding-top: 15px;
+    h3{
+        word-spacing: 5px;
+    }
+}
 /* Responsive: Portrait tablets and up */
 
 @media screen and (min-width: 768px) {
@@ -519,7 +554,7 @@ body {
     }
     .navbar-right {
         float: right !important;
-        margin-top: 5px;
+        margin-top: 20px;
     }
     /* Remove the bottom border on the panel for visual effect */
     .panel {
