@@ -69,7 +69,9 @@ body {
     background-position: top left;
     vertical-align: middle;
 }
-
+.seal-phone {
+    display: none;
+}
 .v-align {
     @include vertical-align();
 }
@@ -115,7 +117,9 @@ body {
     background-color: transparent;
     border-color: transparent;
 }
-
+.navbar-right {
+    margin-top: 10px;
+}
 .navbar-default .navbar-nav > li > a {
     color: #fff;
     text-decoration: underline;
@@ -124,6 +128,7 @@ body {
 
 a.pipe-left {
     border-left: 1px solid #fff;
+    border-left: 1px solid rgba(255,255,255,0.5);
 }
 
 .navbar-default .navbar-nav > li {
@@ -390,7 +395,7 @@ a.pipe-left {
         font-size: 0.9em;
         padding-left: 10px;
         margin-bottom: 7px;
-        text-transform: uppercase;
+        /*text-transform: uppercase;*/
     }
     .row {
         margin-top: 20px;
@@ -556,6 +561,77 @@ hr {
 }
 
 
+/* ----------- iPhone 5 and 5S ----------- */
+
+
+/* Portrait and Landscape */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+
+/* Portrait */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    .container {
+        max-width: 568px;
+    }
+    .container.heading {
+        color: #fff;
+        text-align: center;
+        margin-top: 20px;
+        h1 {
+            font-size: 2em;
+            font-family: 'Roboto Condensed', sans-serif;
+            margin-top: -10px;
+            letter-spacing: 10px;
+            font-weight: 600;
+        }
+        h4 {
+            font-size: 1em;
+            letter-spacing: 3px;
+        }
+    }
+    .info {
+        vertical-align: top;
+        font-family: 'Roboto', sans-serif;
+        margin-top: 10px;
+        margin-left: 20px;
+        .heading {
+            font-size: 0.9em;
+            color: #525252;
+            font-weight: 600;
+        }
+    }
+    .lead {
+        font-size: 0.8em;
+        letter-spacing: 3px;
+    }
+    .seal {
+        display: none;
+    }
+    .seal-phone {
+        background: url(../images/seal-iphone.png);
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+    }
+    .footer-logo {
+        display: none;
+    }
+    .copyright {
+        font-size: 0.9em;
+    }
+    .phone-hidden {
+        display: none;
+    }
+}
+
+
+/* Landscape */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {}
+
+
 /* Responsive: Portrait tablets and up */
 
 
@@ -624,11 +700,6 @@ hr {
         }
     }
 }
-
-
-/*@media screen and (min-width: 768px) {
-    
-}*/
 
 .pad-top-8 {
     padding-top: 8px;
