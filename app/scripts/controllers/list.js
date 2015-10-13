@@ -14,6 +14,8 @@ angular.module('presidentsClubApp')
 
             settings.setValue('logo', true);
             settings.setValue('back', false);
+            settings.setValue('backText', '2015 Nominees');
+            settings.setValue('backLink', '#/list');
             $scope.nomineesModel = null;
 
             demoService.getNominees(function(result) {

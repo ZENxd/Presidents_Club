@@ -32,7 +32,8 @@ angular.module('presidentsClubApp')
             //Top nav DOM visual switches
             settings.setValue('logo', false);
             settings.setValue('back', true);
-
+            settings.setValue('backText', 'RETURN TO HOME');
+            settings.setValue('backLink', '#/');
             //Step forward to next form after validation
             $scope.next = function(url) {
                 if ($scope.userForm.$valid) {

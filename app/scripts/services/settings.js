@@ -13,7 +13,9 @@
             var settings = {
                 'logo': true,
                 'back': false,
-                'user': false
+                'user': false,
+                'backText': 'RETURN TO HOME',
+                'backLink': '#/'
             };
 
             this.getSettings = function(callback) {
