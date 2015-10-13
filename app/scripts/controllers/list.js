@@ -8,32 +8,20 @@
  * Controller of the presidentsClubApp
  */
 angular.module('presidentsClubApp')
-    .controller('ListCtrl', ['$scope', '$rootScope', '$q', '$location', 'nomineeService', 'settings', 'Nominee',
-        function($scope, $rootScope, $q, $location, nomineeService, settings, Nominee) {
+    .controller('ListCtrl', ['$scope', '$rootScope', '$location', 'demoService', 'settings', 
+        function($scope, $rootScope, $location, demoService, settings) {
 
-            $scope.currentUser = Parse.User.current();
 
-            settings.setValue('showNav', true);
             settings.setValue('logo', true);
             settings.setValue('back', false);
+            $scope.nomineesModel = null;
 
-            $scope.nomineeModels = [];
-
-            Nominee.getNominees().then(function(results) {
-                $scope.nomineeModels = results;
+            demoService.getNominees(function(result) {
+                $scope.nomineesModel = result;
             });
 
-
-            // nomineeService.getNominees(function(result) {
-            //     $scope.nomineeModels = result;
-            // });
-
             $scope.detail = function(id) {
-                $location.path('/list/' + id);
-            };
-
-            $scope.edit = function(id) {
-                $location.path('/step1/' + id);
+                $location.path('/detail/' + id);
             };
 
         }

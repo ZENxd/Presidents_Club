@@ -51,6 +51,16 @@ angular.module('presidentsClubApp', [
                 controller: 'ThanksCtrl',
                 controllerAs: 'thanks'
             })
+            .when('/list', {
+                templateUrl: 'views/list.html',
+                controller: 'ListCtrl',
+                controllerAs: 'list'
+            })
+            .when('/detail/:id', {
+                templateUrl: 'views/detail.html',
+                controller: 'DetailCtrl',
+                controllerAs: 'detail'
+            })
             .otherwise({
                 redirectTo: '/'
             });

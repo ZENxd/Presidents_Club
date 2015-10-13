@@ -87,12 +87,13 @@
                     behavior: '',
                     leadership: ''
                 },
+                /*
                 nominator: {
                     first: '',
                     last: '',
                     email: '',
                     phone: ''
-                },
+                },*/
                 nominationStatus: ''
             };
             nomineeModel = angular.copy(template);
