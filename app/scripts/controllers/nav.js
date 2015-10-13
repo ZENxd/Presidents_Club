@@ -8,8 +8,8 @@
  * Controller of the presidentsClubApp
  */
 angular.module('presidentsClubApp')
-  .controller('NavCtrl', ['$scope', '$rootScope', '$q', '$location', '$routeParams', 'AuthenticationService', 'settings', 
-   function ($scope, $rootScope, $q, $location, $routeParams, AuthenticationService, settings) {
+  .controller('NavCtrl', ['$scope', '$rootScope', '$q', '$location', '$routeParams', 'AuthenticationService', 'settings', 'modelService', 
+   function ($scope, $rootScope, $q, $location, $routeParams, AuthenticationService, settings, modelService) {
     
     $scope.settings = null;
 
@@ -32,6 +32,7 @@ angular.module('presidentsClubApp')
     });
 
     $scope.logout = function(){
+      modelService.resetModel();
       // reset login status & return to login
       AuthenticationService.ClearCredentials();
       $rootScope.cloud = false;

@@ -19,7 +19,10 @@ angular.module('presidentsClubApp')
             // Obj for user creds
             $scope.loginCredentials = {
                 username: null,
-                password: null
+                password: null,
+                firstName: null,
+                lastName: null,
+                email: null
             };
             $scope.loginError = false;
 
@@ -35,9 +38,9 @@ angular.module('presidentsClubApp')
             //Called on pressing login
             $scope.tryLogin = function() {
                 globals.loader.show = true;
-                AuthenticationService.Login($scope.loginCredentials.username, $scope.loginCredentials.password, function(response) {
+                AuthenticationService.Login($scope.loginCredentials, function(response) {
                     if (response.success) {
-                        AuthenticationService.SetCredentials($scope.loginCredentials.username, $scope.loginCredentials.password);
+                        AuthenticationService.SetCredentials($scope.loginCredentials);
                         $scope.loginError = false;
                         $scope.next();
                     } else {

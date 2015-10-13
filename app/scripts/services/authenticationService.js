@@ -13,13 +13,20 @@
         function(Base64, $http, $cookieStore, $rootScope, $timeout) {
             var service = {};
 
-            service.Login = function(username, password, callback) {
+            service.Login = function(loginCredentials, callback) {
 
                 /* Dummy authentication for testing, uses $timeout to simulate api call
                  ----------------------------------------------*/
                 $timeout(function() {
+                    loginCredentials.first = 'John';
+                    loginCredentials.last = 'Smith';
+                    loginCredentials.email = 'jsmith@agilent.com';
                     var response = {
-                        success: username === 'John_Smith' && password === 'password'
+                        success: loginCredentials.username === 'John_Smith' && 
+                                    loginCredentials.password === 'password' && 
+                                    loginCredentials.first === 'John' && 
+                                    loginCredentials.last === 'Smith' && 
+                                    loginCredentials.email === 'jsmith@agilent.com'
                     };
                     if (!response.success) {
                         response.message = 'Username or password is incorrect';
@@ -30,19 +37,22 @@
 
                 /* Use this for real authentication
                  ----------------------------------------------*/
-                //$http.post('/api/authenticate', { username: username, password: password })
+                //$http.post('/api/authenticate', { username: loginCredentials.username, password: loginCredentials.password })
                 //    .success(function (response) {
                 //        callback(response);
                 //    });
 
             };
 
-            service.SetCredentials = function(username, password) {
-                var authdata = Base64.encode(username + ':' + password);
+            service.SetCredentials = function(loginCredentials) {
+                var authdata = Base64.encode(loginCredentials.username + ':' + loginCredentials.password);
 
                 $rootScope.globals = {
                     currentUser: {
-                        username: username,
+                        username: loginCredentials.username,
+                        userFirst: loginCredentials.first,
+                        userLast: loginCredentials.last,
+                        userEmail: loginCredentials.email,
                         authdata: authdata
                     }
                 };

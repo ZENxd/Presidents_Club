@@ -392,9 +392,18 @@ a.pipe-left {
     }
     .eg {
         color: #CACACA;
-        font-size: 0.9em;
-        padding-left: 10px;
+        font-size: 0.8em;
         margin-bottom: 7px;
+        padding-top: 27px;
+        padding-left: 0;
+        font-style: italic;
+        /*text-transform: uppercase;*/
+    }
+    .light {
+        color: #CACACA;
+        font-size: 0.9em;
+        margin-bottom: 7px;
+        padding-left: 10px;
         /*text-transform: uppercase;*/
     }
     .row {

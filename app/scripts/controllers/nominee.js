@@ -21,6 +21,10 @@ angular.module('presidentsClubApp')
             //The persistant data model bound to html
             modelService.getModel(function(result) {
                 $scope.nomineeModel = result;
+                //Bind user login credentials to niminee model -> nimonator attributes
+                $scope.nomineeModel.nominator.nom_first = $rootScope.globals.currentUser.userFirst;
+                $scope.nomineeModel.nominator.nom_last = $rootScope.globals.currentUser.userLast;
+                $scope.nomineeModel.nominator.nom_email = $rootScope.globals.currentUser.userEmail;
             });
 
             //Top nav DOM visual switches
