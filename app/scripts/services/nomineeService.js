@@ -26,6 +26,18 @@
                         });
                     return q.promise;
                 },
+                //Update nominee (Approve, Deny)
+                updateNominee: function(dataObj) {
+                    var q = $q.defer();
+                    $http.post('/api/v1/nominees', dataObj)
+                        .success(function(result) {
+                            q.resolve(result);
+                        }).error(function(msg, code) {
+                            q.reject(msg);
+                            console.log(msg, code);
+                        });
+                    return q.promise;
+                },
                 //Get all nominees
                 getNominees: function() {
                     var q = $q.defer();

@@ -42,7 +42,9 @@ body {
     background-color: #072847;
     font-family: 'Roboto', sans-serif;
 }
-
+a {
+    cursor: pointer;
+}
 .container {
     max-width: 900px;
     padding-bottom: 20px;
@@ -69,9 +71,11 @@ body {
     background-position: top left;
     vertical-align: middle;
 }
+
 .seal-phone {
     display: none;
 }
+
 .v-align {
     @include vertical-align();
 }
@@ -83,10 +87,16 @@ body {
     /* Set the fixed height of the footer here */
     height: 60px;
     background-color: #f5f5f5;
-    padding: 10px 30px 10px 30px;
+    /*padding: 10px 30px 0 30px;*/
     color: #524b3f;
     background-color: #fff;
     border-top: 1px solid #b8cce2;
+    .container {
+        padding-bottom: 0;
+    }
+    .container > span {
+        padding-top: 20px;
+    }
 }
 
 
@@ -117,9 +127,11 @@ body {
     background-color: transparent;
     border-color: transparent;
 }
+
 .navbar-right {
     margin-top: 10px;
 }
+
 .navbar-default .navbar-nav > li > a {
     color: #fff;
     text-decoration: underline;
@@ -128,7 +140,7 @@ body {
 
 a.pipe-left {
     border-left: 1px solid #fff;
-    border-left: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .navbar-default .navbar-nav > li {
@@ -217,8 +229,37 @@ a.pipe-left {
 
 /* Main marketing message and sign up button */
 
+.gray-col {
+    background-color: #F8F8F8;
+}
+
+.smaller {
+    font-size: 0.9em;
+}
+.larger {
+    font-size: 1.2em;
+}
+.approved-text{
+    color: #e2ba23;
+}
+.denied-text {
+    color: #CA4045;
+}
 .panel {
     margin-bottom: 150px;
+    .panel-body.tight {
+        padding: 0 15px 0 15px;
+        .row {
+            height: 80px;
+            .col {
+                height: 100%;
+                p {
+                    @include vertical-align();
+                }
+            }
+        }
+    }
+    
     .form-heading {
         color: #d3a907;
         .wave {
@@ -438,11 +479,13 @@ a.pipe-left {
 .btn-approve:active,
 .btn-approve.active,
 .open > .dropdown-toggle.btn-approve {
+    color: #fff;
     background: #CAA823;
 }
 
 .btn-approve:active,
 .btn-approve.active {
+    color: #fff;
     background: #CAA823;
     box-shadow: none;
 }
@@ -464,11 +507,13 @@ a.pipe-left {
 .btn-deny:active,
 .btn-deny.active,
 .open > .dropdown-toggle.btn-deny {
+    color: #E02B2D;
     background: #B9B9B9;
 }
 
 .btn-deny:active,
 .btn-deny.active {
+    color: #E02B2D;
     background: #B9B9B9;
     box-shadow: none;
 }
@@ -721,6 +766,10 @@ hr {
     padding-top: 8px;
 }
 
+.margin-top-0 {
+    margin-top: 0px;
+}
+
 .margin-top-10 {
     margin-top: 10px;
 }
@@ -735,6 +784,10 @@ hr {
 
 .padding-left-20 {
     padding-left: 20px;
+}
+
+.padding-left-30 {
+    padding-left: 30px;
 }
 
 .padding-left-50 {
@@ -752,7 +805,9 @@ hr {
 .padding-right-20 {
     padding-right: 20px;
 }
-
+.padding-top-10 {
+    padding-top: 10px;
+}
 .padding-top-20 {
     padding-top: 20px;
 }

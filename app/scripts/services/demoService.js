@@ -61,7 +61,7 @@
 
       var details = {
         so: {id: '0', name: 'LSAG/ACG'},
-        region: {id: '0', name: 'China'}, 
+        region: {id: '0', name: 'Americas'}, 
         country: {id: '0', name: 'USA'},
         address: '5301 Stevens Creek Blvd., Santa Clara CA, 95051',
         officeTel: '8774244536', mobileTel: '4083458886',
