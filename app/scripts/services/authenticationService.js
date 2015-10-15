@@ -18,16 +18,36 @@
                 /* Dummy authentication for testing, uses $timeout to simulate api call
                  ----------------------------------------------*/
                 $timeout(function() {
+                    //Basic credentials
                     loginCredentials.first = 'John';
                     loginCredentials.last = 'Smith';
                     loginCredentials.email = 'jsmith@agilent.com';
+
+                    //Basic flag to determine auth level
+                    loginCredentials.authLevel = 0;
+
+                    //Default user
+                    // loginCredentials.username = 'John_Smith';
+
+                        //Regional
+                    if(loginCredentials.username === 'Regional_Manager'){
+                        loginCredentials.authLevel = 1;
+                        //loginCredentials.username = 'Regional_Manager';
+                        //World wide
+                    } else if(loginCredentials.username === 'Worldwide_Manager'){
+                        loginCredentials.authLevel = 2;
+                        //loginCredentials.username = 'Worldwide_Manager';
+                    }
+
                     var response = {
-                        success: loginCredentials.username === 'John_Smith' && 
+                        success:    loginCredentials.username && 
                                     loginCredentials.password === 'password' && 
                                     loginCredentials.first === 'John' && 
                                     loginCredentials.last === 'Smith' && 
                                     loginCredentials.email === 'jsmith@agilent.com'
                     };
+                    
+                        
                     if (!response.success) {
                         response.message = 'Username or password is incorrect';
                     }
@@ -53,6 +73,7 @@
                         userFirst: loginCredentials.first,
                         userLast: loginCredentials.last,
                         userEmail: loginCredentials.email,
+                        authLevel: loginCredentials.authLevel,
                         authdata: authdata
                     }
                 };

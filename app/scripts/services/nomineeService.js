@@ -11,13 +11,13 @@
         .factory('nomineeService', function($http, $log, $q) {
             return {
                 /* 
-                    Server REST API Calls
+                    Server REST API (CRUD) operations.
                     Change URL's to path to your REST call.
                 */
                 //Post a nominee
                 postNominee: function(dataObj) {
                     var q = $q.defer();
-                    $http.post('/api/v1/nominees', dataObj)
+                    $http.post('/api/v1/save', dataObj)
                         .success(function(result) {
                             q.resolve(result);
                         }).error(function(msg, code) {
@@ -29,7 +29,7 @@
                 //Update nominee (Approve, Deny)
                 updateNominee: function(dataObj) {
                     var q = $q.defer();
-                    $http.post('/api/v1/nominees', dataObj)
+                    $http.post('/api/v1/update', dataObj)
                         .success(function(result) {
                             q.resolve(result);
                         }).error(function(msg, code) {
@@ -41,7 +41,7 @@
                 //Get all nominees
                 getNominees: function() {
                     var q = $q.defer();
-                    $http.get('/api/v1/nominees')
+                    $http.get('/api/v1/query')
                         .success(function(result) {
                             q.resolve(result);
                         }).error(function(msg, code) {
@@ -53,7 +53,7 @@
                 //Get a nominee by id
                 getNomineeById: function(id) {
                     var q = $q.defer();
-                    $http.get('/api/v1/nominees' + id)
+                    $http.get('/api/v1/query' + id)
                         .success(function(result) {
                             q.resolve(result);
                         }).error(function(msg, code) {
@@ -106,7 +106,8 @@
                     email: '',
                     phone: ''
                 },*/
-                nominationStatus: ''
+                nominationStatus: '',
+                winner: false
             };
             nomineeModel = angular.copy(template);
 

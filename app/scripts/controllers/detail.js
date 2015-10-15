@@ -16,11 +16,14 @@ angular.module('presidentsClubApp')
                 $location.path('/');
             } else {
                 $rootScope.cloud = true;
+                $scope.authLevel = $rootScope.globals.currentUser.authLevel;
             }
 
             settings.setValue('logo', false);
             settings.setValue('back', true);
-
+            settings.setValue('backText', '2015 Nominees');
+            settings.setValue('backLink', '#/list');
+            
             $scope.nomineeModel = null;
             $scope.nomineeModelId = $routeParams.id;
 
@@ -36,37 +39,44 @@ angular.module('presidentsClubApp')
                 $scope.nomineeModelId
             );
 
-            $scope.approve = function(id) {
+            $scope.approve = function() {
                 //Demo
                 var value = ($scope.nomineeModel.nomStatus === 'Approved') ? 'Awaiting Approval' : 'Approved';
-                demoService.save(id, value);
-                //$scope.back();
+                $scope.nomineeModel.nomStatus = value;
+                demoService.save($scope.nomineeModelId, $scope.nomineeModel);
                 //
 
                 //API call
-                //$scope.save(id, 'Approved');
-
-                
+                //$scope.save($scope.nomineeModelId, 'Approved');
             };
 
-            $scope.deny = function(id) {
+            $scope.deny = function() {
                 //Demo
                 var value = ($scope.nomineeModel.nomStatus === 'Denied') ? 'Awaiting Approval' : 'Denied';
-                demoService.save(id, value);
-                //$scope.back();
+                $scope.nomineeModel.nomStatus = value;
+                demoService.save($scope.nomineeModelId, $scope.nomineeModel);
                 //
 
                 //API call
-                //$scope.save(id, 'Denied');
+                //$scope.save($scope.nomineeModelId, 'Denied');
+            };
+
+            $scope.winner = function() {
+                //Demo
+                var value = ($scope.nomineeModel.winner) ? false : true;
+                $scope.nomineeModel.winner = value;
+                demoService.save($scope.nomineeModelId, $scope.nomineeModel);
+                //
+
+                //API call
+                //$scope.save($scope.nomineeModelId, 'Denied');
             };
 
             //API only
-            $scope.save = function(id, value) {
+            $scope.save = function() {
                 //Update model to server
-                var vote = {'id':id, 'value':value};
-                nomineeService.updateNominee(vote).then(function(result) {
+                nomineeService.updateNominee($scope.nomineeModel).then(function(result) {
                     console.log(result);
-                    $scope.back();
                 });
             };
 

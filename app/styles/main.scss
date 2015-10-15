@@ -232,7 +232,9 @@ a.pipe-left {
 .gray-col {
     background-color: #F8F8F8;
 }
-
+.green-col {
+    background-color: #E8F1DB;
+}
 .smaller {
     font-size: 0.9em;
 }
@@ -241,6 +243,9 @@ a.pipe-left {
 }
 .approved-text{
     color: #e2ba23;
+}
+.winner-text{
+    color: #58A725;
 }
 .denied-text {
     color: #CA4045;
@@ -542,6 +547,33 @@ a.pipe-left {
     box-shadow: none;
 }
 
+.btn-winner {
+    background: #58A725;
+    color: #ffffff;
+    font-size: 1em;
+    letter-spacing: 2px;
+}
+
+.btn-winner > i {
+    float: right;
+    padding-top: 2px;
+}
+
+.btn-winner:hover,
+.btn-winner:focus,
+.btn-winner:active,
+.btn-winner.active,
+.open > .dropdown-toggle.btn-winner {
+    color: #fff;
+    background: #238B28;
+}
+
+.btn-winner:active,
+.btn-winner.active {
+    color: #fff;
+    background: #238B28;
+    box-shadow: none;
+}
 .row.underline {
     border-bottom: 1px solid #ccc;
 }

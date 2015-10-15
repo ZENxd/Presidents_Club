@@ -1,7 +1,7 @@
 (function() {
   'use strict';
   angular.module('presidentsClubApp')
-    .service('demoService', function() {
+    .service('demoService', ['$rootScope', function($rootScope) {
       
       var data = [];
       var template = {
@@ -41,7 +41,8 @@
               email: '',
               phone: ''
           },*/
-          nominationStatus: ''
+          nominationStatus: '',
+          winner: false
       };
 
       var nominees = [
@@ -85,6 +86,7 @@
 
       this.makeNominees = function(){
         angular.forEach(nominees, function(nominee, index){
+          var chosenValue = Math.random() < 0.5 ? 'Approved' : 'Denied';
           var employee = angular.copy(template);
           employee.id = index;
           employee.number = nominees[index].number;
@@ -112,10 +114,11 @@
           employee.comments.relationship = comment;
           employee.comments.behavior = comment;
           employee.comments.leadership = comment;
-          employee.nomStatus = 'Awaiting Approval';
+          employee.nomStatus = ($rootScope.globals.currentUser.authLevel === 2) ? chosenValue : 'Awaiting Approval';
           employee.nominator = {first: nominators[index].first, last: nominators[index].last, 
                                 email: nominators[index].first+'@agilent.com',
                                 phone: nominators[index].phone};
+          employee.winner = false;
           data.push(employee);
         });
       };
@@ -129,8 +132,10 @@
         callback(data[id]);
       };
 
-      this.save = function(id, value){
-        data[id].nomStatus = value;
+      this.save = function(id, nominee){
+        data[id] = nominee;
       };
-    });
+
+
+    }]);
 })();

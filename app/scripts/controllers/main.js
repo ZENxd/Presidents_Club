@@ -42,6 +42,7 @@ angular.module('presidentsClubApp')
                     if (response.success) {
                         AuthenticationService.SetCredentials($scope.loginCredentials);
                         $scope.loginError = false;
+                        console.log($scope.loginCredentials.authLevel);
                         $scope.next();
                     } else {
                         $scope.loginError = true;
@@ -54,7 +55,11 @@ angular.module('presidentsClubApp')
             // Continue to step 1 after successfull login
             $scope.next = function() {
                 globals.loader.show = false;
-                $location.path('/home');
+                var path = '/home';
+                if($scope.loginCredentials.authLevel > 0) {
+                    path = '/list';
+                }
+                $location.path(path);
             };
 
         }
