@@ -42,9 +42,11 @@ body {
     background-color: #072847;
     font-family: 'Roboto', sans-serif;
 }
+
 a {
     cursor: pointer;
 }
+
 .container {
     max-width: 900px;
     padding-bottom: 20px;
@@ -138,7 +140,9 @@ a {
     text-decoration: underline;
     padding: 0 0 0 15px;
 }
-.navbar-back,  .navbar-back a {
+
+.navbar-back,
+.navbar-back a {
     float: left;
     padding: 26px 15px;
     font-size: 18px;
@@ -151,9 +155,11 @@ a.pipe-left {
     border-left: 1px solid #fff;
     border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
+
 .navbar {
     margin-bottom: 10px;
 }
+
 .navbar-default .navbar-nav > li {
     color: #fff;
     padding: 0 15px 0 5px;
@@ -243,24 +249,35 @@ a.pipe-left {
 .gray-col {
     background-color: #F8F8F8;
 }
+
 .green-col {
     background-color: #E8F1DB;
 }
+
 .smaller {
     font-size: 0.9em;
 }
+
 .larger {
     font-size: 1.2em;
 }
-.approved-text{
+
+.approved-text {
     color: #e2ba23;
 }
-.winner-text{
+
+.winner-text {
     color: #58A725;
 }
+
 .denied-text {
     color: #CA4045;
 }
+
+.asterisk {
+    color: #e2ba23;
+}
+
 .panel {
     margin-bottom: 70px;
     .panel-body.tight {
@@ -275,7 +292,6 @@ a.pipe-left {
             }
         }
     }
-    
     .form-heading {
         color: #d3a907;
         .wave {
@@ -482,9 +498,11 @@ a.pipe-left {
         color: #CA1D2D
     }
 }
+
 .form-control.tall {
     height: 50px;
 }
+
 .btn-approve {
     background: #e2ba23;
     color: #ffffff;
@@ -592,6 +610,7 @@ a.pipe-left {
     background: #238B28;
     box-shadow: none;
 }
+
 .row.underline {
     border-bottom: 1px solid #ccc;
 }
@@ -657,9 +676,11 @@ a.pipe-left {
     border-bottom: none;
     min-height: 16.428571429px;
 }
+
 .modal-header .close {
     margin-top: -20px;
 }
+
 .modal-text {
     text-align: center;
     padding: 70px;
@@ -669,6 +690,7 @@ a.pipe-left {
         font-weight: 600;
     }
 }
+
 .modal-content {
     position: relative;
     background-color: #fff;
@@ -679,6 +701,7 @@ a.pipe-left {
     background-clip: padding-box;
     outline: 0;
 }
+
 hr {
     margin-right: 70px;
     margin-top: 40px;
@@ -871,9 +894,11 @@ hr {
 .padding-right-20 {
     padding-right: 20px;
 }
+
 .padding-top-10 {
     padding-top: 10px;
 }
+
 .padding-top-20 {
     padding-top: 20px;
 }
