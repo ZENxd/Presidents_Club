@@ -129,20 +129,31 @@ a {
 }
 
 .navbar-right {
-    margin-top: 10px;
+    margin-top: 25px;
+    /*margin-right: -30px;*/
 }
 
 .navbar-default .navbar-nav > li > a {
     color: #fff;
     text-decoration: underline;
-    padding: 0 10px 0 20px;
+    padding: 0 0 0 15px;
+}
+.navbar-back,  .navbar-back a {
+    float: left;
+    padding: 26px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    height: 50px;
+    color: #fff;
 }
 
 a.pipe-left {
     border-left: 1px solid #fff;
     border-left: 1px solid rgba(255, 255, 255, 0.5);
 }
-
+.navbar {
+    margin-bottom: 10px;
+}
 .navbar-default .navbar-nav > li {
     color: #fff;
     padding: 0 15px 0 5px;
@@ -160,7 +171,7 @@ a.pipe-left {
 }
 
 .container-narrow > hr {
-    margin: 30px 0;
+    margin: 40px 0;
 }
 
 .container.heading {
@@ -251,7 +262,7 @@ a.pipe-left {
     color: #CA4045;
 }
 .panel {
-    margin-bottom: 150px;
+    margin-bottom: 70px;
     .panel-body.tight {
         padding: 0 15px 0 15px;
         .row {
@@ -294,7 +305,7 @@ a.pipe-left {
             font-size: 0.8em;
             font-family: 'Roboto Condensed', sans-serif;
             font-weight: 400;
-            margin-right: 20px;
+            margin-right: 25px;
         }
         .right {
             padding-top: 20px;
@@ -311,7 +322,7 @@ a.pipe-left {
         color: #fff;
     }
     .btn-login {
-        background: #e2ba23;
+        background: #1a6eac;
         font-size: 1.2em;
         letter-spacing: 2px;
         height: 50px;
@@ -320,12 +331,15 @@ a.pipe-left {
     .btn-login:focus,
     .btn-login:active,
     .btn-login.active {
-        background: #CAA823;
+        background: #1a6eac;
     }
     .btn-login:active,
     .btn-login.active {
-        background: #CAA823;
+        background: #1a6eac;
         box-shadow: none;
+    }
+    .btn-login:disabled {
+        opacity: 0.5;
     }
     .row {
         margin-top: 10px;
@@ -409,6 +423,8 @@ a.pipe-left {
     .btn {
         color: #d3a907;
         text-align: left;
+        padding: 6px 20px;
+        margin-right: 20px;
     }
     .btn .caret {
         float: right;
@@ -441,7 +457,7 @@ a.pipe-left {
         cursor: pointer;
     }
     .required {
-        color: #d3a907;
+        color: #333;
     }
     .eg {
         color: #CACACA;
@@ -466,7 +482,9 @@ a.pipe-left {
         color: #CA1D2D
     }
 }
-
+.form-control.tall {
+    height: 50px;
+}
 .btn-approve {
     background: #e2ba23;
     color: #ffffff;
@@ -626,11 +644,11 @@ a.pipe-left {
 
 .close {
     float: right;
-    font-size: 5em;
+    font-size: 4em;
     font-weight: lighter;
     line-height: 1;
     color: #e2ba23;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Helvetica', sans-serif;
     opacity: 1;
 }
 
@@ -639,18 +657,32 @@ a.pipe-left {
     border-bottom: none;
     min-height: 16.428571429px;
 }
-
+.modal-header .close {
+    margin-top: -20px;
+}
 .modal-text {
     text-align: center;
     padding: 70px;
     padding-top: 15px;
     h3 {
         word-spacing: 5px;
+        font-weight: 600;
     }
 }
-
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #999;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
+    background-clip: padding-box;
+    outline: 0;
+}
 hr {
     margin-right: 70px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 
@@ -757,13 +789,15 @@ hr {
     }
     .navbar-right {
         float: right !important;
-        margin-top: 20px;
+        margin-top: 25px;
     }
     /* Remove the bottom border on the panel for visual effect */
     .panel {
         border-bottom: 0;
         hr {
             margin-right: 80px;
+            margin-top: 40px;
+            margin-bottom: 40px;
         }
     }
     .container.heading {

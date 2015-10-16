@@ -71,7 +71,7 @@ angular.module('presidentsClubApp')
             //Consumable Data for pre-population, dropdowns etc.
             dataService.getData(function(result) {
                 $scope.salesOrg = result.salesOrg;
-                $scope.regions = result.countries;
+                $scope.regions = result.regions;
                 $scope.countries = result.countries;
                 $scope.titles = result.titles;
                 $scope.salutations = result.salutations;

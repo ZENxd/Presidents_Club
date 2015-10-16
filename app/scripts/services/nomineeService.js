@@ -82,7 +82,6 @@
                 mobileTel: '',
                 email: '',
                 title: {},
-                nominatedByManager: 'No',
                 recurringWinner: 'No',
                 winCount: {},
                 years: '',
@@ -99,13 +98,6 @@
                     behavior: '',
                     leadership: ''
                 },
-                /*
-                nominator: {
-                    first: '',
-                    last: '',
-                    email: '',
-                    phone: ''
-                },*/
                 nominationStatus: '',
                 winner: false
             };

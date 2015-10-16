@@ -17,7 +17,6 @@
           mobileTel: '',
           email: '',
           title: {},
-          nominatedByManager: 'No',
           recurringWinner: 'No',
           winCount: {},
           years: '',
@@ -34,13 +33,6 @@
               behavior: '',
               leadership: ''
           },
-          /*
-          nominator: {
-              first: '',
-              last: '',
-              email: '',
-              phone: ''
-          },*/
           nominationStatus: '',
           winner: false
       };
@@ -68,7 +60,6 @@
         officeTel: '8774244536', mobileTel: '4083458886',
         recurringWinner: 'Yes',
         performance: {salesQuota: 1500000, sales: 1700000, percentOver: 110, percentLast: 103},
-        nominatedByManager: 'Yes',
         winCount: {id: '1', name: '2'},
         years: '2010, 2011'
       };
@@ -102,7 +93,6 @@
           employee.officeTel = details.officeTel;
           employee.mobileTel = details.mobileTel;
           employee.recurringWinner = details.recurringWinner;
-          employee.nominatedByManager = details.nominatedByManager;
           employee.winCount = details.winCount;
           employee.years = details.years;
           employee.performance.salesQuota = details.performance.salesQuota;
