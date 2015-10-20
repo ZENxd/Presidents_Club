@@ -8,8 +8,8 @@
  * Controller of the presidentsClubApp
  */
 angular.module('presidentsClubApp')
-    .controller('MainCtrl', ['$scope', '$rootScope', '$location', 'AuthenticationService', 'settings', 'globals',
-        function($scope, $rootScope, $location, AuthenticationService, settings, globals) {
+    .controller('MainCtrl', ['$scope', '$rootScope', '$location', 'AuthenticationService', 'settings', 'globals', 'dataService', 
+        function($scope, $rootScope, $location, AuthenticationService, settings, globals, dataService) {
 
             //Bounce to here if we have a user logged in
             if ($rootScope.globals.currentUser) {
@@ -25,6 +25,12 @@ angular.module('presidentsClubApp')
                 email: null
             };
             $scope.loginError = false;
+
+            // Only needed when Regional Managers login time
+            // Consumable Data for pre-population regions dropdown.
+            dataService.getRegions(function(result) {
+                $scope.regions = result;
+            });
 
             $scope.alert = {
                 type: 'danger',

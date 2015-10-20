@@ -8,8 +8,8 @@
  * Controller of the presidentsClubApp
  */
 angular.module('presidentsClubApp')
-    .controller('ListCtrl', ['$scope', '$rootScope', '$location', 'demoService', 'settings', '$anchorScroll',
-        function($scope, $rootScope, $location, demoService, settings, $anchorScroll) {
+    .controller('ListCtrl', ['$scope', '$rootScope', '$location', 'nomineeService', 'demoService', 'settings', '$anchorScroll',
+        function($scope, $rootScope, $location, nomineeService, demoService, settings, $anchorScroll) {
 
             //Bounce to here if we have a user not logged in
             if (!$rootScope.globals.currentUser) {
@@ -29,10 +29,18 @@ angular.module('presidentsClubApp')
                 $anchorScroll();
             };
 
+            // Use for Demo only
             demoService.getNominees(function(result) {
                 $scope.nomineesModel = result;
             });
 
+            // Use for API only
+            /*
+            nomineeService.getNominees().then(function(result) {
+                $scope.nomineesModel = result;
+            });
+            */
+            
             $scope.detail = function(id) {
                 $location.path('/detail/' + id);
             };

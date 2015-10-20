@@ -32,6 +32,7 @@ angular.module('presidentsClubApp')
                 $anchorScroll();
             };
 
+            // Use for Demo only
             demoService.queryNominee(function(result) {
                     $scope.nomineeModel = result;
                 },
@@ -39,40 +40,47 @@ angular.module('presidentsClubApp')
                 $scope.nomineeModelId
             );
 
+            // Use for API only
+            /*
+            nomineeService.getNomineeById($scope.nomineeModelId).then(function(result) {
+                $scope.nomineeModel = result;
+            });
+            */
+
             $scope.approve = function() {
-                //Demo
                 var value = ($scope.nomineeModel.nomStatus === 'Approved') ? 'Awaiting Approval' : 'Approved';
                 $scope.nomineeModel.nomStatus = value;
-                demoService.save($scope.nomineeModelId, $scope.nomineeModel);
-                //
 
-                //API call
+                // Demo Save
+                demoService.save($scope.nomineeModelId, $scope.nomineeModel);
+
+                // API Save
                 //$scope.save($scope.nomineeModelId, 'Approved');
             };
 
             $scope.deny = function() {
-                //Demo
                 var value = ($scope.nomineeModel.nomStatus === 'Denied') ? 'Awaiting Approval' : 'Denied';
                 $scope.nomineeModel.nomStatus = value;
-                demoService.save($scope.nomineeModelId, $scope.nomineeModel);
-                //
 
-                //API call
+                // Demo Save
+                demoService.save($scope.nomineeModelId, $scope.nomineeModel);
+
+                // API Save
                 //$scope.save($scope.nomineeModelId, 'Denied');
             };
 
             $scope.winner = function() {
-                //Demo
                 var value = ($scope.nomineeModel.winner) ? false : true;
                 $scope.nomineeModel.winner = value;
-                demoService.save($scope.nomineeModelId, $scope.nomineeModel);
-                //
 
-                //API call
+                // Demo Winner
+                demoService.save($scope.nomineeModelId, $scope.nomineeModel);
+
+                // API Winner
                 //$scope.save($scope.nomineeModelId, 'Denied');
             };
 
-            //API only
+            // API only
             $scope.save = function() {
                 //Update model to server
                 nomineeService.updateNominee($scope.nomineeModel).then(function(result) {

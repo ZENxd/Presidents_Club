@@ -677,5 +677,9 @@
                 callback(data);
             };
 
+            // Login regions
+            this.getRegions = function(callback) {
+                callback(data.regions);
+            };
         });
 })();
