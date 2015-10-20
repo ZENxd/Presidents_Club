@@ -617,7 +617,7 @@
                     name: 'Zambia'
                 }, {
                     id: 195,
-                    name: 'Zimbabweid'
+                    name: 'Zimbabwe'
                 }],
                 titles: [{
                     id: 0,
