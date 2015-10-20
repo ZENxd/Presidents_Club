@@ -78,6 +78,23 @@
       this.makeNominees = function(){
         angular.forEach(nominees, function(nominee, index){
           var chosenValue = Math.random() < 0.5 ? 'Approved' : 'Denied';
+          var regions = [{
+                    id: 0,
+                    name: 'AFO'
+                },{
+                    id: 1,
+                    name: 'China'
+                },{
+                    id: 2,
+                    name: 'EMEAI'
+                },{
+                    id: 3,
+                    name: 'Japan'
+                },{
+                    id: 4,
+                    name: 'SAPK'
+                }];
+          var region = regions[Math.floor(Math.random() * regions.length)];
           var employee = angular.copy(template);
           employee.id = index;
           employee.number = nominees[index].number;
@@ -87,7 +104,7 @@
           employee.title = nominees[index].title;
           employee.email = nominees[index].first+'@agilent.com';
           employee.so = details.so;
-          employee.region = details.region;
+          employee.region = region; //details.region;
           employee.country = details.country;
           employee.address = details.address;
           employee.officeTel = details.officeTel;

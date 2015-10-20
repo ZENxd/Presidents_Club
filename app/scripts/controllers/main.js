@@ -22,7 +22,8 @@ angular.module('presidentsClubApp')
                 password: null,
                 firstName: null,
                 lastName: null,
-                email: null
+                email: null,
+                region: null
             };
             $scope.loginError = false;
 

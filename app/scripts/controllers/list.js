@@ -11,11 +11,19 @@ angular.module('presidentsClubApp')
     .controller('ListCtrl', ['$scope', '$rootScope', '$location', 'nomineeService', 'demoService', 'settings', '$anchorScroll',
         function($scope, $rootScope, $location, nomineeService, demoService, settings, $anchorScroll) {
 
+            $scope.regionError = false;
+
             //Bounce to here if we have a user not logged in
             if (!$rootScope.globals.currentUser) {
                 $location.path('/');
             } else {
                 $rootScope.cloud = true;
+                if ($rootScope.globals.currentUser.region.hasOwnProperty('name')) {
+                    $scope.region = $rootScope.globals.currentUser.region.name;
+                    $scope.regionError = false;
+                } else {
+                    $scope.regionError = true;
+                }
             }
 
             settings.setValue('logo', true);
@@ -23,6 +31,7 @@ angular.module('presidentsClubApp')
             settings.setValue('backText', '2015 Nominees');
             settings.setValue('backLink', '#/list');
             $scope.nomineesModel = null;
+
 
             $scope.scrollTo = function(id) {
                 $location.hash(id);
@@ -40,7 +49,7 @@ angular.module('presidentsClubApp')
                 $scope.nomineesModel = result;
             });
             */
-            
+
             $scope.detail = function(id) {
                 $location.path('/detail/' + id);
             };

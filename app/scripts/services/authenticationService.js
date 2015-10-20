@@ -73,6 +73,7 @@
                         userFirst: loginCredentials.first,
                         userLast: loginCredentials.last,
                         userEmail: loginCredentials.email,
+                        region: loginCredentials.region,
                         authLevel: loginCredentials.authLevel,
                         authdata: authdata
                     }
