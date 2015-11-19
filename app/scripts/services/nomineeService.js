@@ -17,14 +17,17 @@
                 //Post a nominee
                 postNominee: function(dataObj) {
                     var q = $q.defer();
-                    $http.post('/api/v1/save', dataObj)
-                        .success(function(result) {
-                            q.resolve(result);
-                        }).error(function(msg, code) {
-                            q.reject(msg);
-                            console.log(msg, code);
-                        });
+                    q.resolve(dataObj);
                     return q.promise;
+                    // var q = $q.defer();
+                    // $http.post('/api/v1/save', dataObj)
+                    //     .success(function(result) {
+                    //         q.resolve(result);
+                    //     }).error(function(msg, code) {
+                    //         q.reject(msg);
+                    //         console.log(msg, code);
+                    //     });
+                    // return q.promise;
                 },
                 //Update nominee (Approve, Deny)
                 updateNominee: function(dataObj) {
@@ -71,19 +74,19 @@
             var nomineeModel = null;
             var template = {
                 number: '',
-                salesOrg: {},
-                region: {},
-                country: {},
-                salutation: {},
+                salesOrg: null,
+                region: null,
+                country: null,
+                salutation: null,
                 first: '',
                 last: '',
                 address: '',
                 officeTel: '',
                 mobileTel: '',
                 email: '',
-                title: {},
+                title: null,
                 recurringWinner: 'No',
-                winCount: {},
+                winCount: null,
                 years: '',
                 performance: {
                     salesQuota: null,

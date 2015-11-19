@@ -4,12 +4,12 @@
 		"selected_items":
 		[
 			[
-				"padd",
-				"padding-right"
+				"font",
+				"font-weight"
 			],
 			[
-				"text",
-				"text-transform"
+				"mar",
+				"margin-right"
 			],
 			[
 				"marg",
@@ -17,31 +17,67 @@
 			],
 			[
 				"pad",
-				"padding-left"
+				"padding-bottom"
 			],
 			[
 				"back",
-				"background"
+				"background-color"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"fon",
+				"font-style"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"m",
+				"margin-top"
+			],
+			[
+				"comm",
+				"comment"
+			],
+			[
+				"percent",
+				"percentLast"
+			],
+			[
+				"salse",
+				"salesQuota"
+			],
+			[
+				"$root",
+				"$rootScope	AngularJS"
+			],
+			[
+				"but",
+				"bs3-button:default	bs3-button-default"
+			],
+			[
+				"padd",
+				"padding-right"
 			],
 			[
 				"ng-cl",
 				"ng-click	AngularJS"
 			],
 			[
-				"i",
-				"i	Tag"
-			],
-			[
 				"button",
 				"bs3-button:primary	bs3-button-primary"
-			],
-			[
-				"mar",
-				"margin-bottom"
-			],
-			[
-				"fon",
-				"font-size"
 			],
 			[
 				"border-t",
@@ -70,14 +106,6 @@
 			[
 				"max",
 				"max-width"
-			],
-			[
-				"but",
-				"bs3-button:primary	bs3-button-primary"
-			],
-			[
-				"in",
-				"input"
 			],
 			[
 				"ma",
@@ -116,20 +144,12 @@
 				"min-height"
 			],
 			[
-				"font",
-				"font-size"
-			],
-			[
 				"co",
 				"copy"
 			],
 			[
 				"con",
 				"controller	AngularJS"
-			],
-			[
-				"margin",
-				"margin-right"
 			],
 			[
 				"bo",
@@ -494,26 +514,6 @@
 			[
 				"mode",
 				"modelType"
-			],
-			[
-				"col",
-				"collapse"
-			],
-			[
-				"ad",
-				"addClass"
-			],
-			[
-				"rem",
-				"removeClass"
-			],
-			[
-				"gl",
-				"glyph"
-			],
-			[
-				"patter",
-				"patterns"
 			]
 		]
 	},
@@ -523,23 +523,47 @@
 			"file": "app/styles/main.scss",
 			"settings":
 			{
-				"buffer_size": 6181,
+				"buffer_size": 20480,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/thanks.html",
+			"file": "app/views/home.html",
 			"settings":
 			{
-				"buffer_size": 725,
+				"buffer_size": 7000,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/index.html",
+			"file": "app/views/nominee.html",
 			"settings":
 			{
-				"buffer_size": 4392,
+				"buffer_size": 11205,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/scripts/services/nomineeService.js",
+			"settings":
+			{
+				"buffer_size": 4100,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/scripts/services/data.js",
+			"settings":
+			{
+				"buffer_size": 19605,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/scripts/controllers/nominee.js",
+			"settings":
+			{
+				"buffer_size": 7505,
 				"line_ending": "Unix"
 			}
 		}
@@ -551,12 +575,16 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 327.0,
+		"height": 347.0,
 		"last_filter": "copy",
 		"selected_items":
 		[
 			[
 				"copy",
+				"File: Copy as Tag script"
+			],
+			[
+				"cop",
 				"File: Copy as Tag script"
 			],
 			[
@@ -582,10 +610,6 @@
 			[
 				"instal",
 				"Package Control: Install Package"
-			],
-			[
-				"cop",
-				"File: Copy as Tag script"
 			],
 			[
 				"inst",
@@ -647,34 +671,58 @@
 	[
 		"/Users/david/sites/Presidents_Club",
 		"/Users/david/sites/Presidents_Club/app",
+		"/Users/david/sites/Presidents_Club/app/images",
 		"/Users/david/sites/Presidents_Club/app/scripts",
 		"/Users/david/sites/Presidents_Club/app/scripts/controllers",
 		"/Users/david/sites/Presidents_Club/app/scripts/services",
 		"/Users/david/sites/Presidents_Club/app/styles",
-		"/Users/david/sites/Presidents_Club/app/views",
-		"/Users/david/sites/Presidents_Club/bower_components/angular",
-		"/Users/david/sites/Presidents_Club/bower_components/angular-ui-mask/dist"
+		"/Users/david/sites/Presidents_Club/app/views"
 	],
 	"file_history":
 	[
-		"/Users/david/sites/Presidents_Club/app/views/nominator.html",
-		"/Users/david/sites/Presidents_Club/app/views/performance.html",
 		"/Users/david/sites/Presidents_Club/app/views/nominee.html",
-		"/Users/david/sites/Presidents_Club/app/views/main.html",
-		"/Users/david/sites/Presidents_Club/app/views/comments.html",
-		"/Users/david/sites/Presidents_Club/app/scripts/controllers/nominator.js",
-		"/Users/david/sites/Presidents_Club/app/scripts/controllers/thanks.js",
-		"/Users/david/sites/Presidents_Club/app/index.html",
-		"/Users/david/sites/Presidents_Club/app/scripts/app.js",
-		"/Users/david/sites/Presidents_Club/app/views/error-messages.html",
-		"/Users/david/sites/Presidents_Club/app/scripts/services/usersService.js",
-		"/Users/david/sites/Presidents_Club/app/scripts/controllers/comments.js",
-		"/Users/david/sites/Presidents_Club/app/scripts/services/employeeService.js",
-		"/Users/david/sites/Presidents_Club/app/scripts/controllers/performance.js",
 		"/Users/david/sites/Presidents_Club/app/scripts/controllers/nominee.js",
+		"/Users/david/sites/Presidents_Club/app/scripts/services/nomineeService.js",
+		"/Users/david/sites/Presidents_Club/app/scripts/app.js",
+		"/Users/david/sites/Presidents_Club/app/views/winners/index.html",
+		"/Users/david/sites/Presidents_Club/app/scripts/ExcelDownload.js",
+		"/Users/david/sites/Presidents_Club/app/views/comments.html",
+		"/Users/david/sites/Presidents_Club/app/scripts/controllers/detail.js",
+		"/Users/david/sites/Presidents_Club/app/views/detail.html",
+		"/Users/david/sites/Presidents_Club/app/views/login.html",
 		"/Users/david/sites/Presidents_Club/app/scripts/controllers/main.js",
-		"/Users/david/sites/Presidents_Club/bower.json",
+		"/Users/david/sites/Presidents_Club/app/scripts/services/demoService.js",
+		"/Users/david/sites/Presidents_Club/app/index.html",
+		"/Users/david/sites/Presidents_Club/app/scripts/controllers/list.js",
+		"/Users/david/sites/Presidents_Club/app/views/list.html",
+		"/Users/david/sites/Presidents_Club/app/views/performance.html",
 		"/Users/david/sites/Presidents_Club/app/scripts/services/data.js",
+		"/Users/david/sites/Presidents_Club/app/views/thanks.html",
+		"/Users/david/sites/Presidents_Club/app/views/home.html",
+		"/Users/david/sites/Presidents_Club/app/scripts/services/authenticationService.js",
+		"/Users/david/sites/Presidents_Club/app/scripts/services/settings.js",
+		"/Users/david/Desktop/script.txt",
+		"/Users/david/sites/Presidents_Club/app/scripts/controllers/thanks.js",
+		"/Users/david/sites/Presidents_Club/app/scripts/controllers/nav.js",
+		"/Users/david/sites/Presidents_Club/app/scripts/controllers/home.js",
+		"/Users/david/sites/Presidents_Club/.gitignore",
+		"/Users/david/sites/Presidents_Club/Gruntfile.js",
+		"/Users/david/sites/Presidents_Club/README.md",
+		"/Users/david/sites/Presidents_Club/app/styles/main.scss",
+		"/Users/david/sites/Presidents_Club/app/nominees.json",
+		"/Users/david/sites/Presidents_Club/app/views/main.html",
+		"/Users/david/sites/Presidents_Club/bower.json",
+		"/Users/david/sites/Presidents_Club/app/scripts/services/nominees.json",
+		"/Users/david/sites/Presidents_Club/app/views/nominator.html",
+		"/Users/david/sites/Presidents_Club/app/scripts/controllers/nominator.js",
+		"/Users/david/sites/Presidents_Club/app/scripts/controllers/comments.js",
+		"/Users/david/sites/Presidents_Club/app/scripts/controllers/performance.js",
+		"/Users/david/sites/Presidents_Club/package.json",
+		"/Users/david/sites/Presidents_Club/.jshintrc",
+		"/Users/david/sites/Presidents_Club/app/scripts/services/usersService.js",
+		"/Users/david/sites/Presidents_Club/app/scripts/services/employeeService.js",
+		"/Users/david/sites/Presidents_Club/app/scripts/services/employees.js",
+		"/Users/david/sites/Presidents_Club/app/views/error-messages.html",
 		"/Users/david/sites/ep-common/demos/ui-grid/app/index.html",
 		"/Users/david/sites/ep-common/src/ui-grid/plugins/UiGridDragSelectionPlugin.js",
 		"/Users/david/sites/ep-common/demos/ui-grid/bower_components/ep-common/src/ui-grid/plugins/UiGridDragSelectionPlugin.js",
@@ -759,32 +807,7 @@
 		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/src/cellAllowance/ep.common.cellAllowance.js",
 		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/templates/cellAllowance.tpl.html",
 		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/templates/epAlert.tpl.html",
-		"/Applications/MAMP/htdocs/EP_components/app/templates/cellAllowance.tpl.html",
-		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/src/alert/ep.common.alert.js",
-		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/src/computerRental/ep.common.computerRental.js",
-		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/templates/computerRental.tpl.html",
-		"/Applications/MAMP/htdocs/EP_components/app/controllers/computerRental.js",
-		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/src/boxRental/ep.common.boxRental.js",
-		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/templates/boxRental.tpl.html",
-		"/Applications/MAMP/htdocs/EP_components/app/templates/computerRental.tpl.html",
-		"/Applications/MAMP/htdocs/EP_components/app/controllers/alerts.js",
-		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/src/carAllowance/ep.common.carAllowance.js",
-		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/src/boxRental",
-		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/templates/carAllowance.tpl.html",
-		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep.common/bower.json",
-		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/README.md",
-		"/Applications/MAMP/htdocs/EP_components/app/bower_components/angular-bootstrap/ui-bootstrap-tpls.js",
-		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/bower.json",
-		"/Applications/MAMP/htdocs/EP_components/app/bower_components/ep-common/boxRental.tpl.html",
-		"/Applications/MAMP/htdocs/EP_components/app/templates/boxRental.tpl.html",
-		"/Applications/MAMP/htdocs/EP_components/scripts/angular-ui-utils.js",
-		"/Applications/MAMP/htdocs/EP_components/css/panel.css",
-		"/Users/david/sites/directives/epPanel/bower.json",
-		"/Users/david/sites/directives/epPanel.js",
-		"/Applications/MAMP/htdocs/EP_components/app/templates/carAllowance.tpl.html",
-		"/Applications/MAMP/htdocs/EP_components/app/templates/panel.tpl.html",
-		"/Applications/MAMP/htdocs/EP_components/app/controllers/boxRental.js",
-		"/Applications/MAMP/htdocs/EP_components/app/templates/boxRental.html"
+		"/Applications/MAMP/htdocs/EP_components/app/templates/cellAllowance.tpl.html"
 	],
 	"find":
 	{
@@ -795,6 +818,12 @@
 		"height": 93.0,
 		"where_history":
 		[
+			"/Users/david/sites/Presidents_Club/app/views",
+			"/Users/david/sites/Presidents_Club/app/scripts/",
+			"/Users/david/sites/Presidents_Club/app/scripts/services",
+			"/Users/david/sites/Presidents_Club/app/scripts/controllers",
+			"/Users/david/sites/Presidents_Club/app/scripts",
+			"/Users/david/sites/Presidents_Club/app",
 			"/Users/david/sites/ep-common/demos/ui-grid/bower_components/angular-ui-grid",
 			"/Applications/MAMP/htdocs/mtc_zenxd/mtc_desktop",
 			"/Applications/MAMP/htdocs/ESP/dev/app/controllers",
@@ -818,134 +847,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"left",
-			"Nominator",
-			"nominator",
-			"right",
-			"Nominator",
-			"nemail",
-			"nlast",
-			"nfirst",
-			"Comments",
-			"\"3\"",
-			"behavior",
-			"planning",
-			"$error\">",
-			"\"70\"",
-			"70",
-			"planning",
-			"performance",
-			"ng-message",
-			"behavior",
-			"Behavior",
-			"behavior",
-			"relationship",
-			"Relationship",
-			"relationship",
-			"planning",
-			"Planning",
-			"planning",
-			"performance",
-			"number",
-			"Number",
-			"number",
-			"Main",
-			"number",
-			"phone",
-			"title",
-			"percentOver",
-			"sales",
-			"salesQuota",
-			"span",
-			"number",
-			"Number",
-			"number",
-			"email",
-			"number",
-			"Main",
-			"About",
-			"ng-required=\"{{employee.nominatedByManager === 'Yes'}}\"",
-			" && employee.nominatedByManager === 'Yes'",
-			" && !userForm.nfirst.$pristine && employee.nominatedByManager === 'Yes'",
-			"employee.nominatedByManager === 'No'",
-			"nemail",
-			"nlast",
-			"nfirst",
-			"email",
-			"nfirst",
-			"email",
-			"so",
-			"mobile",
-			"phone",
+			"{}",
+			"info",
+			"vertical-align",
+			"v-align",
+			"light",
+			"$scope.region",
+			"region",
+			"username",
 			"address",
-			"number",
-			"country",
-			"region",
-			"so",
-			"help-block",
-			"number",
-			"service_id",
-			"service",
-			"number",
-			"name",
-			"email",
-			"Email",
-			"primary",
-			"]",
-			"so",
-			"region",
+			"$scope.",
+			"first",
+			"testTypes",
+			"row",
+			"data",
+			"'",
+			"<span class=\"required\">*</span>",
+			"<span class=\"required\">",
+			"phone",
+			"masked",
+			"hr",
+			".navbar-right",
+			".nav",
+			".navbar-right",
+			"approve",
+			"id",
+			"div",
+			"span",
+			".footer",
+			".panel",
+			"pull-right ",
+			"4",
+			"vertical-align",
+			"')",
+			"get('",
+			"')",
+			"get('",
+			"nomineeModel",
+			"employees",
+			"makeEmployees",
+			"Employees",
+			"employees",
+			"nomineeService",
+			"employeeService",
+			"h1",
 			"2",
-			"region",
+			"Thanks",
+			"thanks",
+			"Thanks",
+			"thanks",
+			"70",
+			"eg",
+			"style=\"padding-bottom: 0;\"",
+			"required\">*",
+			"70 words max",
+			"salesQuota",
+			".ie",
+			"ie",
+			"div",
+			"pattern=\"[0-9]*\"",
+			"col-md-7",
+			"seal",
+			"heading",
+			"col-md-6",
+			"hr",
+			"col-md-3",
+			".info",
+			"container",
+			"heading",
+			".lead",
+			"heading",
+			"detail",
+			"-form",
+			"Main",
+			"form",
+			"div",
+			"ngtemplates",
+			"light",
+			"<div class=\"pipe\"></div> ",
+			"+ $scope.step",
+			"/:step",
+			"$scope.step++",
+			"+ step",
+			"(step)",
+			"/step/",
+			"/step",
+			"settings.setValue('step', step);",
+			"nomineeService",
+			"$log",
+			"Curabitur blandit tempus porttitor. Maecenas faucibus mollis interdum. Nullam id dolor id nibh ultriciesvehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sitamet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec ullamcorper nulla non metus auctorfringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.",
+			"login",
+			"'1'",
+			"'0'",
+			"nomfirst",
+			"nphone",
+			"nemail",
+			"nomfirst",
+			"nfirst",
 			"so",
-			"jumbotron",
-			"cmdDown",
-			"firstColIndex",
-			"colIndex",
-			"6",
-			"formatMatrix",
-			"buildMatrix",
-			"cell.scope().$apply();",
-			"lastRow",
-			"formatMatrix",
-			"//cell.scope().$apply();",
-			"cell.scope().$apply();",
-			"selectAllRows",
-			"between",
-			"hiddenCols",
-			"gridColumnOffset",
-			"self.gridColumnOffset",
-			"Third Party Vendor",
-			"3rd",
-			"return",
-			"tempData",
-			"didMakeSelection",
-			"formatMatrix",
-			"didMakeSelection",
-			"formatMatrix",
-			"gridColumnOffset",
-			"formatMatrix",
-			"SheetClip",
-			"clipboardData",
-			"getSelectableElements",
-			"didMakeSelection",
-			"mapObject",
-			"lastColIndex",
-			"firstColIndex",
-			"colVisibilities",
-			"didClearSelection",
-			"cutGridColData",
-			"getSelectedData",
-			"copiedGridColData",
-			"getColData",
-			"getSelectedData",
-			"didMakeSelection",
-			"getSelectedData",
-			"didMakeSelection",
-			"self.$scope.copiedGridColData",
-			"didMakeSelection",
-			"getSelectedData",
-			"columnMap",
-			"$scope"
+			"emp_",
+			"employee",
+			"appAuth",
+			"email",
+			"Parse.User.current()",
+			"deferred",
+			"movie",
+			"nominee",
+			"nominees[index]",
+			"nomineeModels",
+			"nominee",
+			"Employee",
+			"employee",
+			"employeeService",
+			"form",
+			"0",
+			"next()",
+			"list",
+			"gameScore",
+			"savedTemplate",
+			"saveObj = result;",
+			"employee",
+			"$location.path('/step' + step);",
+			"nominee",
+			"template",
+			"nominee",
+			"template",
+			"gameScore",
+			"$scope.",
+			"null"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -953,6 +982,10 @@
 		"regex": false,
 		"replace_history":
 		[
+			"nomineeClass",
+			"Nominee",
+			"nomineeModel",
+			"nomineeService",
 			"self.copiedGridColData",
 			",}\\n",
 			"\"Notes\": \"\",}",
@@ -992,7 +1025,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -1001,82 +1034,141 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6181,
+						"buffer_size": 20480,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4751,
-								4751
+								6955,
+								6959
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1262.0,
+						"translation.y": 5321.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/views/thanks.html",
+					"file": "app/views/home.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 725,
+						"buffer_size": 7000,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								635,
-								635
+								3413,
+								3413
 							]
 						],
 						"settings":
 						{
-							"open_with_edit": true,
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 842.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/nominee.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11205,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7573,
+								7573
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1271.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/scripts/services/nomineeService.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4100,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4093,
+								2648
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 961.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "app/index.html",
-					"semi_transient": false,
+					"buffer": 4,
+					"file": "app/scripts/services/data.js",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 4392,
+						"buffer_size": 19605,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1073,
-								1073
+								380,
+								205
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -1085,13 +1177,43 @@
 					},
 					"stack_index": 0,
 					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/scripts/controllers/nominee.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7505,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								890,
+								871
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 154.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 22.0
+		"height": 34.0
 	},
 	"input":
 	{
@@ -1136,7 +1258,7 @@
 	"project": "pc.sublime-project",
 	"replace":
 	{
-		"height": 40.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1182,7 +1304,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 339.0,
+	"side_bar_width": 238.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -18,6 +18,8 @@ angular.module('presidentsClubApp')
                 $rootScope.cloud = true;
             }
 
+            $scope.submitError = false;
+
             //The persistant data model bound to html
             modelService.getModel(function(result) {
                 $scope.nomineeModel = result;
@@ -34,7 +36,7 @@ angular.module('presidentsClubApp')
             settings.setValue('back', true);
             settings.setValue('backText', 'RETURN TO HOME');
             settings.setValue('backLink', '#/');
-            
+
             //Step forward to next form after validation
             $scope.next = function(url) {
                 if ($scope.userForm.$valid) {
@@ -46,6 +48,7 @@ angular.module('presidentsClubApp')
 
             //Step back to previous form
             $scope.back = function(url) {
+                $scope.submitError = false;
                 //Update local model for persistance
                 modelService.updateModel($scope.nomineeModel);
                 $location.path('/' + url);
@@ -57,15 +60,42 @@ angular.module('presidentsClubApp')
 
             */
             $scope.save = function(url) {
+                $scope.submitError = false;
                 if ($scope.userForm.$valid) {
                     //Update local model for persistance
                     modelService.updateModel($scope.nomineeModel);
-                    //Post model to server
-                    nomineeService.postNominee($scope.nomineeModel).then(function(result) {
-                        console.log(result);
-                        //Goto thank you page.
-                        $location.path('/' + url);
-                    });
+
+                    var checkModel = true;
+                    for (var prop in $scope.nomineeModel) {
+                        if ($scope.nomineeModel.hasOwnProperty(prop)) {
+                            if ($scope.nomineeModel[prop] === null || $scope.nomineeModel[prop] === '') {
+                                console.log(prop, ' was null');
+                                if(prop === 'winCount'){
+                                    console.log('Ignoring winCount');
+                                } else if(prop === 'years'){
+                                    console.log('Ignoring years');
+                                } else if(prop === 'nominationStatus'){
+                                    console.log('Ignoring nominationStatus');
+                                } else {
+                                    checkModel = false;
+                                }
+                            }
+                        }
+                    }
+
+                    if (!checkModel) {
+                        $location.path('/nominee');
+                    } else {
+                        //Post model to server
+                        nomineeService.postNominee($scope.nomineeModel).then(function(result) {
+                            if (result.error) {
+                                $scope.submitError = true;
+                            }
+                            //Goto thank you page.
+                            $location.path('/' + url);
+                        });
+                    }
+
                 }
             };
 
